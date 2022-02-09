@@ -52,7 +52,7 @@ main {
 .site-headline {
     font-weight: 600;
     position: absolute;
-    color: rgb(241, 236, 236);
+    color: rgb(240, 240, 240);
     filter: drop-shadow(0 0 0.5rem rgb(22, 22, 22));
     font-size: 4vw;
     font-family: 'Grotesk';
