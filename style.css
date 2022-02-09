@@ -9,7 +9,9 @@
     font-weight: bold;
 }
 
-
+html {
+    --myText: 0;
+}
 
 body {
 font-family: 'Grotesk', Futura, "Trebuchet MS", sans-serif;
@@ -23,10 +25,6 @@ nav {
 
 nav > h1 {
     padding-left: 10px;
-}
-
-body{
-    
 }
 
 nav > h1 {
@@ -102,6 +100,11 @@ object-fit: scale-down;
     margin-left: 25%;
     margin-bottom: 20px;
     
+}
+
+.about {
+    opacity: var(--myText)
+ 
 }
 footer {
     display: flex;
