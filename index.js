@@ -1,0 +1,1 @@
+gsap.to("p", {duration: 1, x: 100});

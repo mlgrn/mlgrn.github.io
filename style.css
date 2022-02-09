@@ -16,7 +16,7 @@ font-family: 'Grotesk', Futura, "Trebuchet MS", sans-serif;
 }
 
 nav {
-    border: solid 1px black;
+    /* border: solid 1px black; */
     margin : 20px;
  
 }
@@ -38,7 +38,7 @@ nav > h1 {
 
 main {
     display: flex;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     justify-content: center;
     margin : 20px;
     
@@ -55,7 +55,7 @@ main {
     font-weight: 600;
     position: absolute;
     color: rgb(241, 236, 236);
-    filter: drop-shadow(0 0 1rem black);
+    filter: drop-shadow(0 0 0.5rem rgb(22, 22, 22));
     font-size: 4vw;
     font-family: 'Grotesk';
     font-weight: bold;
@@ -80,12 +80,32 @@ object-fit: scale-down;
 .main-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 10px;
+}
+
+.main-content > h1 {
+    max-width: 50vw;;
+    margin-left: 25%;
+    margin-bottom: 20px;
+    
+}
+.main-content > h2, h3, strong {
+   
+    max-width: 50vw;;
+    margin-left: 25%;
+    margin-bottom: 20px;
+}
+
+.main-content > p {
+    
+    max-width: 60vw;;
+    margin-left: 25%;
+    margin-bottom: 20px;
+    
 }
 footer {
     display: flex;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     justify-content: center;
     margin : 20px;
 }
