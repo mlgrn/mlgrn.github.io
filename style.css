@@ -48,18 +48,22 @@ main {
     display:flex;
     align-items: center;
     justify-content: center;
-   
-
-    /* justify-content: center; */
+    padding-bottom: 20px;
 }
 
 .site-headline {
     font-weight: 600;
     position: absolute;
     color: rgb(241, 236, 236);
+    filter: drop-shadow(0 0 1rem black);
     font-size: 4vw;
     font-family: 'Grotesk';
     font-weight: bold;
+    
+}
+
+.site-headline > ul,li {
+    list-style: none;
     
 }
 
@@ -67,12 +71,18 @@ main {
 .hero-img {
 
 width: 55vw;
+padding-top: 20px;
+max-height: 1000px;
 object-fit: scale-down;
 
 }
 
-
-
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
 footer {
     display: flex;
     border: solid 1px black;
