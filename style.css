@@ -1,11 +1,18 @@
 
 @font-face {
-    font-family:GroteskReg;
-    src=url(./fonts/AlteHaasGroteskBold.ttf);
+    font-family:'Grotesk';
+    src: url('./fonts/AlteHaasGroteskRegular.ttf');
+}
+@font-face {
+    font-family:'Grotesk';
+    src: url('fonts/AlteHaasGroteskBold.ttf');
+    font-weight: bold;
 }
 
+
+
 body {
-font-family: Futura, "Trebuchet MS", Roboto, sans-serif;
+font-family: 'Grotesk', Futura, "Trebuchet MS", sans-serif;
 }
 
 nav {
@@ -23,6 +30,7 @@ body{
 }
 
 nav > h1 {
+    font-family: Futura;
     font-weight: 100;
     font-size: 3rem;
     font-style: normal;
@@ -50,7 +58,8 @@ main {
     position: absolute;
     color: rgb(241, 236, 236);
     font-size: 4vw;
-    font-family: GroteskReg;
+    font-family: 'Grotesk';
+    font-weight: bold;
     
 }
 
