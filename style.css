@@ -1,0 +1,72 @@
+
+@font-face {
+    font-family:GroteskReg;
+    src=url(./fonts/AlteHaasGroteskBold.ttf);
+}
+
+body {
+font-family: Futura, "Trebuchet MS", Roboto, sans-serif;
+}
+
+nav {
+    border: solid 1px black;
+    margin : 20px;
+ 
+}
+
+nav > h1 {
+    padding-left: 10px;
+}
+
+body{
+    
+}
+
+nav > h1 {
+    font-weight: 100;
+    font-size: 3rem;
+    font-style: normal;
+}
+
+main {
+    display: flex;
+    border: solid 1px black;
+    justify-content: center;
+    margin : 20px;
+    
+}
+
+.hero {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+   
+
+    /* justify-content: center; */
+}
+
+.site-headline {
+    font-weight: 600;
+    position: absolute;
+    color: rgb(241, 236, 236);
+    font-size: 4vw;
+    font-family: GroteskReg;
+    
+}
+
+
+.hero-img {
+
+width: 55vw;
+object-fit: scale-down;
+
+}
+
+
+
+footer {
+    display: flex;
+    border: solid 1px black;
+    justify-content: center;
+    margin : 20px;
+}
