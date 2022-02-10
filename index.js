@@ -17,6 +17,7 @@ window.addEventListener('load', (event) => {
     //fades out loader
         gsap.to(".loader", {duration: 1, opacity: 0})
         gsap.to("#loader-area", {duration: 1, opacity: 0})
+        gsap.to("#loader-area h3", {duration: 1, opacity: 0})
 
     // site load animations
         gsap.from(".hero", {duration: 1, opacity: 0.01, delay:1, scale: 0.8,});
