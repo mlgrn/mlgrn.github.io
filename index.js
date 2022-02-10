@@ -19,10 +19,10 @@ window.addEventListener('load', (event) => {
         gsap.to("#loader-area", {duration: 1, opacity: 0})
         gsap.to("#loader-area h3", {duration: 1, opacity: 0})
 
-    // site load animations
+    // site loa hero animations
         gsap.from(".hero", {duration: 1, opacity: 0.01, delay:1, scale: 0.8,});
         gsap.from(".site-headline", {duration: 2, x: 0, opacity: 1, scale: 0.98 });
-
+        
 
     //emilioguarino nav animation
         gsap.from(".the-name", {duration: 1.5, x:0, y:-100,  ease: "back.inOut(1.7)"});
