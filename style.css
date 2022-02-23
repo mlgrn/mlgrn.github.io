@@ -23,6 +23,15 @@ html {
     margin: 100px 0 0 -40px;
 }
 
+#canvas1 {
+    position: fixed;
+    z-index: 2;
+    width:100%;
+    height: 100%;
+    top:0;
+    left:0;
+} 
+
 .loader {
     position: absolute;
     left: 50%;
@@ -38,6 +47,7 @@ html {
     animation: spin 2s linear infinite;
   }
   
+  /* this is for the loader animation */
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -59,7 +69,12 @@ font-family: 'Grotesk', Futura, "Trebuchet MS", sans-serif;
 nav {
     /* border: solid 1px black; */
     margin : 20px;
- 
+    
+}
+
+.the-name {
+   font-family: monospace;
+
 }
 
 nav > h1 {
@@ -96,6 +111,7 @@ main {
     font-size: 4vw;
     font-family: 'Grotesk';
     font-weight: bold;
+   
     
 }
 
@@ -107,9 +123,8 @@ main {
 
 .hero-img {
 
-width: 55vw;
-padding-top: 20px;
-max-height: 1000px;
+width: 45vw;
+max-height: 800px;
 object-fit: scale-down;
 
 }
@@ -117,7 +132,8 @@ object-fit: scale-down;
 .main-content {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 15px;
+    
 }
 
 .main-content > h1 {
@@ -142,8 +158,27 @@ object-fit: scale-down;
 }
 
 .about {
+    /* opacity: var(--myText) */
+}
+
+
+.skills-area {
+    background-color: rgb(141, 141, 230); 
+    margin-left: -10%;
+    margin-right: -10%;
+    text-align: center;
     opacity: var(--myText)
- 
+
+}
+
+.portfolio-area {
+ background-color: black;
+ color:white;
+ margin-left: -10%;
+ margin-right: -10%;
+ text-align: center;
+ opacity: var(--myText)
+    
 }
 footer {
     display: flex;

@@ -19,24 +19,28 @@ window.addEventListener('load', (event) => {
         gsap.to("#loader-area", {duration: 1, opacity: 0})
         gsap.to("#loader-area h3", {duration: 1, opacity: 0})
 
-    // site loa hero animations
+    // site load hero animations
         gsap.from(".hero", {duration: 1, opacity: 0.01, delay:1, scale: 0.8,});
         gsap.from(".site-headline", {duration: 2, x: 0, opacity: 1, scale: 0.98 });
         
 
     //emilioguarino nav animation
-        gsap.from(".the-name", {duration: 1.5, x:0, y:-100,  ease: "back.inOut(1.7)"});
-        gsap.from(".the-name", {duration: 1, opacity: 0.1, delay: 0.5,})
+        gsap.from(".the-name", {duration: 1, x:0, y:-25,  ease: "back.inOut(1.7)"});
+        gsap.from(".the-name", {duration: 1, opacity: 0, delay: 0.5,})
     
     //headline breathing loop
         gsap.to(".site-headline", {duration: 2, opacity: .95, scale: 0.92, repeat: -1,ease: "power1.inOut", yoyo: true, yoyoEase: true});
 
         TweenMax.to("html", 1, {"--myColor":"orange", yoyo:true, repeat:20});
 
+
+        gsap.to(".about", {duration: 1, opacity: 0.8, delay:1, scale: 1,});
+        
+        // changes the opacity of --myText variable to reveal stuff on scroll
         window.onscroll = () => { 
-            TweenMax.to("html", 1, {"--myText":"1",})
+            TweenMax.to("html", 1, {"--myText":"1",})}
             
-}
+
 
 });
 
