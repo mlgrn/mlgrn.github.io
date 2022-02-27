@@ -104,14 +104,17 @@ main {
 }
 
 .site-headline {
+   display: flex;
     font-weight: 600;
     position: absolute;
+    bottom:5%;
     color: rgb(240, 240, 240);
     filter: drop-shadow(0 0 0.5rem rgb(22, 22, 22));
-    font-size: 4vw;
+    font-size: 2.5vw;
+    
     font-family: 'Grotesk';
     font-weight: bold;
-   
+    
     
 }
 
@@ -123,8 +126,7 @@ main {
 
 .hero-img {
 
-width: 45vw;
-max-height: 800px;
+max-width: max-content;
 object-fit: scale-down;
 
 }
@@ -158,31 +160,58 @@ object-fit: scale-down;
 }
 
 .about {
-    /* opacity: var(--myText) */
+    opacity: var(--myText)
 }
 
 
 .skills-area {
-    background-color: rgb(141, 141, 230); 
-    margin-left: -10%;
-    margin-right: -10%;
+    display:flex;
+    flex-flow: row wrap;
     text-align: center;
+    background-color: rgb(141, 141, 230); 
+    margin-left: -5%;
+    margin-right: -5%;
     opacity: var(--myText)
 
 }
 
+.skills-area > h1 {
+    margin: auto;
+justify-content:center;
+width: 100%;
+}
+
+.skills-area > section {
+    margin: auto;
+    justify-content: center;
+    max-width: 25%;
+}
+
 .portfolio-area {
- background-color: black;
+display: flex;
+flex-flow: row wrap;
+text-align: center; 
+background-color: black;
  color:white;
- margin-left: -10%;
- margin-right: -10%;
- text-align: center;
+ margin-left: -5%;
+ margin-right: -5%;
  opacity: var(--myText)
     
 }
+
+.portfolio-area > h1 {
+margin: auto;
+justify-content:center;
+width: 100%;
+}
+
+.portfolio-area > section {
+ margin: auto;
+justify-content: center;
+}
+
 footer {
     display: flex;
-    /* border: solid 1px black; */
     justify-content: center;
     margin : 20px;
 }
