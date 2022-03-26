@@ -52,7 +52,7 @@ canvas.addEventListener('mousemove', (event)=>{
 })
 
 
-
+// changes the --clr-accent css variable as the mouse moves to current value of hue
 document.addEventListener('mousemove', (event => {
     let hslColor = 'hsl(' + hue + ', 100%, 70%)'
     const r = document.querySelector(':root')
