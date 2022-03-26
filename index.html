@@ -2,122 +2,211 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta name = "description" content = "Emilio Guarino is a bassist, music producer, and teacher. Click here to learn more about him and his projects." />
+   
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name = "description" content = "A portfolio of Emilio Guarino's projects" />
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    <title>Emilio Guarino</title>
+    <title>Emilio Guarino Portfolio Site</title>
+
+    <!-- normalize helps to even out differences between browsers -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
   
+        <!-- font awesome kit for icons -->
+        <script src="https://kit.fontawesome.com/e0231dabcc.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- the loader icon -->
-    <section id="loader-area">
-        <div class="loader"></div>
-        <h3>Page is loading...</h3>
-    </section>
+    <div id="loader-area">
+    <div class="loader"></div>
+        <h3 class="loader__text"> Page is loading...</h3>
+    </div>
     
-    
-    <div id="entire-page">
+  
+    <div id="entire-page"> <!-- used for loader fade in -->
         <!-- this is this canvas element for mouse effect -->
         <canvas id="canvas1"></canvas>
 
-        
-        <h1 class="the-name">&lt;emilio-guarino&gt;</h1> 
-        
-        
+    <!-- Header and nav -->
+    <header>
+        <div class='logo'>
+            <a href='index.html'><h3>emilio guarino</h3></div></a>
+            <button class='nav-toggle' aria-label="toggle navigation">
+                <span class='hamburger'></span>
+            </button>
+            <nav class='nav'>
+                <ul class='nav__list'>
+                    <li class='nav__item'> <a href="#home" class='nav__link'>Home</a></li>
+                    <li class='nav__item'> <a href="#services" class='nav__link'>What I Do</a></li>
+                    <li class='nav__item'> <a href="#about" class='nav__link'>About</a></li>
+                    <li class='nav__item'> <a href="#work" class='nav__link'>Work</a></li>
+                </ul>
+            </nav>
   
-<!-- headline and hero image -->
-    <main id="main-content"  class="main-content">
-        <div class="hero">
-            <h1 class="site-headline">
-                <ul>
-                    <li>Hello.</li> 
-                    <li>My name is Emilio.</li> 
-                    <li>↴</li> 
-
-                </ul> 
+        </header>
+        
+        <!-- introduction -->
+        <section class="intro" id="home">
+            <h1 class='section__title section__title--intro'>
+                Hello, my name is <strong style="font-size: 5rem;">Emilio</strong>
             </h1>
-            
-            <img class="hero-img" style="border-radius: 50px;" src="./images/HotWobble-29 smaller.jpg" alt="hot-wobble-wideshot" />
-        </div>
-
-        <!-- My Skills -->
-<!-- <div class="skills-area">
-    <h1>Skills</h1> -->
-
-<!--     
-    
-    <section class="body-section">   <h2>Web Development</h2>
-        <p>I use React, Javascript, and good old HTML/CSS to build things on the web that help you tell your story.</p></section>
-    
-        <section class="body-section"><h2>Video Production</h2>
-        <p>I've freelanced as a camera operator since 2012 and have filmed everything from corporate livestreams
-            to MMA matches, music videos, and even a couple US presidents. 
-            I edit using Adobe Creative Cloud and Davinci Resolve.</p></section>
-    
-            <section class="body-section">  <h2>All Things Audio</h2>
-        <p>I have a background in classical music and audio production. 
-            Everything from removing background noise to writing a full blown soundtrack is possible.</p>
+            <p class="section__subtitle section__subtitle--intro">front-end dev and producer</p>
+            <img src="images/HotWobble-29 smaller.jpg" alt="a picture of Emilio" class="intro__img">
         </section>
- 
-     -->
-    </div>
-
-
-
-
-        <!-- PORTFOLIO -->
-<!-- <div class="portfolio-area">
-<h1>My Work</h1>
-
-    <section>
-    <h2>GlitchMagic.com</h2>
-    <p>This is an e-commerce website that provides sounds and sampler instruments to music producers</p></section>   
-
-    <section>
-    <h2>Hot Wobble</h2>
-    <p>My musical portfolio. I've worked on all kinds of tunes and built the site from scratch.</p></section>
-    
-    <section>
-    <h2>Meme Generator</h2>
-    <p><a href src='https://kind-northcutt-dec50e.netlify.app/'> A Meme Generator</a></p></section>
-
-
-
-
-
-</div> -->
-
-
-<!-- CONTACT info -->
-        <h3 class="about">Contact:</h3>
-        <strong class="about">emilio at emilioguarino.com</strong>
-
-
-
-        <!-- gsap CDN import code       -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Flip.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Draggable.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/EaselPlugin.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/MotionPathPlugin.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/PixiPlugin.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
-    
-    <!-- my scripts link -->
-    <script src="./index.js"></script>
-    <!-- mouse effect script -->
-    <script src="./mouse.js"></script>     
-
         
-    </main>  
-<!-- FOOTER area -->
-    <footer>
+        <!-- My Services -->
         
-        <p>&#169 2022 All Rights Reserved. </p>
-    </footer>
-</div>
-</body>
-</html>
+        <section class="my-services" id="services">
+            <h2 class="section__title section__title--services">What I Do</h2>
+            <!-- the group of all services -->
+            <div class="services">
+                
+                <div class='service'>
+                    <h3>Web Development</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. </p>
+                    </div> <!-- end service -->
+                    <div class='service'>
+                        <h3>E-Commerce</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. </p>
+                        </div> <!-- end service -->
+                        <div class='service'>
+                            <h3>Audio & Video Production</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. </p>
+                            </div> <!-- end service -->
+                        </div> <!-- end services group -->
+                        <a href="#work" class='btn'>My Work</a>
+                    </section>
+                    
+                    <!-- About Me -->
+                    <section class="about-me" id="about">
+                        <h2 class='section__title section__title--about '>Who Am I</h2>
+                        <p class='section__subtitle section__subtitle--about'>Developer and Content Creator</p>
+                        <div class="about-me__body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                    magna
+                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat.</p>
+                                </div>
+                                <img src="img/dev-jane-02.jpg" alt="Jane leaning against a bus" class="about-me__img">
+                            </section>
+                            
+                            <!-- my Work -->
+                            <section class="my-work" id='work'>
+                                <h2 class="section__title section__title--work">My Work</h2>
+                                <p class='section__subtitle section__subtitle--work'>A selection of my range of work</p>
+                                <div class="portfolio">
+                                    
+                                    <!-- portfolio item 01-->
+                                    <a href="portfolio-item.html" class="portfolio__item">
+                                        <img src="./images/portfolio-01.jpg" alt="" class="portfolio__img">
+                                    </a>
+                                    
+                                    <!-- portfolio item 02-->
+                                    <a href="portfolio-item.html" class="portfolio__item">
+                                        <img src="./images/portfolio-02.jpg" alt="" class="portfolio__img">
+                                    </a>
+                                    
+                                    <!-- portfolio item 03-->
+                                    <a href="portfolio-item.html" class="portfolio__item">
+                                        <img src="./images/portfolio-03.jpg" alt="" class="portfolio__img">
+                                    </a>
+                                    
+                                    <!-- portfolio item 04-->
+                                    <a href="portfolio-item.html" class="portfolio__item">
+                                        <img src="./images/portfolio-04.jpg" alt="" class="portfolio__img">
+                                    </a>
+                                    
+                                    <!-- portfolio item 05-->
+                                    <a href="portfolio-item.html" class="portfolio__item">
+                                        <img src="./images/portfolio-05.jpg" alt="" class="portfolio__img">
+                                    </a>
+                                    
+                                    <!-- portfolio item 06-->
+                                    <a href="portfolio-item.html" class="portfolio__item">
+                                        <img src="./images/portfolio-06.jpg" alt="" class="portfolio__img">
+                                    </a>
+                                    
+                                    <!-- portfolio item 07-->
+                                    <a href="portfolio-item.html" class="portfolio__item">
+                                        <img src="./images/portfolio-07.jpg" alt="" class="portfolio__img">
+                                    </a>
+                                    
+                                    <!-- portfolio item 08-->
+                                    <a href="portfolio-item.html" class="portfolio__item">
+                                        <img src="./images/portfolio-08.jpg" alt="" class="portfolio__img">
+                                    </a>
+                                    
+                                    <!-- portfolio item 09-->
+                                    <a href="portfolio-item.html" class="portfolio__item">
+                                        <img src="./images/portfolio-09.jpg" alt="" class="portfolio__img">
+                                    </a>
+                                    
+                                    <!-- portfolio item 0 0-->
+                                    <a href="portfolio-item.html" class="portfolio__item">
+                                        <img src="./images/portfolio-10.jpg" alt="" class="portfolio__img">
+                                    </a>
+                                    
+                                </div> <!-- end portfolio section -->
+                            </section>
+                            
+                            <footer class="footer">
+                                <!-- replace with email address and link -->
+                                <a href="mailto:emilio@emilioguarino.com" class="footer__link">emilio@emilioguarino.com</a>
+                                <!-- replace these with whatever makes sense -->
+                                <ul class="social-list">
+                                    <li class="social-list__item">
+                                        
+                                        <a href="https://www.twitter.com" class="social-list__link"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li class="social-list__item"><a href="http://www.github.com" class="social-list__link"><i
+                                            class="fa-brands fa-github"></i></a></li>
+                                            <li class="social-list__item"><a href="https://www.linkedin.com" class="social-list__link"><i
+                                                class="fa-brands fa-linkedin"></i></a></li>
+                                                <li class="social-list__item"><a href="https://www.instagram.com/" class="social-list__link"><i
+                                                    class="fa-brands fa-instagram"></i></a></li>
+                                                    
+                                                </ul>
+                                            </footer>
+                                            
+                                            
+                                        </div>
+                                        <!-- gsap CDN import code       -->
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Flip.min.js"></script>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Draggable.min.js"></script>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/EaselPlugin.min.js"></script>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/MotionPathPlugin.min.js"></script>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/PixiPlugin.min.js"></script>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+                                        
+                                        <!-- my scripts link -->
+                                        <script src="./index.js"></script>
+                                        <!-- mouse effect script -->
+                                        <script src="./mouse.js"></script>     
+                                        
+                                        
+                                    </main>  
+                                    
+                                </div>
+                            </div>
+                                
+                                
+                                
+                                
+                            </body>
+                            </html>

@@ -17,7 +17,7 @@ const particlesArray = [];
 window.addEventListener("resize", () => {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
-  //  ctx.fillStyle = "white"
+//    ctx.fillStyle = "white"
 // ctx.fillRect(10, 10, 150, 50)
 // uncomment the above two lines to see how canvas deals with resizing
 })
@@ -45,8 +45,19 @@ canvas.addEventListener('mousemove', (event)=>{
     // control how many particles are generated on mousemove here
     for (let i = 0; i < 1; i++){
         particlesArray.push(new Particle)
-    }}
-        )
+        
+    }
+    
+
+})
+
+
+
+document.addEventListener('mousemove', (event => {
+    let hslColor = 'hsl(' + hue + ', 100%, 70%)'
+    const r = document.querySelector(':root')
+    r.style.setProperty('--clr-accent', hslColor)
+}))
 
 
 
@@ -54,13 +65,13 @@ canvas.addEventListener('mousemove', (event)=>{
 // inside the constructor() is all of their properties. 
 class Particle {
     constructor() {
-       this.x = mouse.x;
-      this.y = mouse.y ; 
-   
-       this.size = Math.random() * 7 + 1;
-       this.speedX = Math.random() * 3 - 2
-       this.speedY = Math.random() * 3 - 2
-       this.color = 'hsl(' + hue + ', 100%, 50%)'
+        this.x = mouse.x;
+        this.y = mouse.y ; 
+        
+        this.size = Math.random() * 10 + 1;
+        this.speedX = Math.random() * 3 - 2
+        this.speedY = Math.random() * 3 - 2
+        this.color = 'hsl(' + hue + ', 100%, 50%)'
     }
     // methods are functions on an object. 
     // This is a method on the Particle object.
@@ -68,7 +79,7 @@ class Particle {
         this.x += this.speedX
         this.y += this.speedY
         if(this.size > 0.2) this.size-= 0.1;
-
+        
     }
     draw() {
         ctx.fillStyle = this.color
@@ -81,7 +92,6 @@ class Particle {
     }
     
 }
-console.log(particlesArray)
 
 
 
@@ -91,7 +101,7 @@ function handleParticle() {
         particlesArray[i].update()
         particlesArray[i].draw()
         
-         for (let j = i; j < particlesArray.length; j++  ) {
+        for (let j = i; j < particlesArray.length; j++  ) {
             const dx = particlesArray[i].x - particlesArray[j].x
             const dy = particlesArray[i].y - particlesArray[j].y 
             const distance = Math.sqrt(dx**2 + dy**2)
@@ -109,24 +119,28 @@ function handleParticle() {
         if(particlesArray[i].size <= 0.4){
             particlesArray.splice(i, 1);
             i--
-            }
         }
-
+    }
+    
 }
 
 
 
 function animate() {
-   // this clears the entire canvas
-
-   ctx.clearRect(0, 0, canvas.width, canvas.height)
-// ctx.fillStyle = 'rgba(0,0,0,0.01'
-// ctx.fillRect(0, 0, canvas.width, canvas.height) 
-handleParticle()
-hue+=4
-   //this function calls a function we pass as an arg 1 time
-   //since it calls itself, a loop is created
+    // this clears the entire canvas
+    
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    // ctx.fillStyle = 'rgba(0,0,0,0.01'
+    // ctx.fillRect(0, 0, canvas.width, canvas.height) 
+    handleParticle()
+    hue+=4
+    
+    //this function calls a function we pass as an arg 1 time
+    //since it calls itself, a loop is created
     requestAnimationFrame(animate) 
+    
 } 
 
 animate()
+
+
