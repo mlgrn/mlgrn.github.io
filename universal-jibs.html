@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <!-- need this to make sure site loads properly on mobile or will load zoomed way out -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Portfolio</title>
+    <!-- normalize helps to even out differences between browsers -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+
+
+
+    <!-- update this with preferred fonts for the site -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome kit for icons -->
+    <script src="https://kit.fontawesome.com/e0231dabcc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+        <!-- this is this canvas element for mouse effect -->
+        <canvas id="canvas1"></canvas>
+    <header>
+        <div class='logo'>
+            <a href='index.html'><h3>#emilio-guarino</h3></a>
+        </div>
+        <button class='nav-toggle' aria-label="toggle navigation">
+            <span class='hamburger'></span>
+        </button>
+        <nav class='nav'>
+            <ul class='nav__list'>
+                <li class='nav__item'> <a href="index.html" class='nav__link'>Home</a></li>
+                <li class='nav__item'> <a href="index.html#services" class='nav__link'>Services</a></li>
+                <li class='nav__item'> <a href="index.html#about" class='nav__link'>About</a></li>
+                <li class='nav__item'> <a href="index.html#work" class='nav__link'>Work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- introduction -->
+    <section class="intro">
+        <h2 class='section__title section__title--intro'>
+            <strong>Universal Jibs</strong>
+        </h2>
+        <p class="section__subtitle section__subtitle--intro">SEO & Site Optimization</p>
+        <img src="images/sony-camera.png" alt="a picture of Jane Smith smiling" class="intro__img">
+    </section>
+
+
+    <div class='portfolio-item-individual'>
+        <h3>What They Do</h3>
+        <p>Universal Jibs is a video production company that specializes in providing camera jibs, drones, and operators for live and studio production.</p>
+        <img src="img/portfolio-10.jpg" alt="">
+
+        <h3>How I helped</h3>
+        <p>The owner of the company, Steve Marchiarullo, wanted to reach more directors and production companies who hire jib operators regularly.
+        </p>
+        <p>A few simple changes made a tremendous difference. We added a web form to the front page of the site for people to request a quote which helps people looking to hire get what they need right away: contact with a human.</p>
+        <p>On a longer term basis, I helped them find niche articles to write, optimize site URL structure, make the site easily crawlable by Google, and identify the high value search terms they need to be ranking for.</p>
+        <p>As of early 2022, if you search for "jib operator NYC" (and a few other relevant phrases!), Universal Jibs is right where any business wants to be: on the first page of Google.</p>
+
+    </div>
+
+
+
+
+    <footer class="footer">
+        <!-- replace with email address and link -->
+        <a href="mailto:hello@jane.dev" class="footer__link">emilio@emilioguarino.com</a>
+        <!-- replace these with whatever makes sense -->
+        <ul class="social-list">
+            <!-- <li class="social-list__item"><a href="https://twitter.com" class="social-list__link"><i
+                        class="fa-brands fa-twitter"></i></a></li> -->
+            <li class="social-list__item"><a href="http://github.com" class="social-list__link"><i
+                        class="fa-brands fa-github"></i></a></li>
+            <li class="social-list__item"><a href="https://linkedin.com" class="social-list__link"><i
+                        class="fa-brands fa-linkedin"></i></a></li>
+            <!-- <li class="social-list__item"><a href="https://instagram.com" class="social-list__link"><i
+                        class="fa-brands fa-instagram"></i></a></li> -->
+
+        </ul>
+    </footer>
+    
+
+
+    <!-- gsap CDN import code       -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/EaselPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/PixiPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+
+    <!-- my scripts link -->
+    <script src="./index.js"></script>
+    <!-- mouse effect script -->
+    <script src="./mouse.js"></script>
+
+</body>
+
+</html>
