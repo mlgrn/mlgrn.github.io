@@ -481,10 +481,15 @@ header {
 .portfolio__item {
   background: var(--clr-accent);
   overflow: hidden;
+  margin: 5%;
+  text-decoration: none;
 }
 
 .portfolio__img {
   transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+  height:100%;
+
+  
 }
 
 .portfolio__item:focus {
@@ -493,10 +498,17 @@ header {
 }
 
 .portfolio__img:hover,
-.portfolio__item:focus .portfolio__img {
-  transform: scale(1.2);
+.portfolio__item:focus .portfolio__img  
+{
+  transform: scale(1.05);
   opacity: 0.75;
 }
+.project-name, .project-name a {
+padding: 0.5em;
+
+}
+
+
 
 /* footer */
 
@@ -542,7 +554,7 @@ header {
 }
 
 /* individual portolio item styles*/
-.portfolio-item-individual {
+/* .portfolio-item-individual {
   padding: 0 2em 2em;
   max-width: 1000px;
   margin: 0 auto;
@@ -552,8 +564,8 @@ header {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
 .portfolio-item-individual img {
-  margin: 0 auto;
+  /* margin: 0 auto; */
 } /* might have to make this a grid if there's a bunch of screenshots */
