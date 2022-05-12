@@ -478,11 +478,12 @@ header {
   /* this is a great method. responsive grid that scales with size */
 }
 
-.portfolio__item {
+.portfolio__item, .portfolio__item a {
   background: var(--clr-accent);
   overflow: hidden;
   margin: 5%;
   text-decoration: none;
+  color: rgb(37, 33, 33);
 }
 
 .portfolio__img {
