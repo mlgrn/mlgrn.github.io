@@ -1,12 +1,14 @@
-// this is basically boilerplate to set up HTML canvas.
+// boilerplate to set up HTML canvas.
 const canvas = document.getElementById("canvas1");
 
 // getContext can be passed 2d or WebGL.
 // This ctx (short for context)variable will return an object.
 // basically a bunch of properites we can change to do stuff
 const ctx = canvas.getContext("2d");
+canvas.height = $(".intro").outerHeight();
+// canvas.width = $(".intro").width();
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+// canvas.height = window.innerHeight;
 let hue = 0;
 const particlesArray = [];
 
@@ -16,7 +18,7 @@ const particlesArray = [];
 
 window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  canvas.height = $(".intro").outerHeight();
   //    ctx.fillStyle = "white"
   // ctx.fillRect(10, 10, 150, 50)
   // uncomment the above two lines to see how canvas deals with resizing
@@ -44,7 +46,7 @@ canvas.addEventListener("mousemove", (event) => {
   }
 });
 
-// changes the --clr-accent css variable as the mouse moves to current value of hue. Commented out original function and moved it into a handler function to add multiple eventlisteners.
+// changes the --clr-accent css variable as the mouse moves to current value of hue. Commented out original function and moved it into a handler function to add multiple eventlisteners. Wanted colors to change on mobile Scroll.
 document.addEventListener("mousemove", colorHandler);
 document.addEventListener("scroll", colorHandler);
 

@@ -30,9 +30,7 @@
 <body>
 
     <header>
-        <!-- this is this canvas element for mouse effect -->
-    <canvas id="canvas1"></canvas>
-        <div class='logo'>
+        <div class='logo' id="logo">
             <h3>#emilio-guarino</h3>
         </div>
         <button class='nav-toggle' aria-label="toggle navigation">
@@ -47,18 +45,20 @@
             </ul>
         </nav>
     </header>
-
+    
+    <!-- this is this canvas element for mouse effect -->
+<canvas id="canvas1"></canvas>
     <!-- introduction -->
     <section class="intro">
         <h2 class='section__title section__title--intro'>
             <strong>Tenzies</strong>
         </h2>
         <p class="section__subtitle section__subtitle--intro">React Dice Game</p>
-        <img src="images/tenzies_game_screenshot.png" alt="a picture of Jane Smith smiling" class="intro__img">
+        <img src="images/tenzies_game_screenshot.png" alt="a picture of the tenzies game" class="intro__img">
     </section>
 
 
-    <div class='portfolio-item-individual'>
+    <div class='portfolio-item-individual' id="content-top">
         <h3>What Is Tenzies?</h3>
         <p>Tenzies is a dice game where the player chooses a die face to match, for example #6, and keeps rolling the other dice until they all match. </p>
         <h3>How was this made?</h3>

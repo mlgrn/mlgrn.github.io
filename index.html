@@ -29,34 +29,34 @@
     
   
     <div id="entire-page"> <!-- used for loader fade in -->
-        <!-- this is this canvas element for mouse effect -->
-        <canvas id="canvas1"></canvas>
-
-    <!-- Header and nav -->
-    <header>
-        <div class='logo'>
-        <h3>#emilio-guarino</h3></div>
-            <button class='nav-toggle' aria-label="toggle navigation">
-                <span class='hamburger'></span>
-            </button>
-            <nav class='nav'>
-                <ul class='nav__list'>
-                    <li class='nav__item'> <a href="#home" class='nav__link'>Home</a></li>
-                    <li class='nav__item'> <a href="#services" class='nav__link'>What I Do</a></li>
-                    <li class='nav__item'> <a href="#about" class='nav__link'>About</a></li>
-                    <li class='nav__item'> <a href="#work" class='nav__link'>Work</a></li>
-                </ul>
-            </nav>
-  
-        </header>
         
+        <!-- Header and nav -->
+        <header>
+            <div class='logo' id="logo">
+                <h3>#emilio-guarino</h3></div>
+                <button class='nav-toggle' aria-label="toggle navigation">
+                    <span class='hamburger'></span>
+                </button>
+                <nav class='nav'>
+                    <ul class='nav__list'>
+                        <li class='nav__item'> <a href="#home" class='nav__link'>Home</a></li>
+                        <li class='nav__item'> <a href="#services" class='nav__link'>What I Do</a></li>
+                        <li class='nav__item'> <a href="#about" class='nav__link'>About</a></li>
+                        <li class='nav__item'> <a href="#work" class='nav__link'>Work</a></li>
+                    </ul>
+                </nav>
+                
+            </header>
+            
+            <!-- this is this canvas element for mouse effect -->
+            <canvas id="canvas1"></canvas>
         <!-- introduction -->
         <section class="intro" id="home">
             <h1 class='section__title section__title--intro'>
                 Hello, my name is <strong style="font-size: 7rem;">Emilio</strong>
             </h1>
             <p class="section__subtitle section__subtitle--intro">front-end dev/musician/human</p>
-            <img src="images/emilio-smaller.jpg" alt="a picture of Emilio" class="intro__img">
+            <img src="images/emilio-smaller.jpg" alt="a picture of a man on a red background" class="intro__img">
         </section>
         
         <!-- My Services -->
@@ -105,23 +105,31 @@
                                 <div class="portfolio">
                                     
                                     <!-- portfolio item 01-->
-                                    <a href="universal-jibs.html" class="portfolio__item">
+                                    
+                                    
+                                    <a href="universal-jibs.html" class="portfolio__item" style="display: grid; align-items: center; ">
                                     <h3 class="project-name">Universal Live: SEO</h3>
                                 
-                                    <img src="images/sony-camera.png" alt="" class="portfolio__img" style="object-fit: cover ; height: 100%;">
-                                </a>
+                                    <img src="images/sony-camera.png" alt="" class="portfolio__img" style="object-fit: cover; align-self:baseline ; " >
+                                     </a>
                                     
                                     
                                     <!-- portfolio item 02-->
                                     
                                     <a href="tenzies.html" class="portfolio__item">
-                                        <h3 class="project-name">Tenzies: React Browser Game</h3>
+                                        <h3 class="project-name" style="align-self: start;">Tenzies: React Browser Game</h3>
                                     
-                                        <img src="images/tenzies_game_screenshot.png" alt="" class="portfolio__img">
+                                        <img src="images/tenzies_game_screenshot.png" alt="" class="portfolio__img" style="object-fit: cover; align-self:baseline ;">
                                     </a>
                                
-                               
-                                    
+                 
+
+
+
+
+
+
+
                                 </div> 
 
 
