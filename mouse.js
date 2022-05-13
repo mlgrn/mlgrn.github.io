@@ -5,7 +5,7 @@ const canvas = document.getElementById("canvas1");
 // This ctx (short for context)variable will return an object.
 // basically a bunch of properites we can change to do stuff
 const ctx = canvas.getContext("2d");
-canvas.height = $(".intro").outerHeight();
+canvas.height = ($(".intro").outerHeight() / $(".intro").outerHeight()) * 687;
 // canvas.width = $(".intro").width();
 canvas.width = window.innerWidth;
 // canvas.height = window.innerHeight;
@@ -18,7 +18,7 @@ const particlesArray = [];
 
 window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
-  canvas.height = $(".intro").outerHeight();
+  canvas.height = ($(".intro").outerHeight() / $(".intro").outerHeight()) * 687;
   //    ctx.fillStyle = "white"
   // ctx.fillRect(10, 10, 150, 50)
   // uncomment the above two lines to see how canvas deals with resizing

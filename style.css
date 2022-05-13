@@ -103,6 +103,7 @@ this helps us avoid repeating the same values. update as needed  */
   right: 0;
   bottom: 0;
   left: 0;
+/* border: 0.5rem solid rgba(203, 29, 104, 0.6); */
 
 
 }
@@ -174,6 +175,13 @@ h3 {
   font-size: var(--fs-h3);
 }
 
+a {
+  color: #5ac4f1;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
 .section__title {
   margin-bottom: 0.25em;
@@ -345,7 +353,7 @@ header {
       "img subtitle";
     grid-template-columns: min-content max-content;
   }
-
+  
   .intro__img {
     grid-area: img;
     min-width: 250px;
@@ -363,6 +371,7 @@ header {
   }
 }
 
+
 /* my services section */
 
 .my-services {
@@ -370,7 +379,25 @@ header {
   background-size: cover;
   background-blend-mode: overly;
   color: var(--clr-light);
-  text-align: center;
+  text-align: center; 
+}
+
+.project-description {
+ display: flex;
+ flex-direction: column;
+ 
+ background-color: var(--clr-dark);
+ background-size: cover;
+ background-blend-mode: overly;
+ color: var(--clr-light);
+ 
+ 
+}
+
+.project-description h3, p {
+  
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .section__title--services {
