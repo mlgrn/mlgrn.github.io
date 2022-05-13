@@ -17,9 +17,8 @@
         <script src="https://kit.fontawesome.com/e0231dabcc.js" crossorigin="anonymous"></script>
 
         <!-- load jQuery from CDN -->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- mouse effect script -->
-<script src="./mouse.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
 </head>
 <body>
@@ -32,6 +31,9 @@
   
     <div id="entire-page"> <!-- used for loader fade in -->
         
+<!-- this is this canvas element for mouse effect -->
+<canvas id="canvas1"></canvas>
+
         <!-- Header and nav -->
         <header>
             <div class='logo' id="logo">
@@ -50,8 +52,6 @@
                 
             </header>
             
-            <!-- this is this canvas element for mouse effect -->
-            <canvas id="canvas1"></canvas>
         <!-- introduction -->
         <section class="intro" id="home">
             <h1 class='section__title section__title--intro'>
@@ -174,7 +174,8 @@
                                         
                                         <!-- my scripts link -->
                                         <script src="./index.js"></script>
-                                          
+                                        <!-- mouse effect script -->
+                                        <script src="./mouse.js"></script>
                                         
                                         
                                     
