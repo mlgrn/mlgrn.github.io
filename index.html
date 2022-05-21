@@ -103,25 +103,45 @@
                             <!-- my Work -->
                             <section class="my-work" id='work'>
                                 <h2 class="section__title section__title--work">My Work</h2>
-                                <p class='section__subtitle section__subtitle--work'>Projects I've Contributed To</p>
+                                <p class='section__subtitle section__subtitle--work'>See What I Do</p>
                                 <div class="portfolio">
                                     
-                                    <!-- portfolio item 01-->
-                                    
-                                    
-                                    <a href="universal-jibs.html" class="portfolio__item" style="display: grid; align-items: center; ">
-                                    <h3 class="project-name">Universal Live: SEO</h3>
-                                
-                                    <img src="images/sony-camera.png" alt="" class="portfolio__img" style="object-fit: cover; align-self:baseline ; " >
-                                     </a>
+                                    <script>
+                                      function hideTitle(elem) {
+                                        $(elem + " h3").css({"opacity":"0", "transition": "600ms"})
+                                      }
+                                      
+                                      function insertTitle(elem) {
+                                        $(elem + " h3").css({"opacity": "1"})
+                                      }
+
+                                    </script>
+
+                                    <!-- to add a new item, copy the last block and change the id attribute. make the mouseover/out params match -->
+                                     
+                                    <!-- portfolio item 03-->
+                                     <a id='port3' onmouseover="hideTitle('#port3')" onmouseout="insertTitle('#port3')" 
+                                    href="netflix-clone.html" class="portfolio__item" style="display: grid; align-items: center; " >
+                                        <h3 class="project-name">Netflix UI Clone</h3>
+                                        <img src="images/netflix-clone-img/netflix-UI.png" alt="" class="portfolio__img" style="object-fit: cover; align-self:baseline ; " >
+                                         </a>
                                     
                                     
                                     <!-- portfolio item 02-->
+                                    <a id='port2' onmouseover="hideTitle('#port2')" onmouseout="insertTitle('#port2')" 
+                                    href="universal-jibs.html" class="portfolio__item" style="display: grid; align-items: center; " >
+                                    <h3 class="project-name">Universal Live: SEO</h3>
+                                
+                                    <img src="images/sony-camera.png" alt="" class="portfolio__img" style="object-fit: cover; align-self:baseline ; "  >
+                                     </a>
                                     
-                                    <a href="tenzies.html" class="portfolio__item">
-                                        <h3 class="project-name" style="align-self: start;">Tenzies: React Browser Game</h3>
                                     
-                                        <img src="images/tenzies_game_screenshot.png" alt="" class="portfolio__img" style="object-fit: cover; align-self:baseline ;">
+                                    <!-- portfolio item 01-->
+                                    
+                                    <a id='port1' onmouseover="hideTitle('#port1')" onmouseout="insertTitle('#port1')" 
+                                    href="tenzies.html" class="portfolio__item" >
+                                        <h3 class="project-name" style="align-self: start;" >Tenzies: React Browser Game</h3>
+                                        <img src="images/tenzies_game_screenshot.png" alt="" class="portfolio__img" style="object-fit: cover; align-self:baseline ;" >
                                     </a>
                                
                  
