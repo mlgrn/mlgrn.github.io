@@ -405,6 +405,7 @@ header {
 .section__title--services {
   color: var(--clr-accent);
   position: relative;
+
 }
 
 .section__title--services::after {
@@ -415,10 +416,13 @@ header {
   margin: 0.5em auto 1em;
   background: var(--clr-light);
   opacity: 0.5;
+ 
 }
 
 .services {
   margin-bottom: 4em;
+
+  
 }
 
 .service {
@@ -429,19 +433,15 @@ header {
         section to break into columns and not stack vertically. use an @media */
 @media (min-width: 800px) {
   .services {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
     /* max-width: 90%; */
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     margin-bottom: 4em;
   }
 
-  /* the + selector. selects the first .service placed immediately after a .service 
-    this is only selects siblings. cleaner than adding margin to all of them or having 
-    to make a class to select 1-2 of them. much more scalable as you add items! */
-  .service + .service {
-    margin-left: 2em;
-  }
+  
 }
 
 .about-me {
