@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         <title>Emilio Guarino</title>
       </Head>
 
-      
+      <h1 className="text-3xl font-bold underline">this will be a portfolio</h1>
     </div>
   )
 }
