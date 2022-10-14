@@ -14,7 +14,7 @@ const [text, count] = useTypewriter({
 })
 
   return (
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center">
+    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <BackgroundCircles />
         <h1>
             <span>{text}</span>
