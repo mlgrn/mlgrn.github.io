@@ -2,6 +2,7 @@ import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from './BackgroundCircles'
 import Image from 'next/image'
+import Link from 'next/link'
 import EmilioHere from "../images/emilio-smaller.jpg"
 
 
@@ -25,19 +26,36 @@ const [text, count] = useTypewriter({
             <Image src={EmilioHere} alt="picture of emilio" layout='fill' objectFit='contain' className="" />
           </div>        
 
-          <div>
+          <div className="z-20">
             <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[3px]">Music | Web Development | Video Production</h2>
             
             <h1 className="text-5xl lg:text-6xl font-semibold  px-10">
               I am a <span className="mr-1">{text}</span>
               <Cursor cursorColor='#9A21C6'/>
            </h1>
+        
+          <div className="pt-5">
+            
+            <Link href="#experience">
+            <button className="heroButton">Experience</button>
+            </Link>
+            
+            <Link href="#about">
+            <button className="heroButton">About</button>            
+            </Link>
+            
+            <Link href="#skills">
+            <button className="heroButton">Skills</button>            
+            </Link>
+
+            <Link href="#projects">
+            <button className="heroButton">Projects </button>          
+            </Link>
+          
+          </div>
+        
           </div>   
 
-          <div className="heroButton">Experience</div>
-          <div className="heroButton">About</div>
-          <div className="heroButton">Skills</div>
-          <div className="heroButton">Projects </div>
           
     </div>
 
