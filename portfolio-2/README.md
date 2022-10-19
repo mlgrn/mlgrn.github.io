@@ -2,7 +2,7 @@
 
 Made using NextJS, Typescript, and Tailwind. 
 
-## Helpful things to know for updating with new projects or modifiying
+## Helpful quirks to know about for updating with new projects or modifiying
 
 In NextJS, using the `<Image />` component optimizes load time. Don't forget to whitelist URLs of remote images.
 
