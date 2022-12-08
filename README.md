@@ -10,7 +10,7 @@ Image component doesn't seem to like certain Tailwind classes in the wrapper, e.
 
 ## To Add new content
 
-Log into Sanity and and add the content to it's respective category and it will populate on the front end of the site.
+Log into Sanity and add the content to it's respective category and it will populate on the front end of the site.
 
 ## To Add New Categories of to site
 

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm } from "react-hook-form";
+import { sendContactForm } from "../utils/sendContactForm";
 
 type Props = {};
 
@@ -12,12 +13,22 @@ type FormData = {
 };
 
 function ContactMe({}: Props) {
-  const { register, handleSubmit } = useForm<FormData>();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>();
 
-  // This function should ultimately send the email from backend, not open a window in the mail client
-  const onSubmit = handleSubmit((formData) => {
-    window.location.href = `mailto:email@provider.com?subject=${formData.subject}
-    &body= Hi, my name is ${formData.name}. ${formData.message} ${formData.email}`;
+  // email form submission
+  const [formState, setFormState] = useState(false);
+
+  const onSubmit = handleSubmit(async (formData) => {
+    try {
+      await sendContactForm(formData);
+      setFormState(true);
+    } catch (err) {
+      console.log("there was an error");
+    }
   });
 
   return (
@@ -38,27 +49,33 @@ function ContactMe({}: Props) {
           </span>
         </h4>
 
-        <div space-y-10>
+        <p className="text-md text-center m-20">
+          Available for freelance, contract, or full time opportunities.
+        </p>
+
+        {/* <div space-y-10>
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="text-2xl">+123456789</p>
           </div>
-        </div>
+        </div> */}
 
         <div>
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">123 developer street</p>
+            <p className="text-2xl">Remote or Local to NYC area</p>
           </div>
         </div>
 
         <div>
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">email@website.com</p>
+            <p className="text-2xl">emilio at emilioguarino.com</p>
           </div>
         </div>
       </div>
+
+      {formState && <text>Your message has been sent!</text>}
 
       <form
         onSubmit={onSubmit}
@@ -66,31 +83,41 @@ function ContactMe({}: Props) {
       >
         <div className="space-x-2">
           <input
-            {...register("name")}
+            {...register("name", { required: "A name is required" })}
             placeholder="Name"
             className="contactInput"
             type="text"
           />
+          <p>{errors.name?.message}</p>
           <input
-            {...register("email")}
+            {...register("email", { required: "An email is required" })}
             placeholder="Email"
             className="contactInput"
             type="email"
           />
+          <p>{errors.email?.message}</p>
         </div>
 
         <input
-          {...register("subject")}
+          {...register("subject", {
+            required: "A message subject is required",
+          })}
           placeholder="Subject"
           className="contactInput"
           type="text"
         />
+        <p>{errors.subject?.message}</p>
 
         <textarea
-          {...register("message")}
+          {...register("message", {
+            required: "A message is required",
+            minLength: 4,
+          })}
           placeholder="Message"
           className="contactInput"
         />
+        <p>{errors.subject?.message}</p>
+
         <button
           type="submit"
           className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg"

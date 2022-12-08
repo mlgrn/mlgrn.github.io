@@ -5,7 +5,7 @@ import { urlFor } from "../pages/sanity";
 // import ReactPlayer from "react-player";
 import dynamic from "next/dynamic";
 
-// not the ideal way to do it for now, but this is a workaround for the hydration error Next throws when trying to use React Player out of the box
+// not the ideal way to do it for now, but this is a workaround for the hydration error Next throws when trying to use React Player out of the box.
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 type Props = {
@@ -36,7 +36,6 @@ function Music({ music }: Props) {
       >
         {music.map((item) => {
           const videoUrl = item.linkToListen;
-          console.log(videoUrl);
           return (
             <div
               key={item._id}
