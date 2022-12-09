@@ -11,8 +11,8 @@ type Props = {
 function ExperienceCard({ experience }: Props) {
   return (
     <article
-      className="flex flex-col rounded-lg items-center space-y-7 
-    flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40
+      className="flex flex-col rounded-lg items-center space-y-0 
+    flex-shrink-0 w-[500px] h-[650px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-95
     cursor-pointer transition-opacity duration-200 overflow-hidden"
     >
       <motion.div
@@ -25,35 +25,48 @@ function ExperienceCard({ experience }: Props) {
         viewport={{ once: true }}
         className="w-32 h-32 xl:w-[200px] xl:h-[200px] object-cover object-center"
       >
+        {/* main experience icon  */}
         <Image
           src={urlFor(experience?.companyImage).url()}
-          alt="This is an example image"
-          className="rounded-full"
+          alt="This is an experience image"
+          className="rounded-lg"
           height="100vh"
-          width="100vw"
+          width="75vw"
           objectFit="contain"
         />
       </motion.div>
 
       <div className="px-0 md:px-10 ">
-        <h4 className="text-4xl font-light">{experience?.jobTitle}</h4>
-        <p className="font-bold text-2xl mt-1">{experience?.company}</p>
-        <div className="flex space-x-2 my-2 ">
+        {/* Job title */}
+        <h4 className="flex flex-wraptext-xl font-light pl-20 md:text-2xl md:pl-0">
+          {experience?.jobTitle}
+        </h4>
+
+        {/* company */}
+        <p className="font-bold text-xl mt-1 pl-20 md:text-2xl md:pl-0">
+          {experience?.company}
+        </p>
+
+        {/* tech icons */}
+        <div className="flex flex-wrap my-2 pl-20 md:text-2xl md:pl-0">
           {experience.technologies.map((technology) => (
             <img
               key={technology._id}
-              className="h-10 w-10 rounded-full"
+              className="h-10 w-10 rounded-full p-1"
               src={urlFor(technology.image).url()}
             />
           ))}
         </div>
-        <div className="uppercase py-5 text-gray-300">
+        {/* experience info  */}
+        <div className="uppercase py-5 text-gray-300 pl-20 md:text-xl md:pl-0">
           {new Date(experience.dateStarted).toDateString()} -{" "}
           {experience.isCurrentlyWorkingHere
             ? "Present"
             : new Date(experience.dateEnded).toDateString()}
         </div>
-        <ul className="list-disc space-y-4 ml-5 max-h-96 text-lg h-[30vh]">
+
+        {/* experience points  */}
+        <ul className="list-disc space-y-4 ml-5 max-h-96 text-sm h-[30vh] pl-20 pr-20 md:text-lg md:pl-0 overflow-auto">
           {experience.points.map((point, i) => (
             <li key={i}>{point}</li>
           ))}

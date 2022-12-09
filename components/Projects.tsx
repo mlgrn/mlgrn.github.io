@@ -15,11 +15,14 @@ function Projects({ projects }: Props) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row 
-    max-w-full justify-evenly mx-auto items-center z-0 "
+    max-w-full justify-evenly mx-auto items-center"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-24 uppercase text-gray-500 text-2xl ">
         Web Projects
       </h3>
+      <h4 className="absolute top-36 lowercase text-gray-500 text-sm ">
+        Swipe to see more
+      </h4>
 
       <div
         className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20
@@ -36,18 +39,19 @@ function Projects({ projects }: Props) {
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              className="pt-5"
             >
               <Image
                 src={urlFor(project?.image).url()}
                 alt="project image"
                 objectFit="contain"
-                height="400px"
-                width="600px"
+                height="300vh"
+                width="600vw"
               />
             </motion.div>
 
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl ">
-              <h4 className="text-4xl font-semibold text-center ">
+            <div className="space-y-3 px-0 md:px-10 max-w-6xl ">
+              <h4 className="text-lg md:text-2xl font-semibold text-center ">
                 <span className="underline decoration-[#F7AB0A]/50">
                   {" "}
                   Case Study {i + 1} of {projects.length}:
@@ -69,9 +73,14 @@ function Projects({ projects }: Props) {
                 ))}
               </div>
 
-              <p className="text-lg text-center md:text-left">
+              <p className="text-md md:text-lg text-center md:text-left">
                 {project?.summary}
               </p>
+              <h3 className="text-red-700 font-bold">
+                <a href={project?.linkToBuild} rel="noreferrer" target="_blank">
+                  Click here to see the {project.title} app
+                </a>
+              </h3>
             </div>
           </div>
         ))}
