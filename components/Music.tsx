@@ -22,13 +22,9 @@ function Music({ music }: Props) {
         Music
       </h3>
 
-      <h2 className="absolute top-[10rem] text-sm uppercase text-gray-500 pb-2 pt-5 tracking-[3px]">
-        Mix, Mastering, Production, and Performance.
+      <h2 className="absolute top-32 text-xs uppercase text-gray-500 pb-2 pt-5 tracking-[3px] text-center">
+        Mix, Mastering, Production, and Performance
       </h2>
-
-      <p className="absolute top-[12rem] text-sm text-gray-500 pb-2 pt-5 tracking-[3px]">
-        Scroll horizontally to hear more.
-      </p>
 
       <div
         className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20
@@ -39,14 +35,14 @@ function Music({ music }: Props) {
           return (
             <div
               key={item._id}
-              className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center 
-            p-20 md:p-44 h-screen "
+              className="w-screen flex-shrink-0 snap-center flex flex-col space-y-1 items-center justify-center 
+            pt-36 p-4 md:p-44 h-screen "
             >
-              <ReactPlayer url={item.linkToListen} />
-              <h4 className="text-4xl font-semibold text-center ">
+              <ReactPlayer url={item.linkToListen} height="50%" width="100%" />
+              <h4 className="text-lg md:text-4xl font-semibold text-center ">
                 {item.title}
               </h4>
-              <p>{item.description}</p>
+              <p className="">{item.description}</p>
             </div>
           );
         })}

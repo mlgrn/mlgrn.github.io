@@ -31,7 +31,7 @@ const About = ({ pageInfo }: Props) => {
         }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className=" mt-40 md:mb-0 flex-shrink-0 lg:w-1/2 lg:h-1/2 md:w-2/3 md:h-2/3  object-cover xl:w-[500px] xl:h-[500px]"
+        className=" mt-40 pt-10  md:mb-0 md:mt-0 flex-shrink-0 lg:w-1/2 lg:h-1/2 md:w-2/3 md:h-2/3  object-cover xl:w-[500px] xl:h-[500px]"
       >
         <Image
           src={urlFor(pageInfo?.heroImage).url()}
@@ -51,7 +51,9 @@ const About = ({ pageInfo }: Props) => {
         <h4 className="text-2xl md:text-4xl font-semibold ">
           My <span className="underline decoration-[#df73ff]">background.</span>
         </h4>
-        <p className="text-base">{pageInfo?.backgroundInformation}</p>
+        <p className="pb-20 text-sm md:text-md">
+          {pageInfo?.backgroundInformation}
+        </p>
       </motion.div>
     </div>
   );

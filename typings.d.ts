@@ -74,3 +74,10 @@ export interface Music extends SanityBody {
     description: string;
     linkToListen: string;
 }
+
+export interface Video extends SanityBody {
+    _type:"video";
+    title:string;
+    description: string;
+    linkToView: string
+}

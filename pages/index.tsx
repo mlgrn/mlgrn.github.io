@@ -10,6 +10,8 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
 import Music from "../components/Music";
+import Video from "../components/Video";
+
 import { ScriptProps } from "next/script";
 import {
   PageInfo,
@@ -18,6 +20,7 @@ import {
   Project,
   Social,
   Music as MusicType,
+  Video as VideoType,
 } from "../typings";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { fetchExperiences } from "../utils/fetchExperiences";
@@ -25,6 +28,7 @@ import { fetchSkills } from "../utils/fetchSkills";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSocial } from "../utils/fetchSocials";
 import { fetchMusic } from "../utils/fetchMusic";
+import { fetchVideo } from "../utils/fetchVideo";
 
 type Props = {
   pageInfo: PageInfo;
@@ -33,6 +37,7 @@ type Props = {
   projects: Project[];
   socials: Social[];
   music: MusicType[];
+  video: VideoType[];
 };
 
 const Home = ({
@@ -42,6 +47,7 @@ const Home = ({
   projects,
   socials,
   music,
+  video,
 }: Props) => {
   return (
     <div
@@ -79,6 +85,10 @@ const Home = ({
         <Music music={music} />
       </section>
 
+      <section id="video" className="snap-start">
+        <Video video={video} />
+      </section>
+
       <section id="contact" className="snap-start">
         <ContactMe />
       </section>
@@ -96,6 +106,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const projects: Project[] = await fetchProjects();
   const socials: Social[] = await fetchSocial();
   const music: MusicType[] = await fetchMusic();
+  const video: VideoType[] = await fetchVideo();
 
   return {
     props: {
@@ -105,6 +116,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       projects,
       socials,
       music,
+      video,
     },
     revalidate: 1,
   };

@@ -30,7 +30,7 @@ function ExperienceCard({ experience }: Props) {
           src={urlFor(experience?.companyImage).url()}
           alt="This is an experience image"
           className="rounded-lg"
-          height="100vh"
+          height="75vh"
           width="75vw"
           objectFit="contain"
         />
@@ -58,7 +58,7 @@ function ExperienceCard({ experience }: Props) {
           ))}
         </div>
         {/* experience info  */}
-        <div className="uppercase py-5 text-gray-300 pl-20 md:text-xl md:pl-0">
+        <div className="uppercase py-1 text-gray-300 pl-20 md:text-xl md:pl-0">
           {new Date(experience.dateStarted).toDateString()} -{" "}
           {experience.isCurrentlyWorkingHere
             ? "Present"

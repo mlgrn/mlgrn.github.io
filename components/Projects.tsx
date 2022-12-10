@@ -15,14 +15,11 @@ function Projects({ projects }: Props) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row 
-    max-w-full justify-evenly mx-auto items-center"
+    max-w-full justify-evenly mx-auto items-center space-y-3"
     >
       <h3 className="absolute top-24 uppercase text-gray-500 text-2xl ">
         Web Projects
       </h3>
-      <h4 className="absolute top-36 lowercase text-gray-500 text-sm ">
-        Swipe to see more
-      </h4>
 
       <div
         className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20
@@ -31,21 +28,21 @@ function Projects({ projects }: Props) {
         {projects?.map((project, i) => (
           <div
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center 
-            p-20 md:p-44 h-screen "
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-1 items-center justify-center 
+            p-10 md:p-44 h-screen "
           >
             <motion.div
               initial={{ y: -300, opacity: 0 }}
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="pt-5"
+              className="pt-10"
             >
               <Image
                 src={urlFor(project?.image).url()}
                 alt="project image"
                 objectFit="contain"
-                height="300vh"
+                height="400vh"
                 width="600vw"
               />
             </motion.div>

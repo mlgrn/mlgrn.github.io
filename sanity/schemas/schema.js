@@ -11,6 +11,7 @@ import pageInfo from "./pageInfo";
 import project from "./project";
 import skill from "./skill";
 import music from "./music";
+import video from "./video";
 
 export default createSchema({
   name: "default",
@@ -22,5 +23,6 @@ export default createSchema({
     project,
     skill,
     music,
+    video,
   ]),
 });
