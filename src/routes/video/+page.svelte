@@ -42,6 +42,10 @@
 	};
 
 	const onSearch = (query: string) => (search = query);
+
+
+
+	
 </script>
 
 <SearchPage title={VideoData.title} {onSearch}>

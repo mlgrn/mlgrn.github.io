@@ -27,6 +27,15 @@
 			data.item?.period.to
 		)}`
 	);
+
+	const embeds = $derived(data.item?.youtubeVideoEmbed ?? []);
+	const gridClass = $derived(
+		embeds.length <= 1
+			? 'grid-cols-1'
+			: embeds.length === 2
+			? 'grid-cols-1 md:grid-cols-2'
+			: 'grid-cols-1 md:grid-cols-2 xl:grid-cols-3'
+	);
 </script>
 
 <BasePage {title}>
@@ -69,7 +78,25 @@
 		<Separator />
 		<div class="flex flex-col gap-2 px-4 pt-4">
 
-			<h1>This is a place where a video block or music player will go</h1>
+
+				{#if embeds.length}
+				<div class={`grid gap-4 ${gridClass}`}>
+				  {#each embeds as src (src)}
+					<div class="relative aspect-video w-full">
+					  <iframe
+						class="absolute inset-0 h-full w-full rounded"
+						src={src}
+						title="YouTube video"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					  ></iframe>
+					</div>
+				  {/each}
+				</div>
+			  {/if}
+
 
 			{#if data.item.screenshots && data.item.screenshots.length > 0}
 				<Muted>Screenshots</Muted>

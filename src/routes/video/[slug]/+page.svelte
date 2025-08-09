@@ -27,6 +27,20 @@
 			data.item?.period.to
 		)}`
 	);
+
+	const yt = $derived(data.item?.youtubeVideoEmbed ?? []);
+  const vi = $derived(data.item?.vimeoVideoEmbed ?? []);
+  const embeds = $derived([...yt, ...vi]);
+
+  const gridClass = $derived(
+    embeds.length <= 1
+      ? 'grid-cols-1'
+      : embeds.length === 2
+      ? 'grid-cols-1 md:grid-cols-2'
+      : 'grid-cols-1 md:grid-cols-2 xl:grid-cols-3'
+  );
+
+	
 </script>
 
 <BasePage {title}>
@@ -67,6 +81,29 @@
 			<EmptyMarkdown />
 		{/if}
 		<Separator />
+
+
+		{#if embeds.length}
+		<div class={`grid gap-4 ${gridClass}`}>
+		  {#each embeds as src (src)}
+			<div class="relative aspect-video w-full">
+			  <iframe
+				class="absolute inset-0 h-full w-full rounded"
+				src={src}
+				title="Video"
+				frameborder="0"
+				loading="lazy"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				referrerpolicy="strict-origin-when-cross-origin"
+				allowfullscreen
+			  ></iframe>
+			</div>
+		  {/each}
+		</div>
+	  {/if}
+
+
+
 		<div class="flex flex-col gap-2 px-4 pt-4">
 			{#if data.item.screenshots && data.item.screenshots.length > 0}
 				<Muted>Screenshots</Muted>

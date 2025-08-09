@@ -4,74 +4,72 @@ import type { Project } from './types';
 
 const items: Array<Project> = [
 	{
-		slug: 'video-project',
+		slug: 'james-blake-life-round-here',
 		color: '#5e95e3',
 		description:
-			'this is a video project page now',
+			'I was one of two camera operators for this live stream of James Blake performing "Life Round Here" from Amazon Music Studios. This was broadcast live to the front page of Twitch.',
 		shortDescription:
-			'this is now a video project page',
+			'Camera work for live stream of James Blake performing Life Round Here from Amazon Music Studios',
 		links: [
-			{ to: 'https://github.com/', label: 'GitHub' },
-			{ to: 'https://github.com/RiadhAdrani/slick-portfolio-svelte', label: 'Reporsitory' },
-			{ to: 'https://svelte.dev/', label: 'Svelte' },
-			{ to: 'https://www.shadcn-svelte.com/', label: 'Shadcn Svelte' }
+			{ to: 'https://player.vimeo.com/video/721299289?h=1e26c2950e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share', label: 'GitHub' },
+			
 		],
 		logo: Assets.Unknown,
-		name: 'THis is a video project',
+		name: 'James Blake Live',
 		period: {
-			from: new Date()
+			from: new Date(2021, 8, 1),
+			to: new Date(2021, 8, 1)
 		},
-		skills: getSkills('angular', 'ts', 'tailwind'),
-		type: 'Website Template',
-		basePath: 'video'
+		skills: getSkills('cam-op'),
+		type: 'Video Production',
+		basePath: '',
+		vimeoVideoEmbed: ['https://player.vimeo.com/video/721299289?h=1e26c2950e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'],
+		
 	},
 	{
-		slug: 'slick-portfolio-svelte',
+		slug: 'bloomberg-phil',
 		color: '#ff3e00',
 		description:
-			'A Vercel-like developer portfolio website template made with Typescript and SvelteKit.',
+			'One of 2 camera operators for a Bloomberg Philanthropies event in Baltimore, MD. Filmed using Sony PMW 300 XDCAMs',
 		shortDescription:
-			'video project 2',
-		links: [{ to: 'https://github.com/RiadhAdrani/slick-portfolio-svelte', label: 'GitHub' }],
-		logo: Assets.Svelte,
-		name: 'Slick Portfolio',
+			'One of 2 camera operators for a Bloomberg Philanthropies event in Baltimore, MD.',
+		links: [{ to: 'https://player.vimeo.com/video/721290246?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share', label: 'Vimeo' }],
+		logo: Assets.Unknown,
+		name: 'Bloomberg Philanthropies',
 		period: {
-			from: new Date()
+			from: new Date(2019,7,1),
+			to: new Date(2019,7,3)
 		},
-		skills: getSkills('svelte', 'ts', 'tailwind', 'sass'),
-		type: 'Website Template',
-		basePath: 'video',
-		screenshots: [
-			{
-				label: 'screen 1',
-				src: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZ3JhbW1pbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60'
-			},
-			{
-				label: '2',
-				src: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZ3JhbW1pbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60'
-			},
-			{
-				label: '3',
-				src: 'https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2dyYW1taW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60'
-			},
-			{
-				label: '4',
-				src: 'https://images.unsplash.com/photo-1542903660-eedba2cda473?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2dyYW1taW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60'
-			},
-			{
-				label: '5',
-				src: 'https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2dyYW1taW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60'
-			},
-			{
-				label: '6',
-				src: 'https://images.unsplash.com/photo-1585079542156-2755d9c8a094?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHByb2dyYW1taW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60'
-			}
-		]
+		skills: getSkills('cam-op'),
+		type: 'Video Production',
+		basePath: '',
+		vimeoVideoEmbed: ['https://player.vimeo.com/video/721290246?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'],
+	},
+	{
+		slug: 'vision-mag',
+		color: '#ff3e00',
+		description:
+			'One of 2 camera operators for a Bloomberg Philanthropies event in Baltimore, MD. Filmed using Sony PMW 300 XDCAMs',
+		shortDescription:
+			'Promotional trailer for a music production product.',
+		links: [{ to: ' https://player.vimeo.com/video/504562182?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share', label: 'Vimeo' }],
+		logo: Assets.Unknown,
+		name: 'VISION MAGNET Trailer',
+		period: {
+			from: new Date(2019,7,1),
+			to: new Date(2019,7,3)
+		},
+		skills: getSkills('cam-op'),
+		type: 'Video Production',
+		basePath: '',
+		vimeoVideoEmbed: [' https://player.vimeo.com/video/504562182?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin'],
 	}
 ];
 
-const title = 'Projects';
+const title = 'Video Production';
 
 const VideoData = { title, items };
 
 export default VideoData;
+
+// https://player.vimeo.com/video/504562182?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin
