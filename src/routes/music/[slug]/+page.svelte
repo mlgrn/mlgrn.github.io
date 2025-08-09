@@ -68,6 +68,9 @@
 		{/if}
 		<Separator />
 		<div class="flex flex-col gap-2 px-4 pt-4">
+
+			<h1>This is a place where a video block or music player will go</h1>
+
 			{#if data.item.screenshots && data.item.screenshots.length > 0}
 				<Muted>Screenshots</Muted>
 				<div class="grid grid-cols-1 gap-2 py-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

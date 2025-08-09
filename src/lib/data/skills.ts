@@ -101,6 +101,25 @@ const items = [
 		category: 'music'
 	}),
 
+	defineSkill({
+		slug: 'mixing',
+		color: 'blue',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		logo: Assets.JavaScript,
+		name: 'Mixing',
+		category: 'music'
+	}),
+	defineSkill({
+		slug: 'Mastering',
+		color: 'red',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		logo: Assets.JavaScript,
+		name: 'Mastering',
+		category: 'music'
+	}),
+
 
 	defineSkill({
 		slug: 'ableton',
@@ -172,6 +191,16 @@ const items = [
 	}),
 
 	defineSkill({
+		slug: 'Camera Operator',
+		color: 'green',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		logo: Assets.JavaScript,
+		name: 'Camera Operator',
+		category: 'video'
+	}),
+
+	defineSkill({
 		slug: 'photoshop',
 		color: 'yellow',
 		description:
@@ -236,7 +265,26 @@ const items = [
 		logo: Assets.Svelte,
 		name: 'Svelte',
 		category: 'tech'
-	})
+	}),
+
+	defineSkill({
+		slug: 'React',
+		color: 'blue',
+		description: svelteMd,
+		logo: Assets.Svelte,
+		name: 'React',
+		category: 'tech'
+	}),
+
+	defineSkill({
+		slug: 'Typescript',
+		color: 'blue',
+		description: svelteMd,
+		logo: Assets.Svelte,
+		name: 'Typescript',
+		category: 'tech'
+	}),
+
 ] as const;
 
 const SkillsData = {
