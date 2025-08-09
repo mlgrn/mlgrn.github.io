@@ -7,11 +7,15 @@ const items: Array<{
 	icon: `i-carbon-${string}`;
 	href: string;
 }> = [
-	{ title: 'Skills', icon: 'i-carbon-assembly-cluster', href: '/skills' },
+	
 	{ title: 'Projects', icon: 'i-carbon-cube', href: '/projects' },
-	{ title: 'Experience', icon: 'i-carbon-development', href: '/experience' },
+	{ title: 'Video', icon: 'i-carbon-video', href: '/video' },
+	{ title: 'Music', icon: 'i-carbon-music', href: '/music' },
+//	{ title: 'Experience', icon: 'i-carbon-development', href: '/experience' },
+// { title: 'Resume', icon: 'i-carbon-document', href: '/resume' },
+	{ title: 'Skills', icon: 'i-carbon-assembly-cluster', href: '/skills' },
 	{ title: 'Education', icon: 'i-carbon-education', href: '/education' },
-	{ title: 'Resume', icon: 'i-carbon-document', href: '/resume' }
+
 ];
 
 const NavBarData = { left, items };

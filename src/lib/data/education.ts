@@ -6,7 +6,7 @@ const title = 'Education';
 const items: Array<Education> = [
 	{
 		degree: 'Bachelor of Music',
-		description: 'Studied with Mike Richmond, Conrad Herwig',
+		description: '',
 		location: 'New Brunswick, NJ, USA',
 		logo: Assets.Unknown,
 		name: '',

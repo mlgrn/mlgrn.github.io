@@ -26,7 +26,7 @@
 	import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
 	import Muted from '../ui/typography/muted.svelte';
 
-	const { project }: { project: Project } = $props();
+	const { project, basePath = 'projects' }: { project: Project; basePath?: string } = $props();
 
 	let from = $derived(getMonthAndYear(project.period.from));
 	let to = $derived(getMonthAndYear(project.period.to));
@@ -36,7 +36,7 @@
 <FancyCard
 	color={project.color}
 	class="flex h-full flex-col"
-	href={href(`/projects/${project.slug}`)}
+	href={href(`/${basePath}/${project.slug}`)}
 >
 	<CardHeader class="flex w-full flex-col gap-4">
 		<Avatar>

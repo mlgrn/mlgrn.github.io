@@ -4,26 +4,25 @@ import type { Project } from './types';
 
 const items: Array<Project> = [
 	{
-		slug: 'slick-portfolio-angular',
+		slug: 'life-so-simple',
 		color: '#5e95e3',
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non dolores voluptatibus vitae praesentium aperiam, iure laboriosam repellendus sunt explicabo pariatur totam enim, nihil animi quisquam. Sit vero quod laborum!',
+			'Life So Simple...From Birth to Death is an hour long concert suite for 30 piece chamber orchestra co-written with Michael Folmer Hansen.',
 		shortDescription:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non dolores voluptatibus vitae praesentium aperiam, iure laboriosam repellendus sunt explicabo pariatur totam enim, nihil animi quisquam. Sit vero quod laborum!',
+			'60 minute concert suite for 30 piece chamber orchestra co-written with Michael Folmer Hansen.',
 		links: [
-			{ to: 'https://github.com/', label: 'GitHub' },
-			{ to: 'https://github.com/RiadhAdrani/slick-portfolio-svelte', label: 'Reporsitory' },
-			{ to: 'https://svelte.dev/', label: 'Svelte' },
-			{ to: 'https://www.shadcn-svelte.com/', label: 'Shadcn Svelte' }
+			{ to: 'https://www.youtube.com/watch?v=eyiDHXhpp94', label: 'YouTube' },
+			
 		],
 		logo: Assets.Unknown,
-		name: 'Slick Portfolio With Svelte',
+		name: 'Life So Simple...',
 		period: {
-			from: new Date()
+			from: new Date(2024, 2,1),
+			to: new Date(2024, 8,1)
 		},
-		skills: getSkills('angular', 'ts', 'tailwind'),
-		type: 'Website Template',
-		basePath: ''
+		skills: getSkills('comp'),
+		type: 'Website Template',	
+		basePath:''
 	},
 	{
 		slug: 'slick-portfolio-svelte',
@@ -31,7 +30,7 @@ const items: Array<Project> = [
 		description:
 			'A Vercel-like developer portfolio website template made with Typescript and SvelteKit.',
 		shortDescription:
-			'A Vercel-like developer portfolio website template made with Typescript and SvelteKit.',
+			'MUSIC project 2',
 		links: [{ to: 'https://github.com/RiadhAdrani/slick-portfolio-svelte', label: 'GitHub' }],
 		logo: Assets.Svelte,
 		name: 'Slick Portfolio',
@@ -40,7 +39,7 @@ const items: Array<Project> = [
 		},
 		skills: getSkills('svelte', 'ts', 'tailwind', 'sass'),
 		type: 'Website Template',
-		basePath: '',
+		basePath:'',
 		screenshots: [
 			{
 				label: 'screen 1',
@@ -67,11 +66,13 @@ const items: Array<Project> = [
 				src: 'https://images.unsplash.com/photo-1585079542156-2755d9c8a094?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHByb2dyYW1taW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60'
 			}
 		]
+		
 	}
+	
 ];
 
-const title = 'Projects';
+const title = 'Music';
 
-const ProjectsData = { title, items };
+const MusicData = { title, items };
 
-export default ProjectsData;
+export default MusicData;

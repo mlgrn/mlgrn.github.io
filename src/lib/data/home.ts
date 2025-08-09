@@ -11,7 +11,7 @@ const hero: {
 } = {
 	title: `${BaseData.fullName}`,
 	description:
-		'Musician and Creative Technologist.',
+		'Musician and Creative Technologist. I play multiple instruments, compose & produce music, create videos, and use computers to solve creative problems.',
 	links: [
 		{ label: 'GitHub', href: 'https://github.com', icon: 'i-carbon-logo-github' },
 		{ label: 'Email', href: 'mailto:emilio.guarino@gmail.com', icon: 'i-carbon-at' }
