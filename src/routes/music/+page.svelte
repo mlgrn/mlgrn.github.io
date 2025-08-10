@@ -61,6 +61,8 @@
 				>
 			{/each}
 		</div>
+		<h2 class="text-2l font-bold">Click on a project card for more information</h2>
+
 		{#if result.length === 0}
 			<EmptyResult />
 		{:else}
@@ -72,3 +74,5 @@
 		{/if}
 	</div>
 </SearchPage>
+
+

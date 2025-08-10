@@ -25,6 +25,7 @@
 	import Separator from '../ui/separator/separator.svelte';
 	import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
 	import Muted from '../ui/typography/muted.svelte';
+	import P from '../ui/typography/p.svelte';
 
 	const { project, basePath = 'projects' }: { project: Project; basePath?: string } = $props();
 
@@ -39,12 +40,50 @@
 	href={href(`/${basePath}/${project.slug}`)}
 >
 	<CardHeader class="flex w-full flex-col gap-4">
+		{#if project.logo != Assets.Unknown}
 		<Avatar>
 			<AvatarFallback>
 				<img src={Assets.Unknown.light} alt={project.name} />
 			</AvatarFallback>
 			<AvatarImage src={$mode === 'dark' ? project.logo.dark : project.logo.light} />
 		</Avatar>
+		{/if}
+		
+		{#if project.screenshots && project.screenshots.length >= 1}
+			<img src={project.screenshots[0].src} alt={project.screenshots[0].label} />
+		{/if}
+
+		{#if project.youtubeVideoEmbed}
+		<div class="relative w-full h-0 pb-[56.25%]">
+			<iframe
+				class="absolute inset-0 w-full h-full rounded"
+				src={project.youtubeVideoEmbed[0]}
+				title="Video"
+				frameborder="0"
+				loading="lazy"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				referrerpolicy="strict-origin-when-cross-origin"
+				allowfullscreen
+			></iframe>
+		</div>
+		{/if}
+
+		{#if project.vimeoVideoEmbed}
+		<div class="relative w-full h-0 pb-[56.25%]">
+			<iframe
+				class="absolute inset-0 w-full h-full rounded"
+				src={project.vimeoVideoEmbed[0]}
+				title="Video"
+				frameborder="0"
+				loading="lazy"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				referrerpolicy="strict-origin-when-cross-origin"
+				allowfullscreen
+			></iframe>
+		</div>
+		{/if}
+	
+
 		<div class="flex w-full flex-row items-center gap-1 overflow-x-hidden">
 			<CardTitle class="h-auto min-w-0 flex-1 overflow-x-hidden">
 				<Tooltip>
