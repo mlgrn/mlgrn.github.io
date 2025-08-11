@@ -18,6 +18,7 @@
 	import SkillsData from '$lib/data/skills';
 	import { href } from '$lib/utils';
 	import { mode } from 'mode-watcher';
+	import Footer from '$lib/components/common/footer/footer.svelte';
 
 	type Item = {
 		name: string;
@@ -161,3 +162,5 @@
 		</div>
 	{/if}
 </SearchPage>
+
+<Footer />

@@ -13,6 +13,7 @@
 	import type { Project } from '$lib/data/types';
 	import { computeExactDuration, getMonthAndYear, href } from '$lib/utils';
 	import { mode } from 'mode-watcher';
+	import Footer from '$lib/components/common/footer/footer.svelte';
 
 	let { data }: { data: { item?: Project } } = $props();
 
@@ -28,7 +29,11 @@
 		)}`
 	);
 
-	const embeds = $derived(data.item?.youtubeVideoEmbed ?? []);
+	const yt = $derived(data.item?.youtubeVideoEmbed ?? []);
+  const vi = $derived(data.item?.vimeoVideoEmbed ?? []);
+  const embeds = $derived([...yt, ...vi]);
+
+	
 	const gridClass = $derived(
 		embeds.length <= 1
 			? 'grid-cols-1'
@@ -109,3 +114,5 @@
 		</div>
 	{/if}
 </BasePage>
+
+<Footer />

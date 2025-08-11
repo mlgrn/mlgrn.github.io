@@ -47,9 +47,9 @@ const items: Array<Project> = [
 	},
 	{
 		slug: 'vision-mag',
-		color: '#ff3e00',
+		color: '#ffa500',
 		description:
-			'One of 2 camera operators for a Bloomberg Philanthropies event in Baltimore, MD. Filmed using Sony PMW 300 XDCAMs',
+			'Created a promotional trailer for a music production product based on reference videos from another niche and edited it using Adobe Premiere, After Effects, and Davinci Resolve. I also wrote and produced the music using the advertised product.',
 		shortDescription:
 			'Promotional trailer for a music production product.',
 		links: [{ to: ' https://player.vimeo.com/video/504562182?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share', label: 'Vimeo' }],
@@ -59,11 +59,32 @@ const items: Array<Project> = [
 			from: new Date(2019,7,1),
 			to: new Date(2019,7,3)
 		},
-		skills: getSkills('cam-op'),
+		skills: getSkills('pr', 'ae', 'resolve', 'ableton', 'mixing', 'mastering'),
 		type: 'Video Production',
 		basePath: '',
 		vimeoVideoEmbed: [' https://player.vimeo.com/video/504562182?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin'],
+	},
+	{
+		slug: 'spotify-ad-podcast',
+		color: '#90ee90',
+		description:
+			'One of 2 camera operators for this podcast pilot episode for Spotify at their offices in New York City. Filmed using Sony FX9 cameras.',
+		shortDescription:
+			'Promotional trailer for a music production product.',
+		links: [{ to: ' https://player.vimeo.com/video/720880649?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share', label: 'Vimeo' }],
+		logo: Assets.Unknown,
+		name: 'Spotify Ad Podcast',
+		period: {
+			from: new Date(2022,7,1),
+			to: new Date(2022,7,3)
+		},
+		skills: getSkills('cam-op'),
+		type: 'Video Production',
+		basePath: '',
+		vimeoVideoEmbed: [' https://player.vimeo.com/video/720880649?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin'],
 	}
+
+
 ];
 
 const title = 'Video Production';

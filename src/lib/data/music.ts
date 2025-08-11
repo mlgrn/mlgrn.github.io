@@ -7,9 +7,9 @@ const items: Array<Project> = [
 		slug: 'life-so-simple',
 		color: '#5e95e3',
 		description:
-			'<strong>Life So Simple...From Birth to Death</strong> is an hour long concert suite for 30 piece chamber orchestra co-written with <a href="https://unit7noise.bandcamp.com/">Michael Folmer Hansen</a>. <br /> <br /> We wrote the original pieces using software instruments during COVID lockdowns entirely in DAW software, then later adapted them for live performance and developed scores. <br /> <br /> This is my most ambitious project to date. Not only did I write the music with Michael and prepare scores, I also organized the concert logistics, including hiring the group, organizing rehearsals, securing a venue, managing the audio and video recording teams, as well as marketing the event, doing the final mixes and mastering of the audio recording, and editing both the final videos you see on this page in addition to the videos loops of the artwork we projected during the concert. <br /> <br /> Below is a gallery of the concert in full, as well as the individual movements. <br /> <br /> Performed by <a href="https://www.contemporaneous.org/">Contemporaneous</a>. Featuring artwork by <a href="https://www.instagram.com/_hego/">HEGO</a>. <br />Filmed by <a href="https://www.universalliveav.com/">Universal Live</a>. ',
+			'<strong>Life So Simple...From Birth to Death</strong> is an hour long concert suite for 30 piece chamber orchestra co-written with <a href="https://unit7noise.bandcamp.com/">Michael Folmer Hansen</a>. <br /> <br /> We wrote the original pieces using software instruments during COVID lockdowns entirely in DAW software, then later adapted them for live performance and developed scores. <br /> <br /> This is my most ambitious project to date. Not only did I write the music with Michael and prepare scores, I also organized the concert logistics, including hiring the group, organizing rehearsals, securing a venue, managing the audio and video recording teams, as well as marketing the event, doing the final mixes and mastering of the audio recording, and editing both the final videos you see on this page in addition to the video loops of the artwork we projected during the concert. <br /> <br /> Below is a gallery of the concert in full, as well as the individual movements. <br /> <br /> Performed by <a href="https://www.contemporaneous.org/">Contemporaneous</a>. Featuring artwork by <a href="https://www.instagram.com/_hego/">HEGO</a>. <br />Filmed by <a href="https://www.universalliveav.com/">Universal Live</a>. ',
 		shortDescription:
-			'60 minute concert suite for 30 piece chamber orchestra co-written with Michael Folmer Hansen.',
+			'My 60 minute concert suite for 30 piece chamber orchestra co-written with Michael Folmer Hansen.',
 		links: [
 			{ to: 'https://www.youtube.com/watch?v=eyiDHXhpp94', label: 'YouTube' },
 			
@@ -20,7 +20,7 @@ const items: Array<Project> = [
 			from: new Date(2024, 2,1),
 			to: new Date(2024, 8,1)
 		},
-		skills: getSkills('mixing', 'comp', 'Mastering' ),
+		skills: getSkills('mixing', 'comp', 'mastering', 'pr','ae' ),
 		type: 'Composition & Event Production',	
 		basePath:'',
 		// use embed version of the youtube video, not the raw url from browser
@@ -35,13 +35,61 @@ const items: Array<Project> = [
 			'https://www.youtube.com/embed/Z2EfKG6iAuw?si=wuPgzNeZXNEXFlQf'
 		]
 	},
+
+	{
+		slug: 'brain-opera-2',
+		color: '#b2b2ff',
+		description:'Brain, Body & Breath <br /> MIT Museum <br /> October 14th & 15th, 2022 <br /> <br /> Composer: Tod Machover <br /> <br /> Performers: Jessica Shand (flutes), Marina Kifferstein and Leah Asher (violin), Carrie Frey (viola), Meaghan Burke (cello), Emilio Guarino (double bass), Yuma Uesaka (clarinets and tenor sax), Sam Jones (trumpet), Jen Baker (tenor trombone), Mike Truesdell (percussion), Cory Smythe (keyboard), Tod Machover (conductor) <br /> <br /> Sound Design: Ben Bloomberg Graphics: Peter Torpey',
+		shortDescription:
+			'I played bass for Tod Machover\'s Brain, Body & Breath concert at the MIT Museum.',
+		links: [
+			{ to: 'https://player.vimeo.com/video/840201586?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479', label: 'Vimeo' },
+			
+		],
+		logo: Assets.Unknown,
+		name: 'Brain Body + Breath at MIT',
+		period: {
+			from: new Date(2022, 9,14),
+			to: new Date(2022, 9,15)
+		},
+		skills: getSkills('bass' ),
+		type: 'Bass Performance',	
+		basePath:'',
+
+		
+		// use embed version of the youtube video, not the raw url from browser
+		vimeoVideoEmbed: ['https://player.vimeo.com/video/840201586?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'],
+		screenshots: [
+			{
+				label: 'Program Notes',
+				src: 'https://i.ibb.co/Q70QXdw0/Screenshot-2025-08-10-at-6-10-39-PM.png',
+			},
+			{
+				label: 'Program Notes',
+				src: 'https://i.ibb.co/7JcBs5v4/Screenshot-2025-08-10-at-6-11-03-PM.png',
+			},
+			{
+				label: 'Program Notes',
+				src: 'https://i.ibb.co/7JcBs5v4/Screenshot-2025-08-10-at-6-11-03-PM.png',
+			},
+			{
+				label: 'Program Notes',
+				src: 'https://i.ibb.co/JjG2xQdd/Screenshot-2025-08-10-at-6-11-12-PM.png',
+			},
+
+			
+		]
+		
+	},
+
+
 	{
 		slug: 'black-boy-wonderment',
 		color: '#ff3f00',
 		description:
 			'Black Boy Wonderment is the 9th album by The IZM. I worked with him to finalize the mix and do the mastering of the album.',
 		shortDescription:
-			'Black Boy Wonderment is the 9th album by The IZM',
+			'I mixed and mastered the 9th album by The IZM.',
 		links: [{ to: 'https://www.youtube.com/embed/videoseries?si=8OpjABsP1FjXbagr&amp;list=OLAK5uy_mcEW6FrJBXUYn6xLJJdzPgHcdzKDKcyFE', label: 'YouTube' }],
 		logo: Assets.Unknown,
 		name: 'Black Boy Wonderment',
@@ -49,7 +97,7 @@ const items: Array<Project> = [
 			from: new Date(2019, 8, 1),
 			to: new Date(2019, 8, 30)
 		},
-		skills: getSkills('mixing', 'Mastering'),
+		skills: getSkills('mixing', 'mastering'),
 		type: 'Album',
 		basePath:'',   
 		youtubeVideoEmbed: ['https://www.youtube.com/embed/videoseries?si=8OpjABsP1FjXbagr&amp;list=OLAK5uy_mcEW6FrJBXUYn6xLJJdzPgHcdzKDKcyFE'],

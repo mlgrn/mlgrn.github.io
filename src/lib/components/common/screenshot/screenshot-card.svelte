@@ -28,16 +28,19 @@
 			>
 		</Card>
 	</DialogTrigger>
-	<DialogContent class="flex min-h-[70%] min-w-[70%] flex-col">
-		<DialogTitle>{item.label}</DialogTitle>
-		<div
-			class="flex-1 bg-cover bg-center bg-no-repeat"
-			style={`background-image: url("${item.src}")`}
-		></div>
-		<DialogFooter>
-			<DialogClose>
-				<Button>Close</Button>
-			</DialogClose>
-		</DialogFooter>
-	</DialogContent>
+    <DialogContent class="flex max-h-[95vh] max-w-[95vw] flex-col items-center">
+        <DialogTitle>{item.label}</DialogTitle>
+        <div class="w-full">
+            <img
+                src={item.src}
+                alt={item.label}
+                class="mx-auto max-h-[80vh] max-w-full object-contain rounded-md"
+            />
+        </div>
+        <DialogFooter>
+            <DialogClose>
+                <Button>Close</Button>
+            </DialogClose>
+        </DialogFooter>
+    </DialogContent>
 </Dialog>

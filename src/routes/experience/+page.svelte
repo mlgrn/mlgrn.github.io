@@ -4,6 +4,8 @@
 	import ExperienceCard from '$lib/components/experience/experience-card.svelte';
 	import Icon from '$lib/components/ui/icon/icon.svelte';
 	import ExperienceData from '$lib/data/experience';
+	import Footer from '$lib/components/common/footer/footer.svelte';
+	import FancyBanner from '$lib/components/common/fancy-banner/fancy-banner.svelte';
 
 	let search = $state('');
 
@@ -45,3 +47,4 @@
 		</div>
 	{/if}
 </SearchPage>
+<Footer />

@@ -13,6 +13,7 @@
 	import type { Education } from '$lib/data/types';
 	import { computeExactDuration, getMonthAndYear } from '$lib/utils';
 	import { mode } from 'mode-watcher';
+	import Footer from '$lib/components/common/footer/footer.svelte';
 
 	let { data }: { data: { item?: Education } } = $props();
 
@@ -67,3 +68,4 @@
 		</div>
 	{/if}
 </BasePage>
+<Footer />

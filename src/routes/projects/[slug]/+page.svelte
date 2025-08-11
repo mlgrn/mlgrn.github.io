@@ -13,6 +13,7 @@
 	import type { Project } from '$lib/data/types';
 	import { computeExactDuration, getMonthAndYear, href } from '$lib/utils';
 	import { mode } from 'mode-watcher';
+	import Footer from '$lib/components/common/footer/footer.svelte';
 
 	let { data }: { data: { item?: Project } } = $props();
 
@@ -79,3 +80,5 @@
 		</div>
 	{/if}
 </BasePage>
+
+<Footer />

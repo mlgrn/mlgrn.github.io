@@ -40,18 +40,8 @@
 	href={href(`/${basePath}/${project.slug}`)}
 >
 	<CardHeader class="flex w-full flex-col gap-4">
-		{#if project.logo != Assets.Unknown}
-		<Avatar>
-			<AvatarFallback>
-				<img src={Assets.Unknown.light} alt={project.name} />
-			</AvatarFallback>
-			<AvatarImage src={$mode === 'dark' ? project.logo.dark : project.logo.light} />
-		</Avatar>
-		{/if}
 		
-		{#if project.screenshots && project.screenshots.length >= 1}
-			<img src={project.screenshots[0].src} alt={project.screenshots[0].label} />
-		{/if}
+	
 
 		{#if project.youtubeVideoEmbed}
 		<div class="relative w-full h-0 pb-[56.25%]">
@@ -66,9 +56,8 @@
 				allowfullscreen
 			></iframe>
 		</div>
-		{/if}
 
-		{#if project.vimeoVideoEmbed}
+		{:else if project.vimeoVideoEmbed}
 		<div class="relative w-full h-0 pb-[56.25%]">
 			<iframe
 				class="absolute inset-0 w-full h-full rounded"
@@ -81,7 +70,31 @@
 				allowfullscreen
 			></iframe>
 		</div>
+		
+		{:else if project.screenshots && project.screenshots.length >= 1}
+		<div class="relative w-full h-0 pb-[56.25%]">
+			<img
+				class="absolute inset-0 w-full h-full object-cover rounded"
+				src={project.screenshots[0].src}
+				alt={project.screenshots[0].label}
+			/>
+		</div>
+	
+		{:else if project.logo != Assets.Unknown}
+		<Avatar>
+			<AvatarFallback>
+				<img src={Assets.Unknown.light} alt={project.name} />
+			</AvatarFallback>
+			<AvatarImage src={$mode === 'dark' ? project.logo.dark : project.logo.light} />
+		</Avatar>
 		{/if}
+
+		
+
+	
+
+		
+		
 	
 
 		<div class="flex w-full flex-row items-center gap-1 overflow-x-hidden">

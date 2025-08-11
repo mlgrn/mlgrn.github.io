@@ -9,6 +9,7 @@
 	import SkillsData, { groupByCategory } from '$lib/data/skills';
 	import { href } from '$lib/utils';
 	import { mode } from 'mode-watcher';
+	import Footer from '$lib/components/common/footer/footer.svelte';
 
 	let query = $state('');
 
@@ -49,3 +50,5 @@
 		</div>
 	{/if}
 </SearchPage>
+
+<Footer />

@@ -2,6 +2,7 @@
 	import TitledPage from '$lib/components/common/titled-page/titled-page.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import ResumeData from '$lib/data/resume';
+	import Footer from '$lib/components/common/footer/footer.svelte';
 </script>
 
 <TitledPage title={ResumeData.title}>
@@ -10,3 +11,4 @@
 	</a>
 	<iframe src={ResumeData.resume} class="h-full w-full" title={ResumeData.title}></iframe>
 </TitledPage>
+<Footer />

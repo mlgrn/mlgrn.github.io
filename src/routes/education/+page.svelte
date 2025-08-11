@@ -5,6 +5,7 @@
 	import EducationCard from '$lib/components/education/education-card.svelte';
 	import Icon from '$lib/components/ui/icon/icon.svelte';
 	import EducationData from '$lib/data/education';
+	import Footer from '$lib/components/common/footer/footer.svelte';
 
 	let search = $state('');
 
@@ -48,3 +49,4 @@
 		</div>
 	{/if}
 </TitledPage>
+<Footer />

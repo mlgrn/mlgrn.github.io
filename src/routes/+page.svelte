@@ -16,6 +16,7 @@
 	import { mode } from 'mode-watcher';
 	import { type CarouselAPI } from '$lib/components/ui/carousel/context.js';
 	import { onMount } from 'svelte';
+	import Footer from '$lib/components/common/footer/footer.svelte';
 
 	let api: CarouselAPI;
 
@@ -77,3 +78,5 @@
 		</div>
 	</div>
 </ResponsiveContainer>
+
+<Footer />

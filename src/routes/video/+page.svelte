@@ -7,6 +7,7 @@
 	import VideoData from '$lib/data/video';
 	import SkillsData from '$lib/data/skills';
 	import type { Skill } from '$lib/data/types';
+	import Footer from '$lib/components/common/footer/footer.svelte';
 
 	interface SkillFilter extends Skill {
 		isSelected?: boolean;
@@ -78,3 +79,4 @@
 		{/if}
 	</div>
 </SearchPage>
+<Footer />

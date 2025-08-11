@@ -14,6 +14,7 @@
 	import type { Skill } from '$lib/data/types';
 	import { href } from '$lib/utils';
 	import { mode } from 'mode-watcher';
+	import Footer from '$lib/components/common/footer/footer.svelte';
 
 	let { data }: { data: { item?: Skill } } = $props();
 
@@ -81,3 +82,5 @@
 		{/if}
 	{/if}
 </BasePage>
+
+<Footer />
