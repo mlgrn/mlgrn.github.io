@@ -54,6 +54,13 @@ export interface SkillCategory<S extends string = string> {
 	name: string;
 }
 
+export interface Bio<S extends string = string> extends Item<S> {
+	headingShort: string;
+	shortBio: string;
+	headingFull: string;
+	fullBio: string;
+}
+
 export interface Skill<S extends string = string> extends Omit<Item<S>, 'shortDescription'> {
 	color: string;
 	category?: SkillCategory;

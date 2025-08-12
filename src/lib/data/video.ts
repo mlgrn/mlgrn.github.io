@@ -70,7 +70,7 @@ const items: Array<Project> = [
 		description:
 			'One of 2 camera operators for this podcast pilot episode for Spotify at their offices in New York City. Filmed using Sony FX9 cameras.',
 		shortDescription:
-			'Promotional trailer for a music production product.',
+			'Podcast pilot episode for Spotify at their offices in New York City.',
 		links: [{ to: ' https://player.vimeo.com/video/720880649?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share', label: 'Vimeo' }],
 		logo: Assets.Unknown,
 		name: 'Spotify Ad Podcast',
