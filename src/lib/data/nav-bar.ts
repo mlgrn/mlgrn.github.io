@@ -16,6 +16,7 @@ const items: Array<{
 	{ title: 'Bio', icon: 'i-carbon-person', href: '/bio' },
 	{ title: 'Skills', icon: 'i-carbon-assembly-cluster', href: '/skills' },
 	{ title: 'Education', icon: 'i-carbon-education', href: '/education' },
+	{ title: 'Contact', icon: 'i-carbon-email', href: '/contact' },
 
 ];
 

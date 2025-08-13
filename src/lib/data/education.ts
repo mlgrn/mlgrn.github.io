@@ -25,7 +25,7 @@ const items: Array<Education> = [
 		name: '',
 		organization: 'The Hartt School',
 		period: { from: new Date(2011, 8, 1), to: new Date(2013, 5, 1) },
-		shortDescription: 'Studied classical and Contemporary Bass Performance with Robert Black.',
+		shortDescription: 'Studied Classical and Contemporary Bass Performance with Robert Black.',
 		slug: 'education-item-2',
 		subjects: ['orchestral', 'chamber music', 'solo', 'composition', 'music theory', 'music pedagogy']
 	},
