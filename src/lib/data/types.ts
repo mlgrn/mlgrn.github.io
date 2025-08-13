@@ -28,7 +28,12 @@ export type Screenshot = {
 	label: string;
 };
 
-
+export type ContactFormEmail = {
+	name: string;
+	email: string;
+	subject: string;
+	message: string;
+}
 
 export interface Item<S extends string = string> {
 	slug: S;
