@@ -7,6 +7,9 @@ const asset = (lightFilename: string, darkFilename = lightFilename) => {
 };
 
 const Assets = {
+	Lucerne: asset('lucerne.png'),
+	Hartt: asset('hartt.jpeg'),
+	MG: asset('mg.jpg'),
 	AWS: asset('aws.svg'),
 	Ableton: asset('ableton.png'),
 	Logic: asset('logic.png'),

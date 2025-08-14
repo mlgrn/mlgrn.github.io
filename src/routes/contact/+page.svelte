@@ -1,7 +1,12 @@
 <script lang="ts">
 	import TitledPage from '$lib/components/common/titled-page/titled-page.svelte';
 	import Footer from '$lib/components/common/footer/footer.svelte';
+	import { enhance } from '$app/forms';
+	import type { ActionData } from './$types';
 
+	export let form: ActionData;
+	
+	let submitting = false;
 </script>
 
 
@@ -12,26 +17,50 @@
               Email me using the form below</h4>
    
               <br />
-        <div class="flex justify-center items-center space-x-2">
-            <i class="i-carbon-email text-3xl align-middle mr-3 animate-pulse gradient-icon" ></i>
-            <p class="text-sm pl-4">
+        <div class="flex justify-center items-center space-x-4">
+            <i class="i-carbon-email text-3xl animate-pulse gradient-icon"></i>
+            <p class="text-sm">
             I am available for freelance, contract, or full time opportunities.
             </p>
         </div>
-    <br />
-            
-        <div class="flex justify-center items-center space-x-2">
-            <i class="i-carbon-location-current text-3xl align-middle mr-3 animate-pulse gradient-icon" ></i>
-            <p class="text-sm pl-4">Remote or NYC area</p>
+        <br />
+        <div class="flex justify-center items-center space-x-4">
+            <i class="i-carbon-location-current text-3xl animate-pulse gradient-icon"></i>
+            <p class="text-sm">Remote or NYC area</p>
         </div>
         <br />
+        
+        <!-- Success/Error Messages -->
+        {#if form?.success}
+            <div class="mb-4 rounded-lg bg-green-50 border border-green-200 p-4 text-green-800 dark:bg-green-900/20 dark:border-green-800 dark:text-green-200">
+                <div class="flex items-center">
+                    <i class="i-carbon-checkmark-filled text-xl mr-2"></i>
+                    <span>Message sent successfully! I'll get back to you soon.</span>
+                </div>
+            </div>
+        {/if}
+        
+        {#if form?.error}
+            <div class="mb-4 rounded-lg bg-red-50 border border-red-200 p-4 text-red-800 dark:bg-red-900/20 dark:border-red-800 dark:text-red-200">
+                <div class="flex items-center">
+                    <i class="i-carbon-warning-filled text-xl mr-2"></i>
+                    <span>{form.error}</span>
+                </div>
+            </div>
+        {/if}
             
-    
-         
-
-
-              
-        <form method="POST" action="?/create" class="rounded-lg border bg-white shadow-sm dark:bg-neutral-900">
+        <form 
+            method="POST" 
+            action="?/create" 
+            class="rounded-lg border bg-white shadow-sm dark:bg-neutral-900"
+            use:enhance={() => {
+                submitting = true;
+                return async ({ update }) => {
+                    submitting = false;
+                    await update();
+                };
+            }}
+        >
             <div class="space-y-4 p-4 sm:p-6">
                 <div>
                     <label for="name" class="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
@@ -132,8 +161,17 @@
 
                         
                 </style>
-                <button type="submit" class="gradient-button">
-                    Submit
+                <button 
+                    type="submit" 
+                    class="gradient-button"
+                    disabled={submitting}
+                >
+                    {#if submitting}
+                        <i class="i-carbon-loading animate-spin mr-2"></i>
+                        Sending...
+                    {:else}
+                        Submit
+                    {/if}
                 </button>
 
             </div>

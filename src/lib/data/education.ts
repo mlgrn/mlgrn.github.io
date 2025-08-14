@@ -6,40 +6,43 @@ const title = 'Education';
 const items: Array<Education> = [
 	{
 		degree: 'Bachelor of Music',
-		description: '',
+		description: 'I studied jazz performance for double bass, with Mike Richmond. Theory and composition work with Conrad Herwig, Ralph Bowen, Stanley Cowell. Graduated Mason Gross School of the Arts at Rutgers University class of 2010. <br /> <br /> While I was there, I also got involved in the university orchestra, studied classical bass playing privately with Linda McKnight, and managed to squeeze in a couple seasons playing in the New York Youth Symphony. <br /> <br /> I\'d play gigs, teach lessons, and then work as a production assistant for a wedding band. I\'d spend all week in class or the practice room, then many weekends and late nights were spent unloading equipment trucks, setting up subwoofers, running cables, mounting lights and doing all the grunt work that goes into making a live show happen. <br /> <br />  It was an intense and rewarding experience that got my feet wet with everything from the technical to the creative side of the music industry.',
 		location: 'New Brunswick, NJ, USA',
-		logo: Assets.Unknown,
+		logo: Assets.MG,
 		name: '',
 		organization: 'Rutgers University',
 		period: { from: new Date(2006, 8, 1), to: new Date(2010, 5, 1) },
 		shortDescription: 'Studied Jazz Performance, Double Bass, with Mike Richmond. Theory and composition work with Conrad Herwig, Ralph Bowen, Stanley Cowell.',
 		slug: 'education-item-1',
-		subjects: ['composition', 'improvisation', 'jazz history', 'jazz theory', 'jazz performance', 'jazz pedagogy']
+		subjects: ['composition', 'improvisation', 'jazz history', 'jazz theory', 'jazz performance', 'jazz pedagogy'],
+		media:[]
 	},
 	
 	{
 		degree: 'Master of Music',
-		description: '',
+		description: 'When I decided to go to graduate school, I knew I wanted to focus on chamber music and solo playing because I did a lot of orchestral playing in my undergrad. I auditioned and was accepted to Peabody Conservatory, Manhattan School of Music, Montclair State University, and The Hartt School. <br /> <br />I ultimately chose to go to Hartt entirely because of Robert Black. He had the most unique thing going on that provided not only <strong> *a lot* </strong> of face time with him, but a truly comprehensive artistic education. <br /> <br />A lot of conservatory bass programs focus on orchestral excerpts, an hour lesson a week with your teacher, some coursework, a recital at the end, and that is pretty much it. <br /> <br /> Robert\'s approach was really different. He would host a techniques class, a bass history class, a bass ensemble, coach chamber music, a weekly lesson, host studio masterclasses, require a recital each year, and for graduate students a "third event", which he encouraged to be something from our broader musical life beyond the conservatory work. <br /> <br /> And because of Robert\'s work as a champion of contemporary music and long history with The Bang on a Can All Stars, he not only encouraged us to directly explore composition and non-standard repertoire, but he attracted students who were very open minded. They taught me just as much as the program did. <br /> <br /> I graduated with a Master of Music degreein 2013 and model a lot of my own teaching style around this experience.',
 		location: 'Hartford, CT, USA',
-		logo: Assets.Unknown,
+		logo: Assets.Hartt,
 		name: '',
 		organization: 'The Hartt School',
 		period: { from: new Date(2011, 8, 1), to: new Date(2013, 5, 1) },
 		shortDescription: 'Studied Classical and Contemporary Bass Performance with Robert Black.',
 		slug: 'education-item-2',
-		subjects: ['orchestral', 'chamber music', 'solo', 'composition', 'music theory', 'music pedagogy']
+		subjects: ['orchestral', 'chamber music', 'solo', 'composition', 'music theory', 'music pedagogy'],
+		media:[]
 	},
 	{
 		degree: 'Lucerne Festival Academy - Summer Program',
-		description: '',
+		description: 'The Lucerne Festival Academy is a summer program founded by Pierre Boulez that brings together students from all over the world to study 20th and 21st century music with some of the most renowned musicians and composers of our time. <br /> <br /> I was fortunate enough to be accepted into the full scholarship summer program several years in a row. During this time I was able to work with Alan Gilbert, Sir Simon Rattle, Anne-Sophie Mutter, Heinz Holliger, and members of Ensemble Intercontemporain, to name a few. <br /> <br /> I was additionally invited to perform in several alumni projects that included a collaborative tour with The MIT Media Lab and performing in Pierre Boulez\'s memorial concert in 2016. <br /> <br /> Below are some videos of performances I was able to be a part of during my time at The Academy.',
 		location: 'Lucerne, Switzerland',
-		logo: Assets.Unknown,
+		logo: Assets.Lucerne,
 		name: '',
 		organization: 'Lucerne Festival',
 		period: { from: new Date(2014, 7, 1), to: new Date(2019, 7, 30) },
 		shortDescription: 'Highlights include working with Alan Gilbert, Sir Simon Rattle, Anne-Sophie Mutter, Heinz Holliger, Ensemble Intercontemporain.',
 		slug: 'education-item-3',
-		subjects: ['20th century music', '21st century music']
+		subjects: ['20th century music', '21st century music'],
+		media:['https://player.vimeo.com/video/1110053950?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479','https://player.vimeo.com/video/1110053908?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479', 'https://player.vimeo.com/video/1110053964?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479']
 	},
 	
 ];

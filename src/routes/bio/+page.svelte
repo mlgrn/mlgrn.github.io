@@ -3,10 +3,11 @@
 	import Footer from '$lib/components/common/footer/footer.svelte';
 	import Bio from '$lib/data/bio';
 	import P from '$lib/components/ui/typography/p.svelte';
+	import { base } from '$app/paths';
 </script>
 
-
 <TitledPage title="Bio">
+	<img src={`${base}/images/full-picture-emilio.jpg`} alt="Emilio Guarino" class="w-1/2 h-auto mx-auto">
 	<p class="text-sm text-gray-500 italic text-center">For use in press and promotional materials. Credit EmilioGuarino.com as the source. Do not use the bio for any other purpose or alter the bio in any way without permission.</p>
 
 	

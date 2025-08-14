@@ -14,6 +14,7 @@
 	import { computeExactDuration, getMonthAndYear } from '$lib/utils';
 	import { mode } from 'mode-watcher';
 	import Footer from '$lib/components/common/footer/footer.svelte';
+	import EducationData from '$lib/data/education';
 
 	let { data }: { data: { item?: Education } } = $props();
 
@@ -55,7 +56,30 @@
 		{:else}
 			<EmptyMarkdown />
 		{/if}
+
+		<div class="grid grid-cols-1 gap-6 px-4 pt-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
+			{#if data.item && data.item.media && data.item.media.length > 0}
+				{#each data.item.media as mediaLink}
+					<div class="relative aspect-[16/9] w-full bg-[--background] rounded overflow-hidden">
+						<iframe 
+							class="absolute inset-0 h-full w-full"
+							title={data.item.degree} 
+							src={`${mediaLink}&controls=1&autopause=0&fullscreen=1`} 
+							frameborder="0" 
+							allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+							allowfullscreen
+							referrerpolicy="strict-origin-when-cross-origin">
+							
+						</iframe>
+					</div>
+				{/each}
+			{/if}
+		</div>
+
+		
 		<Separator />
+
+
 		<div class="flex flex-col gap-2 px-4 pt-4">
 			{#if data.item.screenshots && data.item.screenshots.length > 0}
 				<Muted>Screenshots</Muted>
@@ -67,5 +91,8 @@
 			{/if}
 		</div>
 	{/if}
+
 </BasePage>
+
+
 <Footer />

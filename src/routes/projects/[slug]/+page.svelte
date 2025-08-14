@@ -22,12 +22,26 @@
 		($mode == 'dark' ? data?.item?.logo.dark : data.item?.logo.light) ?? Assets.Unknown.light
 	);
 
+	const yt = $derived(data.item?.youtubeVideoEmbed ?? []);
+  const vi = $derived(data.item?.vimeoVideoEmbed ?? []);
+  const embeds = $derived([...yt, ...vi]);
+
+  const gridClass = $derived(
+		embeds.length <= 1
+			? 'grid-cols-1'
+			: embeds.length === 2
+			? 'grid-cols-1 md:grid-cols-2'
+			: 'grid-cols-1 md:grid-cols-2 xl:grid-cols-3'
+	);
+
 	let duration = $derived(
 		`${getMonthAndYear(data.item?.period.from)} - ${getMonthAndYear(data.item?.period.to)} · ${computeExactDuration(
 			data.item?.period.from ?? new Date(),
 			data.item?.period.to
 		)}`
 	);
+
+	
 </script>
 
 <BasePage {title}>
@@ -69,6 +83,27 @@
 		{/if}
 		<Separator />
 		<div class="flex flex-col gap-2 px-4 pt-4">
+
+			{#if embeds.length}
+				<div class={`grid gap-4 ${gridClass}`}>
+				  {#each embeds as src (src)}
+					<div class="relative aspect-video w-full">
+					  <iframe
+						class="absolute inset-0 h-full w-full rounded"
+						src={src}
+						title="YouTube video"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					  ></iframe>
+					</div>
+				  {/each}
+				</div>
+			  {/if}
+
+
+
 			{#if data.item.screenshots && data.item.screenshots.length > 0}
 				<Muted>Screenshots</Muted>
 				<div class="grid grid-cols-1 gap-2 py-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

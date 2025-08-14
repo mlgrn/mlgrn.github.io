@@ -2,7 +2,9 @@
 
 Vercel-like style portfolio template for developers.
 
-[For a reference, check out my personal protfolio, slightly changed, but uses this template.](https://riadhadrani.github.io/RiadhAdrani)
+[Fork of slick-portfolio-svelte-5](https://github.com/RiadhAdrani/slick-portfolio-svelte-5), customized for my portfolio. This fork adds a Nodemailer-powered contact form (via SvelteKit server actions), `.env`-based configuration, and guidance for managing images/SSR and content updates under `src/lib/data`.
+
+[For a reference, check out my personal protfolio.](emilioguarino.com)
 
 ## Libraries
 
@@ -14,6 +16,13 @@ The main libraries used here are :
   - using `carbon` (and thus the icon names `i-carbon-*`) icons that could be browsed [here](https://icones.js.org/collection/carbon)
 - `mode-watcher` : color mode utility.
 - `prismjs` : markdown parsing in combination with `marked`, `marked-mangle`, `marked-gfm-heading-id` and `dompurify`.
+
+## What this fork adds
+
+- Contact form wired to SvelteKit server actions and Nodemailer
+- Environment-based configuration via `.env`
+- Guidance for image paths (hero/bio images) with SvelteKit base path
+- Notes about SSR and static hosting limits (GitHub Pages)
 
 ## Create
 
@@ -85,6 +94,8 @@ But if your repository name is the same as your Github domain name; my Github na
 const base = '';
 ```
 
+> Note: This template uses `@sveltejs/adapter-static` for GitHub Pages. Server actions do not run on static hosting. The contact form will work locally during development but will require a server-capable adapter (e.g., Vercel/Netlify/Node) or an external mail API in production. See "Contact form" below.
+
 ### Launching the build and deploy workflow
 
 If you didn't commit and push the changes in the `svelte.config.js` yet, you can do that now, otherwise you can create an empty commit:
@@ -130,6 +141,104 @@ If you want to use the template as it is, you can :
 - You can find `shadcn-svelte` component in `src/lib/components/ui`, other components are arranged by their page, or in the `common` folder.
 
 But feel free to explore and hack the template to your needs if you feel like it.
+
+## Local development
+
+- Install deps and run:
+
+```bash
+npm i
+npm run dev
+```
+
+- Type/lint:
+
+```bash
+npm run check
+npm run lint
+```
+
+## Contact form (server action + Nodemailer)
+
+This project includes a contact form at `src/routes/contact`. It posts to a SvelteKit server action in `src/routes/contact/+page.server.ts`, which sends mail via Nodemailer.
+
+1) Create `.env` in the project root (same folder as `package.json`):
+
+```env
+NODEMAILER_LOGIN=your-gmail@example.com    # full Gmail address
+NODEMAILER_PW=your-app-password            # Gmail App Password (not your regular password)
+FORWARD_MAIL_TO=recipient@example.com      # where to receive messages
+```
+
+2) Restart `npm run dev` after changing `.env`.
+
+3) Local SSR is enabled in `src/routes/+layout.ts`:
+
+```ts
+export const ssr = true;
+export const prerender = false;
+```
+
+4) Production note (important): GitHub Pages (static) cannot run server actions, so the contact form cannot send emails there. To enable email in production, either:
+
+- Deploy with a server-capable adapter (e.g., Vercel/Netlify/Cloudflare/Node), or
+- Keep GitHub Pages and use a third-party/mail API (e.g., Resend/EmailJS/Formspree) from the client or via serverless functions.
+
+## Updating content
+
+- Most content lives in `src/lib/data/*.ts` (e.g., `home.ts`, `bio.ts`, `experience.ts`, `education.ts`, `projects.ts`, `skills.ts`, `nav-bar.ts`). Update text, links, and lists there.
+- Markdown content can live under `src/lib/data/md/` and be rendered via the provided markdown components.
+
+## Images (hero/bio) and base path
+
+- Put public images in `static/images/...` so they are served directly.
+- When referencing images in code that is rendered both on server and client, use SvelteKit’s base path:
+
+```ts
+import { base } from '$app/paths';
+
+const heroImage = `${base}/images/full-picture-emilio.jpg`;
+```
+
+- In Svelte components:
+
+```svelte
+<script lang="ts">
+  import { base } from '$app/paths';
+</script>
+
+<img src={`${base}/images/full-picture-emilio.jpg`} alt="..." />
+```
+
+- Alternatively, import images from `src` and use the imported URL:
+
+```svelte
+<script lang="ts">
+  import hero from '$lib/assets/images/full-picture-emilio.jpg';
+</script>
+
+<img src={hero} alt="..." />
+```
+
+## UI hydration warnings (Bits UI triggers)
+
+If you see warnings about `<button>` inside `<button>`, use the `asChild`/`builder` pattern to avoid nested buttons:
+
+```svelte
+<TooltipTrigger asChild let:builder>
+  <Button builders={[builder]}>Hover me</Button>
+</TooltipTrigger>
+
+<DialogTrigger asChild let:builder>
+  <Button builders={[builder]}>Open</Button>
+</DialogTrigger>
+```
+
+## Optional blog / news options
+
+- Easiest: publish on Substack/Medium and render posts via RSS on a `/blog` page (instant updates, no redeploys)
+- Git-based CMS with in-repo content editing UI: Decap CMS or TinaCMS
+- Hosted headless CMS: Contentful/Sanity/Hygraph (fetch at build; rebuild via webhooks)
 
 ## Known issues:
 

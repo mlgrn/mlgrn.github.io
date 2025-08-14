@@ -14,19 +14,21 @@
 	import HomeData from '$lib/data/home';
 	import { href } from '$lib/utils';
 	import { mode } from 'mode-watcher';
-	import { type CarouselAPI } from '$lib/components/ui/carousel/context.js';
+	//import { type CarouselAPI } from '$lib/components/ui/carousel/context.js';
 	import { onMount } from 'svelte';
 	import Footer from '$lib/components/common/footer/footer.svelte';
 
-	let api: CarouselAPI;
+	// THIS IS THE SKILLS CAROUSEL logic. Uncomment to show it. 
+	// let api: CarouselAPI;
 
-	onMount(() => {
-		setInterval(() => {
-			if (!api) return;
+	// onMount(() => {
+	// 	setInterval(() => {
+	// 		if (!api) return;
 
-			api.scrollNext();
-		}, 2000);
-	});
+	// 		api.scrollNext();
+	// 	}, 2000);
+	// });
+
 </script>
 
 <Title title={HomeData.title} />
@@ -54,8 +56,13 @@
 				{/each}
 			</div>
 		</div>
-		<div>
-			<Carousel bind:api class="w-[200px] md:ml-14" opts={{ loop: true }}>
+		
+		<img src={HomeData.hero.heroImage} alt="Emilio Guarino" class="w-1/4 h-auto rounded-lg">
+
+		
+		<!--THIS IS THE SKILLS CAROUSEL. Uncomment to show it. -->
+		
+		 <!-- <div> <Carousel bind:api class="w-[200px] md:ml-14" opts={{ loop: true }}>
 				<CarouselContent>
 					{#each HomeData.carousel as item}
 						<CarouselItem class="flex flex-col items-center justify-center gap-4">
@@ -74,8 +81,9 @@
 				</CarouselContent>
 				<CarouselNext />
 				<CarouselPrevious />
-			</Carousel>
-		</div>
+				</div>
+			</Carousel> -->
+		
 	</div>
 </ResponsiveContainer>
 

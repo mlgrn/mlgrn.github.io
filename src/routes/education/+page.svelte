@@ -23,11 +23,13 @@
 	const onSearch = (query: string) => (search = query);
 </script>
 
-<TitledPage title={EducationData.title} {onSearch}>
+<TitledPage title={EducationData.title} >
 	{#if result.length === 0}
 		<EmptyResult />
 	{:else}
 		<div class="flex flex-col gap-6 lg:gap-0">
+			<h2 class="text-2l italic mx-auto pb-8">Click on a card for more information</h2>
+
 			{#each result as it, index (it.slug)}
 				<div class={`flex ${index % 2 !== 0 ? 'flex-row-reverse' : 'flex-row'} gap-4`}>
 					<div class="flex flex-1 flex-col justify-center lg:py-[50px]">
@@ -48,5 +50,9 @@
 			{/each}
 		</div>
 	{/if}
+
+
+	
+	
 </TitledPage>
 <Footer />
