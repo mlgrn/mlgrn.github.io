@@ -57,7 +57,7 @@
 			</div>
 		</div>
 		
-		<img src={HomeData.hero.heroImage} alt="Emilio Guarino" class="w-1/4 h-auto rounded-lg">
+		<img src={HomeData.hero.heroImage} alt="Emilio Guarino" class="w-full max-w-xs md:w-1/3 lg:w-1/4 h-auto rounded-lg object-cover">
 
 		
 		<!--THIS IS THE SKILLS CAROUSEL. Uncomment to show it. -->
