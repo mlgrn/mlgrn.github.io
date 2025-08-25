@@ -22,7 +22,7 @@
 		($mode == 'dark' ? data?.item?.logo.dark : data.item?.logo.light) ?? Assets.Unknown.light
 	);
 
-	const yt = $derived(data.item?.youtubeVideoEmbed ?? []);
+const yt = $derived(data.item?.youtubeVideoEmbed ?? []);
   const vi = $derived(data.item?.vimeoVideoEmbed ?? []);
   const embeds = $derived([...yt, ...vi]);
 
@@ -102,6 +102,7 @@
 				</div>
 			  {/if}
 
+			
 
 
 			{#if data.item.screenshots && data.item.screenshots.length > 0}

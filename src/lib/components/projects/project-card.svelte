@@ -70,7 +70,20 @@
 				allowfullscreen
 			></iframe>
 		</div>
-		
+
+		{:else if project.bandcampEmbed}
+<div class="relative w-full h-0 pb-[56.25%]">
+	<iframe
+		class="absolute inset-0 w-full h-full rounded"
+		src={project.bandcampEmbed[0]}
+		title="Bandcamp Player"
+		frameborder="0"
+		loading="lazy"
+		seamless
+	></iframe>
+</div>
+
+
 		{:else if project.screenshots && project.screenshots.length >= 1}
 		<div class="relative w-full h-0 pb-[56.25%]">
 			<img

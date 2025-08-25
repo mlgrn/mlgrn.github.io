@@ -31,6 +31,7 @@
 
 	const yt = $derived(data.item?.youtubeVideoEmbed ?? []);
   const vi = $derived(data.item?.vimeoVideoEmbed ?? []);
+  const bc = $derived(data.item?.bandcampEmbed ?? []);
   const embeds = $derived([...yt, ...vi]);
 
 	
@@ -100,6 +101,19 @@
 					</div>
 				  {/each}
 				</div>
+			  {/if}
+
+			  {#if bc.length}
+			  <div class={`grid gap-4 ${gridClass}`}>
+				
+				{#each bc as src (src)}
+				<div class="relative aspect-video w-full">
+				<iframe title="Bandcamp"style="border: 0; width: 350px; height: 470px;" src={src}></iframe>
+				</div>
+				{/each}
+				
+			</div>
+
 			  {/if}
 
 

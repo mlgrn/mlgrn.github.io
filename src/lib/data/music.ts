@@ -82,6 +82,34 @@ const items: Array<Project> = [
 		
 	},
 
+	{
+		slug: 'first-life-origin-ep',
+		color: '#ff3f00',
+		description:
+			'I played bass on, co-produced, mixed, and masters the First Life Origin EP by First Life. ',
+		shortDescription:
+			'Bass, mixing, mastering, and co-production of the First Life Origin EP',
+		links: [{ to: 'https://music.apple.com/us/album/origin-ep/1758562284', label: 'Apple Music' }],
+		logo: Assets.Unknown,
+		name: 'ORIGIN EP by First Life',
+		period: {
+			from: new Date(2020, 1, 1),
+			to: new Date(2024, 8, 30)
+		},
+		skills: getSkills('bass', 'mixing', 'mastering'),
+		type: 'Album',
+		basePath:'',   
+		youtubeVideoEmbed: ['https://embed.music.apple.com/us/album/origin-ep/1758562284'],
+		screenshots: [
+			{
+				label: 'Cover Art',
+				src: 'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2c/38/9c/2c389caa-cc3a-7d98-de67-502be1c94e84/artwork.jpg/632x632bb.webp'
+			},
+			
+		]
+		
+	},
+
 
 	{
 		slug: 'black-boy-wonderment',
@@ -109,9 +137,68 @@ const items: Array<Project> = [
 			
 		//]
 		
-	}
+	},
+
+	{
+		slug: 'local-legends',
+		color: '#ff3f00',
+		description:
+			'"Local Legends" released on November 22, 2022. The album contains 12 tracks, including "DO IT FOR THE KIDS," "ONE OF THE FAMILY" (featuring Pootie & Ryan Cordovan), and "KILL EM WITH KINDNESS". Avaiailable on streaming platforms.',
+		shortDescription:
+			'I mixed and mastered Local Legends by A Sarr',
+		links: [{ to: 'https://www.youtube.com/embed/videoseries?si=5GA9QeoT9CPqXlQY&amp;list=OLAK5uy_lgWqmt_zzoAHF-RQG4DKbq7e4Pnya_1F4', label: 'YouTube' }],
+		logo: Assets.Unknown,
+		name: 'A Sarr - Local Legends',
+		period: {
+			from: new Date(2022, 8, 22),
+			to: new Date(2022, 10, 22)
+		},
+		skills: getSkills('mixing', 'mastering'),
+		type: 'Album',
+		basePath:'',   
+		youtubeVideoEmbed: ['https://www.youtube.com/embed/videoseries?si=qrEhlvQSNr_YmkEc&amp;list=OLAK5uy_lgWqmt_zzoAHF-RQG4DKbq7e4Pnya_1F4'],
+		//screenshots: [
+		//	{
+		//		label: 'screen 1',
+		//		src: 'https://f4.bcbits.com/img/a1246816384_16.jpg'
+		//	},
+			
+		//]
+		
+	},
+	{
+		slug: 'ascendant',
+		color: '#9333ea',
+		description:
+			'I played bass for Wrex Mason\'s "Shirley Mae" from ASCENDANT',
+		shortDescription:
+			'I mixed and mastered Local Legends by A Sarr',
+		links: [{ to: 'https://9000plus.bandcamp.com/album/ascendant', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'Wrex Mason - "Shirley Mae"',
+		period: {
+			from: new Date(2022, 8, 22),
+			to: new Date(2022, 10, 22)
+		},
+		skills: getSkills('bass'),
+		type: 'Album',
+		basePath:'',   
+		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=1831463582/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/track=4069999125/transparent=true/'],
+		//screenshots: [
+		//	{
+		//		label: 'screen 1',
+		//		src: 'https://f4.bcbits.com/img/a1246816384_16.jpg'
+		//	},
+			
+		//]
+		
+	},
+
+
 	
 ];
+
+
 
 const title = 'Music';
 

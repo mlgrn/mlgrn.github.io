@@ -83,6 +83,7 @@ export interface Project<S extends string = string> extends Item<S> {
 	basePath: string;
 	youtubeVideoEmbed?: string[];
 	vimeoVideoEmbed?: string[];
+	bandcampEmbed?: string[];
 }
 
 export interface Experience<S extends string = string> extends Project<S> {
