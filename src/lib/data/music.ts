@@ -86,7 +86,7 @@ const items: Array<Project> = [
 		slug: 'first-life-origin-ep',
 		color: '#ff3f00',
 		description:
-			'I played bass on, co-produced, mixed, and masters the First Life Origin EP by First Life. ',
+			'I played bass on, co-produced, mixed, and mastered the First Life Origin EP by First Life. <a href="https://distrokid.com/hyperfollow/firstlife/origin?utm_campaign=website&utm_medium=igProfile+&utm_source=SendGrid">Listen on streaming platforms here.</a>',
 		shortDescription:
 			'Bass, mixing, mastering, and co-production of the First Life Origin EP',
 		links: [{ to: 'https://music.apple.com/us/album/origin-ep/1758562284', label: 'Apple Music' }],
@@ -99,7 +99,7 @@ const items: Array<Project> = [
 		skills: getSkills('bass', 'mixing', 'mastering'),
 		type: 'Album',
 		basePath:'',   
-		youtubeVideoEmbed: ['https://embed.music.apple.com/us/album/origin-ep/1758562284'],
+	//	youtubeVideoEmbed: ['https://embed.music.apple.com/us/album/origin-ep/1758562284'],
 		screenshots: [
 			{
 				label: 'Cover Art',
@@ -110,6 +110,123 @@ const items: Array<Project> = [
 		
 	},
 
+	{
+		slug: 'det-bedste-og-det-værste',
+		color: '#3366cc',
+		description:
+			'Three remixes for Michael Folmer Hansen a.k.a. folmR (Unit 7 Noise). He gave me full creative control over these.',
+		shortDescription:
+			'Three remixes for folmR and Unit 7 Noise.',
+		links: [{ to: 'https://unit7noise.bandcamp.com/album/det-bedste-og-det-v-rste', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'det bedste og det værste - Remixes',
+		period: {
+			from: new Date(2024, 11, 1),
+			to: new Date(2025, 3, 9)
+		},
+		skills: getSkills('comp', 'mixing', 'mastering'),
+		type: 'Album',
+		basePath:'',   
+		youtubeVideoEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=1698722490/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
+	},
+
+	{
+		slug: 'wirklich-unbekannt',
+		color: '#3366cc',
+		description:
+			'Michael Folmer Hansen a.k.a. folmR (Unit 7 Noise) comissioned me to compose a series of double bass pieces that sit over the top of his ambient electronic compositions.',
+		shortDescription:
+			'For Double Bass and electronics.',
+		links: [{ to: 'https://unit7noise.bandcamp.com/album/wirklich-unbekannt-2', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'Wirklich unbekannt',
+		period: {
+			from: new Date(2024, 1, 1),
+			to: new Date(2024, 8, 24)
+		},
+		skills: getSkills('comp', 'bass', 'mixing', 'mastering'),
+		type: 'Album',
+		basePath:'',   
+		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=381250365/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
+	},
+	{
+		slug: 'bgf',
+		color: '#ff3f00',
+		description:
+			'Michael Folmer Hansen a.k.a. folmR (Unit 7 Noise) on synths, Alex Bedwell on drums, and me on bass. <br /> <br /> Our process for this one was to take Alex\'s drumming, record a mix of <a href="https://www.youtube.com/shorts/6Yj7aGqQ1tc">very experimental</a> and conventional bass parts that I comped together as takes, then Michael added the synths on top of that. ',
+		shortDescription:
+			'folmR on synths, Alex Bedwell on drums, and me on bass.',
+		links: [{ to: 'https://unit7noise.bandcamp.com/album/bgf', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'BGF',
+		period: {
+			from: new Date(2024, 0, 1),
+			to: new Date(2024, 1, 29)
+		},
+		skills: getSkills('comp', 'bass'),
+		type: 'Album',
+		basePath:'',   
+		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=2555685837/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
+	},
+
+	{
+		slug: 'le-benevole',
+		color: '#4285f4',
+		description:
+			'Michael Folmer Hansen a.k.a. folmR (Unit 7 Noise) comissioned me to compose this piece inspired by the 11 truths of volunteering. <br /> <br /> This was written and recorded using DAW software and plugins. J\'aurais and Noveau Monde were later adapted for live performance as Life So Simple...From Birth to Death. ',
+		shortDescription:
+			'Inspired by the 11 truths of volunteering.',
+		links: [{ to: 'https://unit7noise.bandcamp.com/album/le-b-n-vole', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'Le bénévole',
+		period: {
+			from: new Date(2024, 0, 1),
+			to: new Date(2024, 1, 29)
+		},
+		skills: getSkills('comp', 'mixing', 'mastering'),
+		type: 'Album',
+		basePath:'',   
+		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=418822400/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
+	},
+	{
+		slug: 'continental-slices',
+		color: '#4285f4',
+		description:
+			'Michael Folmer Hansen on synths, Alex Bedwell on Drums, and me on bass. <br /> <br />Recorded remotely on the continents of Europe, North America and Oceania with a BOSS Slicer pedal as the click track. We were scheduled to recorded together during 2020 in Berlin, but COVID got in the way, so we did this instead... trying to get a live feel and sound.',
+		shortDescription:
+			'A "live" album.',
+		links: [{ to: 'https://unit7noise.bandcamp.com/album/continental-slices', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'Continental Slices',
+		period: {
+			from: new Date(2021, 0, 1),
+			to: new Date(2021, 1, 2)
+		},
+		skills: getSkills('comp', 'bass'),
+		type: 'Album',
+		basePath:'',   
+		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=1405828336/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
+	},
+
+	{
+		slug: 'il-nome',
+		color: '#ff3f00',
+		description:
+			' A collaboration with Michael Folmer Hansen. In his words:"My gratitude, respect and love to the amazing Emilio Guarino for turning my notes into a grand story... Bravo! Bellissimo! Maestro!"',
+		shortDescription:
+			'A symphony about choices.',
+		links: [{ to: 'https://unit7noise.bandcamp.com/album/il-nome-scelto-da-birgitte', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'Il nome scelto da Birgitte',
+		period: {
+			from: new Date(2022, 0, 1),
+			to: new Date(2022, 10, 22)
+		},
+		skills: getSkills('comp', 'mixing', 'mastering'),
+		type: 'Album',
+		basePath:'',   
+		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=2283036/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
+	},
 
 	{
 		slug: 'black-boy-wonderment',
@@ -194,8 +311,141 @@ const items: Array<Project> = [
 		
 	},
 
+	{
+		slug: 'move-remix)',
+		color: '#9333ea',
+		description:
+			'A remix for folmR (Unit 7 Noise) under an old alias',
+		shortDescription:
+			'A remix of Move by folmR',
+		links: [{ to: 'https://unit7noise.bandcamp.com/track/move-hot-wobble-remix', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'Move Remix',
+		period: {
+			from: new Date(2020, 4, 1),
+			to: new Date(2020, 5, 1)
+		},
+		skills: getSkills('comp', 'mixing', 'mastering'),
+		type: 'Album',
+		basePath:'',   
+		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=3407755537/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/track=1722043836/transparent=true/'],
+	},
 
-	
+	{
+		slug: 'aunt-rosemary)',
+		color: '#9333ea',
+		description:
+			'I contributed 4 remixes on this under the alias HOT WOBBLE',
+		shortDescription:
+			'remixes by HOT WOBBLE',
+		links: [{ to: 'https://unit7noise.bandcamp.com/album/the-aunt-rosemary-tape', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'The Aunt Rosemary Tape',
+		period: {
+			from: new Date(2019, 8, 10),
+			to: new Date(2019, 10, 19)
+		},
+		skills: getSkills('comp', 'mixing', 'mastering'),
+		type: 'Album',
+		basePath:'',   
+		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=254119092/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
+	},
+	{
+		slug: 'slicer-1)',
+		color: '#22c55e',
+		description:
+			'folmR (Unit 7 Noise) on synths, Mat Watson on Drums, and me on bass. Recorded live at Phaedra Studios in Melbourne, Australia in 2018, BOSS Slicer pedal as the click track.',
+		shortDescription:
+			'remixes by HOT WOBBLE',
+		links: [{ to: 'https://unit7noise.bandcamp.com/album/slicer', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'Slicer',
+		period: {
+			from: new Date(2018, 1, 10),
+			to: new Date(2018, 11, 6)
+		},
+		skills: getSkills('comp', 'bass'),
+		type: 'Album',
+		basePath:'',   
+		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=912025583/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
+	},
+	{
+		slug: 'soft-red-chocolates)',
+		color: '#22c55e',
+		description:
+			'Remixed under the Hot Wobble alias. Recorded at Kwun Tong Noise Works, Hong Kong. Mixed by James Banbury of Component Music Mastered by Antony Ryan of RedRedPaw',
+		shortDescription:
+			'Recorded at Kwun Tong Noise Works, Hong Kong.',
+		links: [{ to: 'https://unit7noise.bandcamp.com/track/soft-red-chocolates-hot-wobble-remix', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'red chocolates remix',
+		period: {
+			from: new Date(2018, 10, 10),
+			to: new Date(2018, 10, 13)
+		},
+		skills: getSkills('comp', 'bass'),
+		type: 'Album',
+		basePath:'',   
+		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=2706288082/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/track=1101516453/transparent=true/'],
+	},
+	{
+		slug: 'hang)',
+		color: '#ff3f00',
+		description:
+			'Recorded in Separation Creek, Australia. with a lot of distortion pedals and reverb with Michael Folmer Hansen.',
+		shortDescription:
+			'Recorded in Separation Creek, Australia. with a lot of distortion pedals and reverb.',
+		links: [{ to: 'https://unit7noise.bandcamp.com/album/hang', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'HANG',
+		period: {
+			from: new Date(2018, 10, 10),
+			to: new Date(2018, 10, 18)
+		},
+		skills: getSkills('comp', 'bass'),
+		type: 'Album',
+		basePath:'',   
+		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=423751118/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
+	},
+	{
+		slug: 'stars)',
+		color: '#3366cc',
+		description:
+			'Recorded in Separation Creek, Australia. with a lot of distortion pedals and reverb with Michael Folmer Hansen.',
+		shortDescription:
+			'Recorded in Separation Creek, Australia. with a lot of distortion pedals and reverb.',
+		links: [{ to: 'https://unit7noise.bandcamp.com/album/stars', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'STARS',
+		period: {
+			from: new Date(2018, 10, 10),
+			to: new Date(2018, 10, 23)
+		},
+		skills: getSkills('comp', 'bass'),
+		type: 'Album',
+		basePath:'',   
+		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=1828614714/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
+	},
+
+	{
+		slug: 'sensory-sync)',
+		color: '#3366cc',
+		description:
+			'Analog synths synced to Ableton sequences manually by ear at Kwun Tung Noise Works, Hong Kong.',
+		shortDescription:
+			'Recorded at Kwun Tung Noise Works, Hong Kong.',
+		links: [{ to: 'https://unit7noise.bandcamp.com/album/sensory-sync-latency', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'Sensory Sync Latency',
+		period: {
+			from: new Date(2017, 10, 10),
+			to: new Date(2017, 11, 2)
+		},
+		skills: getSkills('comp', 'bass'),
+		type: 'Album',
+		basePath:'',   
+		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=4265519910/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
+	},
 ];
 
 
