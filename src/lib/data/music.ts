@@ -114,7 +114,7 @@ const items: Array<Project> = [
 		slug: 'det-bedste-og-det-værste',
 		color: '#3366cc',
 		description:
-			'Three remixes for Michael Folmer Hansen a.k.a. folmR (Unit 7 Noise). He gave me full creative control over these.',
+			'Three BASS COMPUTER remixes for Michael Folmer Hansen a.k.a. folmR (Unit 7 Noise). He gave me full creative control over these.',
 		shortDescription:
 			'Three remixes for folmR and Unit 7 Noise.',
 		links: [{ to: 'https://unit7noise.bandcamp.com/album/det-bedste-og-det-v-rste', label: 'Bandcamp' }],
@@ -235,7 +235,7 @@ const items: Array<Project> = [
 			'Black Boy Wonderment is the 9th album by The IZM. I worked with him to finalize the mix and do the mastering of the album.',
 		shortDescription:
 			'I mixed and mastered the 9th album by The IZM.',
-		links: [{ to: 'https://www.youtube.com/embed/videoseries?si=8OpjABsP1FjXbagr&amp;list=OLAK5uy_mcEW6FrJBXUYn6xLJJdzPgHcdzKDKcyFE', label: 'YouTube' }],
+		links: [{ to: 'https://theizm.bandcamp.com/album/black-boy-wonderment', label: 'Bandcamp' }],
 		logo: Assets.Unknown,
 		name: 'Black Boy Wonderment',
 		period: {
@@ -246,6 +246,7 @@ const items: Array<Project> = [
 		type: 'Album',
 		basePath:'',   
 		youtubeVideoEmbed: ['https://www.youtube.com/embed/videoseries?si=8OpjABsP1FjXbagr&amp;list=OLAK5uy_mcEW6FrJBXUYn6xLJJdzPgHcdzKDKcyFE'],
+		//bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=1890929091/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
 		//screenshots: [
 		//	{
 		//		label: 'screen 1',
