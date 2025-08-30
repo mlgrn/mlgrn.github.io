@@ -44,7 +44,7 @@
 	
 
 		{#if project.youtubeVideoEmbed}
-		<div class="relative w-full h-0 pb-[56.25%]">
+		<div class="relative w-full overflow-hidden" style="aspect-ratio: 1 / 1;">
 			<iframe
 				class="absolute inset-0 w-full h-full rounded"
 				src={project.youtubeVideoEmbed[0]}
@@ -56,36 +56,44 @@
 				allowfullscreen
 			></iframe>
 		</div>
-
+		
+		
 		{:else if project.vimeoVideoEmbed}
-		<div class="relative w-full h-0 pb-[56.25%]">
+		<div class="relative w-full overflow-hidden" style="aspect-ratio: 1 / 1;">
+		  <div class="absolute inset-0 flex items-center justify-center bg-black">
 			<iframe
-				class="absolute inset-0 w-full h-full rounded"
-				src={project.vimeoVideoEmbed[0]}
-				title="Video"
-				frameborder="0"
-				loading="lazy"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-				referrerpolicy="strict-origin-when-cross-origin"
-				allowfullscreen
+			  class="w-full h-auto max-h-full rounded"
+			  style="aspect-ratio: 16 / 9;"
+			  src={project.vimeoVideoEmbed[0]}
+			  title="Video"
+			  frameborder="0"
+			  loading="lazy"
+			  allow="autoplay; fullscreen; picture-in-picture"
+			  referrerpolicy="strict-origin-when-cross-origin"
+			  allowfullscreen
 			></iframe>
+		  </div>
 		</div>
 
+		
+
 		{:else if project.bandcampEmbed}
-<div class="relative w-full h-0 pb-[56.25%]">
-	<iframe
-		class="absolute inset-0 w-full h-full rounded"
-		src={project.bandcampEmbed[0]}
-		title="Bandcamp Player"
-		frameborder="0"
-		loading="lazy"
-		seamless
-	></iframe>
-</div>
+		<div class="w-full">
+		  <div class="relative w-full" style="aspect-ratio: 350 / 350;">
+			<iframe
+			  class="absolute inset-0 w-full h-full rounded"
+			  src={project.bandcampEmbed[0]}
+			  title="Bandcamp Player"
+			  frameborder="0"
+			  loading="lazy"
+			  seamless
+			></iframe>
+		  </div>
+		</div>
 
 
 		{:else if project.screenshots && project.screenshots.length >= 1}
-		<div class="relative w-full h-0 pb-[56.25%]">
+		<div class="relative w-full overflow-hidden" style="aspect-ratio: 1 / 1;">
 			<img
 				class="absolute inset-0 w-full h-full object-cover rounded"
 				src={project.screenshots[0].src}

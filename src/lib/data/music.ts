@@ -127,7 +127,7 @@ const items: Array<Project> = [
 		skills: getSkills('comp', 'mixing', 'mastering'),
 		type: 'Album',
 		basePath:'',   
-		youtubeVideoEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=1698722490/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
+		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=1698722490/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
 	},
 
 	{
@@ -170,6 +170,26 @@ const items: Array<Project> = [
 	},
 
 	{
+		slug: 'too-hot',
+		color: '#ff3f00',
+		description:
+			'Mixing for Brooklyn based band Sailor Boyfriend. Released August 10, 2021',
+		shortDescription:
+			'Mixed for Brooklyn based band Sailor Boyfriend',
+		links: [{ to: 'https://sailorboyfriend.bandcamp.com/track/too-hot-to-fuck', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'Too Hot To Fuck',
+		period: {
+			from: new Date(2021, 0, 1),
+			to: new Date(2021, 1, 29)
+		},
+		skills: getSkills('mixing'),
+		type: 'Album',
+		basePath:'',   
+		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/track=1611035422/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
+	},
+
+	{
 		slug: 'le-benevole',
 		color: '#4285f4',
 		description:
@@ -188,6 +208,50 @@ const items: Array<Project> = [
 		basePath:'',   
 		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=418822400/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
 	},
+
+	{
+		slug: 'patterns-and-moondragons',
+		color: '#4285f4',
+		description:
+			'Played bass on "Low Sky", as well as mixed, and mastered this EP.',
+		shortDescription:
+			'Played bass on "Low Sky", as well as mixed, and mastered this EP.',
+		links: [{ to: 'https://lateefdameer.bandcamp.com/album/patterns-and-moondragons', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'Patterns and Moondragons',
+		period: {
+			from: new Date(2020, 0, 1),
+			to: new Date(2020, 1, 26)
+		},
+		skills: getSkills('bass', 'mixing', 'mastering'),
+		type: 'Album',
+		basePath:'',   
+		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=969203884/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
+	},
+
+	{
+		slug: 'hot-wobble',
+		color: '#4285f4',
+		description:
+			'from 2018-2021 I wrote and recorded electronic music under the alias HOT WOBBLE. Completely silly name but an important period of my musical life so the tracks will remain online for posterity.',
+		shortDescription:
+			'old moniker I used from 2018-2021',
+		links: [{ to: 'https://hotwobble.bandcamp.com/', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'HOT WOBBLE',
+		period: {
+			from: new Date(2018, 0, 1),
+			to: new Date(2021, 12, 29)
+		},
+		skills: getSkills('comp', 'mixing', 'mastering', "ableton", "bass"),
+		type: 'Artist',
+		basePath:'',   
+		youtubeVideoEmbed: ['https://www.youtube.com/embed/S0QSe_VeYag?si=s_hIYkTRbBUx-v7f'],
+	},
+
+
+
+
 	{
 		slug: 'continental-slices',
 		color: '#4285f4',
@@ -206,6 +270,27 @@ const items: Array<Project> = [
 		type: 'Album',
 		basePath:'',   
 		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=1405828336/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
+	},
+
+
+	{
+		slug: 'departure-return',
+		color: '#4285f4',
+		description:
+			'Played bass on all tracks, mixed, and mastered this EP.',
+		shortDescription:
+			'Played bass on all tracks, mixed, and mastered this EP',
+		links: [{ to: 'https://lateefdameer.bandcamp.com/album/departure-return', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'Departure/Return',
+		period: {
+			from: new Date(2019, 0, 1),
+			to: new Date(2019, 2, 8)
+		},
+		skills: getSkills('comp', 'bass', 'mixing', 'mastering'),
+		type: 'Album',
+		basePath:'',   
+		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=1260195524/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
 	},
 
 	{
@@ -247,6 +332,35 @@ const items: Array<Project> = [
 		basePath:'',   
 		youtubeVideoEmbed: ['https://www.youtube.com/embed/videoseries?si=8OpjABsP1FjXbagr&amp;list=OLAK5uy_mcEW6FrJBXUYn6xLJJdzPgHcdzKDKcyFE'],
 		//bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=1890929091/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/'],
+		//screenshots: [
+		//	{
+		//		label: 'screen 1',
+		//		src: 'https://f4.bcbits.com/img/a1246816384_16.jpg'
+		//	},
+			
+		//]
+		
+	},
+
+	{
+		slug: 'cold-roti',
+		color: '#ff3f00',
+		description:
+			'Played and tracked bass on this track for Lateef\'s No Signal project. ',
+		shortDescription:
+			'Played bass for Cold Roit',
+		links: [{ to: 'https://lateefdameer.bandcamp.com/track/cold-roti-feat-emilio-guarino', label: 'Bandcamp' }],
+		logo: Assets.Unknown,
+		name: 'Cold Roti',
+		period: {
+			from: new Date(2018, 8, 1),
+			to: new Date(2018, 8, 28)
+		},
+		skills: getSkills('mixing', 'mastering'),
+		type: 'Album',
+		basePath:'',   
+		//youtubeVideoEmbed: ['https://www.youtube.com/embed/videoseries?si=8OpjABsP1FjXbagr&amp;list=OLAK5uy_mcEW6FrJBXUYn6xLJJdzPgHcdzKDKcyFE'],
+		bandcampEmbed: ['https://bandcamp.com/EmbeddedPlayer/album=3104692609/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/track=2812960212/transparent=true/'],
 		//screenshots: [
 		//	{
 		//		label: 'screen 1',
