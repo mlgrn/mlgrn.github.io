@@ -21,11 +21,49 @@ const items: Array<Project> = [
 			to: new Date(2021, 8, 1)
 		},
 		skills: getSkills('cam-op'),
-		type: 'Video Production',
+		type: 'Livestream',
 		basePath: '',
 		vimeoVideoEmbed: ['https://player.vimeo.com/video/721299289?h=1e26c2950e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'],
 		
 	},
+	{
+		slug: 'americana-laundorama',
+		color: '#ff3e00',
+		description:
+			'Sound design for this short film directed by <a href="https://www.natesoto.com/" target="_blank" rel="noopener noreferrer">Nate Soto</a>. Featured in the Lower East Side Film Festival 2024, Pictoplasma 2024, New York City Independent Film Festival 2024, Interfilm Berlin 2024, GIRAF 2024.',
+		shortDescription:
+			'Sound design for this short film directed by Nate Soto.',
+		links: [{ to: 'https://www.natesoto.com/work/americana-laundorama', label: 'Nate Soto.com' }],
+		logo: Assets.Unknown,
+		name: 'Americana Laundorama',
+		period: {
+			from: new Date(2019,7,1),
+			to: new Date(2019,7,3)
+		},
+		skills: getSkills('mixing', 'reaper', 'ableton', 'pr', 'ae'),
+		type: 'Short Film',
+		basePath: '',
+		vimeoVideoEmbed: ['https://player.vimeo.com/video/907974786?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'],
+		screenshots: [
+			{
+				label: 'screenshot 1',
+				src: 'https://images.squarespace-cdn.com/content/v1/61118aa1357010220949b721/7fb62794-763a-4ce2-b0cc-23dfe8f1d53a/AmericanaLaundorama_EDIT_NS_240128+%2800000%29.jpg?format=1500w'
+			},
+			{
+				label: 'screenshot 2',
+				src: 'https://images.squarespace-cdn.com/content/v1/61118aa1357010220949b721/47e78f49-ed28-473e-b9fc-ef9ea14bf2fb/AmericanaLaundorama_EDIT_NS_240128+%2800080%29.jpg?format=1500w'
+			},
+			{
+				label: 'screenshot 3',
+				src: 'https://images.squarespace-cdn.com/content/v1/61118aa1357010220949b721/9f5660f6-99c9-4f29-9041-56b89ac9c041/AmericanaLaundorama_EDIT_NS_240128+%2800200%29.jpg?format=1500w'
+			},
+			{
+				label: 'screenshot 4',
+				src: 'https://images.squarespace-cdn.com/content/v1/61118aa1357010220949b721/fbc29764-df73-4230-9816-083e34e88df5/AmericanaLaundorama_EDIT_NS_240128+%2800216%29.jpg?format=1500w'
+			},
+		]
+	},
+
 	{
 		slug: 'bloomberg-phil',
 		color: '#ff3e00',
@@ -41,7 +79,7 @@ const items: Array<Project> = [
 			to: new Date(2019,7,3)
 		},
 		skills: getSkills('cam-op'),
-		type: 'Video Production',
+		type: 'Livestream',
 		basePath: '',
 		vimeoVideoEmbed: ['https://player.vimeo.com/video/721290246?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'],
 	},
@@ -60,7 +98,7 @@ const items: Array<Project> = [
 			to: new Date(2019,7,3)
 		},
 		skills: getSkills('pr', 'ae', 'resolve', 'ableton', 'mixing', 'mastering'),
-		type: 'Video Production',
+		type: 'Ecommerce Video',
 		basePath: '',
 		vimeoVideoEmbed: [' https://player.vimeo.com/video/504562182?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin'],
 	},
@@ -79,7 +117,7 @@ const items: Array<Project> = [
 			to: new Date(2022,7,3)
 		},
 		skills: getSkills('cam-op'),
-		type: 'Video Production',
+		type: 'Podcast',
 		basePath: '',
 		vimeoVideoEmbed: [' https://player.vimeo.com/video/720880649?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin'],
 	}
@@ -93,4 +131,3 @@ const VideoData = { title, items };
 
 export default VideoData;
 
-// https://player.vimeo.com/video/504562182?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin
