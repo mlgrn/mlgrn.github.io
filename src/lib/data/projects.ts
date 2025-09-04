@@ -38,6 +38,75 @@ const items: Array<Project> = [
 	},
 
 	{
+		slug: 'daw-scripting',
+		color: '#00ff00',
+		description:
+			'Two workflows for automating recording of hardware synthesizers using Ableton Live with Max for Live and Reaper, along with some Python helper scripts.',
+		shortDescription:
+			'Two workflows for automating the more repetitive steps in creating samples and Decent Sampler presets. <br /> <br /> This is an ongoing project that I use to create sample for GlitchMagic.com',
+		links: [
+			{ to: 'https://www.youtube.com/watch?v=OCfxL7wMwJ8', label: 'YouTube' },
+			{ to: 'https://www.youtube.com/watch?v=hIdFdJSHZJo', label: 'YouTube' },
+		
+		],
+		logo: Assets.Python,
+		name: 'DAW Scripting',
+		period: {
+			from: new Date(2025, 2, 1),
+			to: new Date()
+		},
+		skills: getSkills('reaper', 'mixing'),
+		type: 'Reaper DAW Scripting',
+		basePath: '',
+		youtubeVideoEmbed: ['https://www.youtube.com/embed/hIdFdJSHZJo?si=UGm8rUlAStA0Q98Z', 'https://www.youtube.com/embed/OCfxL7wMwJ8?si=qgNLBi0MBY7oFqiu'],
+		// screenshots: [
+		// 	{	
+		// 		label: 'screenshot 1',
+		// 		src: `${base}/images/glitch-screen.png`},
+		// 		{	
+		// 			label: 'screenshot 2',
+		// 			src: `${base}/images/glitch-2.png`},
+		// 		
+		// 	
+		// ],
+		
+	},
+
+	{
+		slug: 'healthcare-data-demo',
+		color: '#00ff00',
+		description:
+			'A demonstration project showcasing a concept for a healthcare technology startup. <br /> <br /> I was given a public healthcare dataset and simply told to "do something interesting with it". I wrote some test scripts to probe what was there and decided that allowing a person shopping for healthcare to be informed about claim denial and resubmission rates would be very useful. This certainly is useful to me! <br /> <br /> Next I loaded the data into a Postgres database hosted on Railway, made some API endpoints to expose the data, then some scripts that allow the user to pull relevant data out of it.',
+		shortDescription:
+			'Python scripting to analyze public healthcare data using FastAPI and Postgres.',
+		links: [
+			{ to: 'https://vimeo.com/1115689433', label: 'Vimeo' },
+		
+		],
+		logo: Assets.Python,
+		name: 'Healthcare Data Demo',
+		period: {
+			from: new Date(2025, 3, 1),
+			to: new Date()
+		},
+		skills: getSkills('python'),
+		type: 'Python Scripting',
+		basePath: '',
+		vimeoVideoEmbed: ['https://player.vimeo.com/video/1115689433?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'],
+		// screenshots: [
+		// 	{	
+		// 		label: 'screenshot 1',
+		// 		src: `${base}/images/glitch-screen.png`},
+		// 		{	
+		// 			label: 'screenshot 2',
+		// 			src: `${base}/images/glitch-2.png`},
+		// 		
+		// 	
+		// ],
+		
+	},
+
+	{
 		slug: 'portfolio-website',
 		color: '#00ff00',
 		description:
