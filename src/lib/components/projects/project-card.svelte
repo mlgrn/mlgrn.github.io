@@ -58,12 +58,13 @@
 		</div>
 		
 		
-		{:else if project.vimeoVideoEmbed}
-		<div class="relative w-full bg-black" style="aspect-ratio: 1 / 1;">
-		  <div class="absolute inset-0 flex items-center justify-center bg-black p-0">
+				{:else if project.vimeoVideoEmbed}
+	
+				<div class="relative w-full bg-black" style="aspect-ratio: 350 / 350;">
+		  <div class="absolute inset-0 flex items-center justify-center bg-black">
 			<iframe
-			  class="rounded max-w-full max-h-full"
-			  style="aspect-ratio: 16 / 9; width: 100%; height: auto;"
+			  class="rounded"
+			  style="width: 100%; height: 56.25%; max-height: 100%; max-width: 177.78%; background-color: black;"
 			  src={project.vimeoVideoEmbed[0]}
 			  title="Video"
 			  frameborder="0"
@@ -74,6 +75,7 @@
 			></iframe>
 		  </div>
 		</div>
+
 		
 
 		{:else if project.bandcampEmbed}
