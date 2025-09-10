@@ -44,7 +44,7 @@
 	
 
 		{#if project.youtubeVideoEmbed}
-		<div class="relative w-full overflow-hidden" style="aspect-ratio: 1 / 1;">
+		<div class="relative w-full overflow-hidden bg-black" style="aspect-ratio: 1 / 1;">
 			<iframe
 				class="absolute inset-0 w-full h-full rounded"
 				src={project.youtubeVideoEmbed[0]}
@@ -59,11 +59,11 @@
 		
 		
 		{:else if project.vimeoVideoEmbed}
-		<div class="relative w-full overflow-hidden" style="aspect-ratio: 1 / 1;">
-		  <div class="absolute inset-0 flex items-center justify-center bg-black">
+		<div class="relative w-full bg-black" style="aspect-ratio: 1 / 1;">
+		  <div class="absolute inset-0 flex items-center justify-center bg-black p-0">
 			<iframe
-			  class="w-full h-auto max-h-full rounded"
-			  style="aspect-ratio: 16 / 9;"
+			  class="rounded max-w-full max-h-full"
+			  style="aspect-ratio: 16 / 9; width: 100%; height: auto;"
 			  src={project.vimeoVideoEmbed[0]}
 			  title="Video"
 			  frameborder="0"
@@ -74,7 +74,6 @@
 			></iframe>
 		  </div>
 		</div>
-
 		
 
 		{:else if project.bandcampEmbed}
@@ -110,13 +109,6 @@
 		</Avatar>
 		{/if}
 
-		
-
-	
-
-		
-		
-	
 
 		<div class="flex w-full flex-row items-center gap-1 overflow-x-hidden">
 			<CardTitle class="h-auto min-w-0 flex-1 overflow-x-hidden">

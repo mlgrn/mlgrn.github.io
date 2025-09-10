@@ -4,6 +4,30 @@ import type { Project } from './types';
 
 const items: Array<Project> = [
 	{
+		slug: 'animated-brand-short',
+		color: '#000000',
+		description:
+			'Top of funnel brand short for an e-commerce brand. Scripted, filmed, and edited in Adobe Premiere Pro, After Effects, and incorporates AI generated elements.',
+		shortDescription:
+			'Top of funnel brand short for an e-commerce brand.',
+		links: [
+			{ to: 'https://vimeo.com/1117498188?share=copy" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share', label: 'Vimeo' },
+			
+		],
+		logo: Assets.Unknown,
+		name: 'Animated Brand Short',
+		period: {
+			from: new Date(2025, 8, 1),
+			to: new Date(2025, 8, 1)
+		},
+		skills: getSkills('ae', 'pr', 'resolve'),
+		type: 'Video Production',
+		basePath: '',
+		vimeoVideoEmbed: ['https://player.vimeo.com/video/1117498188?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'],
+		
+	},
+
+	{
 		slug: 'james-blake-life-round-here',
 		color: '#5e95e3',
 		description:
