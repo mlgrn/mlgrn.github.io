@@ -189,7 +189,7 @@
         
     </div>
 </TitledPage>
-<div class="flex justify-center items-center space-x-4 italic">
+<div class="flex justify-center items-center space-x-4 italic text-black">
     <br />
     <br />
 <p class="text-xs max-w-md text-center">
