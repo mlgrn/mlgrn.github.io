@@ -183,7 +183,7 @@
 	];
 
 	const pricingNote =
-		'My rate is $100 per hour across the board. We can always do one-off lessons if you\'re flexible on schedule, but I give priority to my weekly studemts first.';
+		'My rate is $100 per hour across the board. We can always do one-off lessons if you\'re flexible on schedule, but I give priority to my weekly students ts first.';
 
 	const faqs = [
 		{
