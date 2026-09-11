@@ -3,6 +3,7 @@
 	import { base } from '$app/paths';
 	import BasePage from '$lib/components/common/base-page/base-page.svelte';
 	import Footer from '$lib/components/common/footer/footer.svelte';
+	import MetaPixel from '$lib/components/common/meta-pixel/meta-pixel.svelte';
 	import { Badge } from '$lib/components/ui/badge';
 	import { buttonVariants } from '$lib/components/ui/button';
 	import Button from '$lib/components/ui/button/button.svelte';
@@ -14,6 +15,7 @@
 	import H1 from '$lib/components/ui/typography/h1.svelte';
 	import H2 from '$lib/components/ui/typography/h2.svelte';
 	import Muted from '$lib/components/ui/typography/muted.svelte';
+	import { trackMetaLead } from '$lib/meta-pixel';
 	import { cn } from '$lib/utils';
 	import type { ActionData, PageData } from './$types';
 
@@ -183,7 +185,7 @@
 	];
 
 	const pricingNote =
-		'My rate is $100 per hour across the board. We can always do one-off lessons if you\'re flexible on schedule, but I give priority to my weekly students ts first.';
+		'My rate is $100 per hour across the board. We can always do one-off lessons if you\'re flexible on schedule, but I give priority to my weekly students first.';
 
 	const faqs = [
 		{
@@ -283,6 +285,7 @@
 {/snippet}
 
 <BasePage title="Bass Lessons">
+	<MetaPixel />
 	<div class="mx-auto flex w-full max-w-5xl flex-col gap-20 px-4 pb-24 pt-10 sm:px-6 sm:pb-12">
 		<!-- HERO -->
 		<section class="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
@@ -561,9 +564,12 @@
 						class="rounded-lg border bg-white shadow-sm dark:bg-neutral-900"
 						use:enhance={() => {
 							submitting = true;
-							return async ({ update }) => {
+							return async ({ result, update }) => {
 								submitting = false;
 								await update();
+								if (result.type === 'success') {
+									trackMetaLead();
+								}
 							};
 						}}
 					>
