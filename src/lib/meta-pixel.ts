@@ -64,9 +64,17 @@ export function trackMetaPageView(): void {
 	window.fbq?.('track', 'PageView');
 }
 
-/** Standard Meta Lead event — fire only after a real successful inquiry. */
-export function trackMetaLead(): void {
+/**
+ * Standard Meta Lead event — fire only after a real successful inquiry.
+ * Pass the same eventId used for the server-side Conversions API event so
+ * Meta deduplicates the pair instead of counting two leads.
+ */
+export function trackMetaLead(eventId?: string): void {
 	if (!getPixelId()) return;
 	initMetaPixel();
-	window.fbq?.('track', 'Lead');
+	if (eventId) {
+		window.fbq?.('track', 'Lead', {}, { eventID: eventId });
+	} else {
+		window.fbq?.('track', 'Lead');
+	}
 }

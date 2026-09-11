@@ -568,8 +568,10 @@
 								submitting = false;
 								await update();
 								// Only count real inquiries; silently discarded spam returns lead: false.
+								// leadEventId matches the server-side CAPI event for deduplication.
 								if (result.type === 'success' && result.data?.lead) {
-									trackMetaLead();
+									const eventId = result.data.leadEventId;
+									trackMetaLead(typeof eventId === 'string' ? eventId : undefined);
 								}
 							};
 						}}
