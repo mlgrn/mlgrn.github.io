@@ -77,7 +77,8 @@ export async function handleContactSubmission(fd: FormData, options: ContactSubm
 		!Number.isFinite(formStartedAt) || Date.now() - formStartedAt < MIN_SUBMISSION_TIME_MS;
 
 	// Return a normal response so automated submitters do not learn which check caught them.
-	if (honeypot || submittedTooQuickly) return { success: true };
+	// `lead: false` keeps discarded spam out of ad-platform conversion tracking.
+	if (honeypot || submittedTooQuickly) return { success: true, lead: false };
 
 	if (!userEmail || userEmail.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userEmail)) {
 		return fail(400, { error: 'Please enter a valid email address.' });
@@ -136,5 +137,5 @@ export async function handleContactSubmission(fd: FormData, options: ContactSubm
 		html: htmlLines.join('\n')
 	});
 
-	return { success: true };
+	return { success: true, lead: true };
 }

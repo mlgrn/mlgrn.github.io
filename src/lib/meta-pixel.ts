@@ -45,6 +45,8 @@ export function initMetaPixel(): void {
 		fbq.version = '2.0';
 		fbq.queue = [];
 		window.fbq = fbq;
+		// Meta's official snippet also exposes _fbq; some fbevents code paths look for it.
+		window._fbq ??= fbq;
 
 		const script = document.createElement('script');
 		script.async = true;

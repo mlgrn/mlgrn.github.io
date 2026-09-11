@@ -567,7 +567,8 @@
 							return async ({ result, update }) => {
 								submitting = false;
 								await update();
-								if (result.type === 'success') {
+								// Only count real inquiries; silently discarded spam returns lead: false.
+								if (result.type === 'success' && result.data?.lead) {
 									trackMetaLead();
 								}
 							};
