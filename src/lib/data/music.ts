@@ -471,7 +471,7 @@ const items: Array<Project> = [
 		description:
 			'folmR (Unit 7 Noise) on synths, Mat Watson on Drums, and me on bass. Recorded live at Phaedra Studios in Melbourne, Australia in 2018, BOSS Slicer pedal as the click track.',
 		shortDescription:
-			'remixes by HOT WOBBLE',
+			'Recorded live at Phaedra Studios in Melbourne, Australia',
 		links: [{ to: 'https://unit7noise.bandcamp.com/album/slicer', label: 'Bandcamp' }],
 		logo: Assets.Unknown,
 		name: 'Slicer',
@@ -526,9 +526,9 @@ const items: Array<Project> = [
 		slug: 'stars)',
 		color: '#3366cc',
 		description:
-			'Recorded in Separation Creek, Australia. with a lot of distortion pedals and reverb with Michael Folmer Hansen.',
+			'Recorded in Separation Creek, Australia in the same session as "Hang". with a lot of distortion pedals and reverb with Michael Folmer Hansen.',
 		shortDescription:
-			'Recorded in Separation Creek, Australia. with a lot of distortion pedals and reverb.',
+			'Recorded in Separation Creek, Australia in the same session as "Hang".',
 		links: [{ to: 'https://unit7noise.bandcamp.com/album/stars', label: 'Bandcamp' }],
 		logo: Assets.Unknown,
 		name: 'STARS',

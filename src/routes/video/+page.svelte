@@ -50,6 +50,8 @@
 </script>
 
 <SearchPage title={VideoData.title} {onSearch}>
+	<h3 class="text-2l font-bold">Click on a skill to show only projects that use that skill.</h3>
+
 	<div class="flex flex-1 flex-col gap-8">
 		<div class="flex flex-row flex-wrap gap-2">
 			{#each filters as it (it.slug)}

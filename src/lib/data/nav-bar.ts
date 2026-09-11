@@ -13,8 +13,8 @@ const items: Array<{
 	{ title: 'Music', icon: 'i-carbon-music', href: '/music' },
 //	{ title: 'Experience', icon: 'i-carbon-development', href: '/experience' },
 // { title: 'Resume', icon: 'i-carbon-document', href: '/resume' },
+	{ title: 'Lessons', icon: 'i-carbon-music-add', href: '/lessons' },
 	{ title: 'Bio', icon: 'i-carbon-person', href: '/bio' },
-	{ title: 'Skills', icon: 'i-carbon-assembly-cluster', href: '/skills' },
 	{ title: 'Education', icon: 'i-carbon-education', href: '/education' },
 	{ title: 'Contact', icon: 'i-carbon-email', href: '/contact' },
 
