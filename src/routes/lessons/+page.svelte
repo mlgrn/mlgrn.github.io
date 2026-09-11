@@ -194,7 +194,7 @@
 		{
 			question: 'Do you offer a free trial lesson?',
 			answer:
-				'No. Your first lesson is a full 60 minute lesson at my regular rate, and you will leave with an actionable plan to improve your playingwhether or not you continue. If you want to see how I teach before booking, that is exactly what my free videos are for.'
+				'No. Your first lesson is a full 60 minute lesson at my regular rate, and you will leave with an actionable plan to improve your playing whether or not you continue. If you want to see how I teach before booking, that is exactly what my free videos are for.'
 		},
 		{
 			question: 'I have never played an instrument. Is it too late to start?',
@@ -214,7 +214,7 @@
 		{
 			question: 'Do you teach upright as well as electric?',
 			answer:
-				'Yes, I teach both. For upright, I recommend you also use a separate microphone and audio interface instead of the computer\'s built in microphone, particularly for bowed bass playing.'
+				'Yes, I teach both. For upright, I recommend you also use a separate microphone and audio interface instead of the computer\'s built in microphone, particularly for bowed bass playing. I can help you pick the right equipment and get it set up.'
 		},
 		{
 			question: 'How much do I need to practice?',
