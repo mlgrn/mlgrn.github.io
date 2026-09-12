@@ -12,6 +12,12 @@ export type MetaLeadInput = {
 	email: string;
 	/** Free-text name field; split into first/last for Meta's matching. */
 	name?: string;
+	/** Meta Browser ID (_fbp). Not hashed. */
+	fbp?: string;
+	/** Meta Click ID (_fbc), from fbclid. Not hashed. */
+	fbc?: string;
+	/** Stable first-party visitor id. Not hashed (per Events Manager guidance). */
+	externalId?: string;
 	event: RequestEvent;
 };
 
@@ -34,6 +40,10 @@ function splitName(name: string | undefined): { first?: string; last?: string } 
 	return { first: parts[0], last: parts[parts.length - 1] };
 }
 
+function isMetaBrowserOrClickId(value: string): boolean {
+	return /^fb\.\d+\.\d+\./.test(value);
+}
+
 /**
  * Sends a Lead event to Meta's Conversions API from the server.
  *
@@ -41,7 +51,15 @@ function splitName(name: string | undefined): { first?: string; last?: string } 
  * browser blocks Meta (Brave, Firefox, Safari, ad blockers). Never throws: a
  * tracking failure must not break the inquiry form.
  */
-export async function sendMetaLeadEvent({ eventId, email, name, event }: MetaLeadInput): Promise<void> {
+export async function sendMetaLeadEvent({
+	eventId,
+	email,
+	name,
+	fbp,
+	fbc,
+	externalId,
+	event
+}: MetaLeadInput): Promise<void> {
 	const pixelId = publicEnv.PUBLIC_META_PIXEL_ID?.trim();
 	const accessToken = privateEnv.META_CAPI_ACCESS_TOKEN?.trim();
 	if (!pixelId || !accessToken) return;
@@ -62,11 +80,14 @@ export async function sendMetaLeadEvent({ eventId, email, name, event }: MetaLea
 		// Not available in some runtimes; Meta falls back to other matching signals.
 	}
 
-	// First-party cookies set by the browser pixel improve match quality.
-	const fbp = event.cookies.get('_fbp');
-	const fbc = event.cookies.get('_fbc');
-	if (fbp) userData.fbp = fbp;
-	if (fbc) userData.fbc = fbc;
+	// Prefer values captured client-side (form fields); fall back to cookies.
+	const resolvedFbp = (fbp?.trim() || event.cookies.get('_fbp') || '').trim();
+	const resolvedFbc = (fbc?.trim() || event.cookies.get('_fbc') || '').trim();
+	const resolvedExternalId = (externalId?.trim() || event.cookies.get('_eg_eid') || '').trim();
+
+	if (resolvedFbp && isMetaBrowserOrClickId(resolvedFbp)) userData.fbp = resolvedFbp;
+	if (resolvedFbc && isMetaBrowserOrClickId(resolvedFbc)) userData.fbc = resolvedFbc;
+	if (resolvedExternalId) userData.external_id = [resolvedExternalId];
 
 	const payload: Record<string, unknown> = {
 		data: [

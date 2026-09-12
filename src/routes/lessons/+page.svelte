@@ -15,13 +15,20 @@
 	import H1 from '$lib/components/ui/typography/h1.svelte';
 	import H2 from '$lib/components/ui/typography/h2.svelte';
 	import Muted from '$lib/components/ui/typography/muted.svelte';
+	import { ensureMetaMatchIds, type MetaMatchIds } from '$lib/meta-match';
 	import { trackMetaLead } from '$lib/meta-pixel';
 	import { cn } from '$lib/utils';
+	import { onMount } from 'svelte';
 	import type { ActionData, PageData } from './$types';
 
 	let { data, form }: { data: PageData; form: ActionData } = $props();
 
 	let submitting = $state(false);
+	let matchIds = $state<MetaMatchIds>({ fbp: '', fbc: '', externalId: '' });
+
+	onMount(() => {
+		matchIds = ensureMetaMatchIds();
+	});
 
 	// ---------------------------------------------------------------------------
 	// COPY. Everything below is placeholder text. Edit freely.
@@ -582,6 +589,9 @@
 							<input type="text" id="lessons-website" name="website" tabindex="-1" autocomplete="off" />
 						</div>
 						<input type="hidden" name="formStartedAt" value={data.formStartedAt} />
+						<input type="hidden" name="fbp" value={matchIds.fbp} />
+						<input type="hidden" name="fbc" value={matchIds.fbc} />
+						<input type="hidden" name="external_id" value={matchIds.externalId} />
 
 						<div class="space-y-4 p-4 sm:p-6">
 							<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">

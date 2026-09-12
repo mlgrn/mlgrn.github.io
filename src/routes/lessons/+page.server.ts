@@ -9,6 +9,7 @@ export const load: PageServerLoad = () => ({
 export const actions: Actions = {
 	inquire: async (event) => {
 		const fd = await event.request.formData();
+		const read = (key: string) => (fd.get(key) ?? '').toString().trim();
 
 		const result = await handleContactSubmission(fd, {
 			// Prefix makes it easy to filter lesson leads into their own label / list.
@@ -32,8 +33,11 @@ export const actions: Actions = {
 		const leadEventId = crypto.randomUUID();
 		await sendMetaLeadEvent({
 			eventId: leadEventId,
-			email: (fd.get('email') ?? '').toString(),
-			name: (fd.get('name') ?? '').toString(),
+			email: read('email'),
+			name: read('name'),
+			fbp: read('fbp'),
+			fbc: read('fbc'),
+			externalId: read('external_id'),
 			event
 		});
 
