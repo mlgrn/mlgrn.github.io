@@ -1,33 +1,23 @@
-name: Build and Deploy
+# Disabled: production is on Vercel (@sveltejs/adapter-vercel), not GitHub Pages.
+# This workflow expected a static `build/` output from adapter-static, which this
+# project no longer produces — so the job always failed after `npm run build`.
+#
+# To re-enable Pages later, switch svelte.config.js back to adapter-static and
+# restore the build/deploy steps below.
+#
+# name: Build and Deploy
+# on:
+#   push:
+#     branches:
+#       - master
+#       - main
+
+name: Build and Deploy (disabled)
 on:
-  push:
-    branches:
-      - master
-      - main
-permissions:
-  contents: write
+  workflow_dispatch: # manual only; does not run on push
 jobs:
-  build-and-deploy:
-    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+  noop:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v3
-
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
-        env:
-          # Baked into the client at build time. Set this in the repo:
-          # Settings → Secrets and variables → Actions → Variables
-          # Name: PUBLIC_META_PIXEL_ID  Value: your Meta Pixel ID
-          PUBLIC_META_PIXEL_ID: ${{ vars.PUBLIC_META_PIXEL_ID }}
-        run: |
-          npm ci
-          npm run build
-          touch build/.nojekyll
-          cp build/404.html build/index.html
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: build # The folder the action should deploy.
-          branch: gh-pages
+      - name: Skipped
+        run: echo "GitHub Pages deploy is disabled. Use Vercel for production deploys."
