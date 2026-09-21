@@ -122,16 +122,6 @@ const items = [
 
 
 	defineSkill({
-		slug: 'ableton',
-		color: 'white',
-		description:
-			'Ableton Live is my primary DAW, and I have been using it for many years. Additionally I have attended the Ableton Loop conference in Los Angeles and Berlin.',
-		logo: Assets.Ableton,
-		name: 'Ableton Live',
-		category: 'audio'
-	}),
-
-	defineSkill({
 		slug: 'logic',
 		color: 'white',
 		description:
@@ -142,41 +132,22 @@ const items = [
 	}),
 
 	defineSkill({
-		slug: 'reaper',
-		color: 'grey',
+		slug: 'daw-plugin-dev',
+		color: 'blue',
 		description:
-			'Reaper is my go to DAW for mixing, mastering, and any problem requring DAW scripting.',
-		logo: Assets.Reaper,
-		name: 'Reaper',
-		category: 'audio'
+			'I develop custom tools and plugins for digital audio workstations, including scripting and automation workflows for sampling, instrument building, and music production.',
+		logo: Assets.Ableton,
+		name: 'DAW Plugin Development',
+		category: 'tech'
 	}),
 
 	defineSkill({
-		slug: 'ae',
+		slug: 'video-production',
 		color: 'purple',
 		description:
-			'Adobe After Effects is industry standard compositing software. I have used it for a variety of projects, including film, social media campaigns, and advertising.',
-		logo: Assets.AfterEffects,
-		name: 'Adobe After Effects',
-		category: 'video'
-	}),
-
-	defineSkill({
-		slug: 'pr',
-		color: 'purple',
-		description:
-			'Premiere Pro is my go to video editing software when I need to move between After Effects and a larger timeline.',
+			'Editing, compositing, motion graphics, and color for film, social media campaigns, and advertising. <br /> <br /> Adobe Premiere Pro is my go to editor for larger timelines, After Effects handles compositing and motion graphics, and I use Davinci Resolve interchangeably with Premiere for editing and color correction.',
 		logo: Assets.Premiere,
-		name: 'Adobe Premiere',
-		category: 'video'
-	}),
-	defineSkill({
-		slug: 'resolve',
-		color: 'white',
-		description:
-			'Resolve is industry standard color correction and editing software. I use it interchangably with Premiere Pro.',
-		logo: Assets.Resolve,
-		name: 'Davinci Resolve',
+		name: 'Video Production',
 		category: 'video'
 	}),
 

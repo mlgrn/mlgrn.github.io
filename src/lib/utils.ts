@@ -137,3 +137,15 @@ export const getMonthAndYear = (date?: Date) => {
 
 	return `${getMonthName(date.getMonth())} ${date.getFullYear()}`;
 };
+
+/**
+ * Vimeo iframes are transparent by default. On pages with a light color-scheme,
+ * browsers paint an opaque white canvas over that transparency — so a black
+ * player background set in Vimeo still looks white. Force a black iframe bg.
+ */
+export function vimeoEmbedSrc(src: string): string {
+	const cleaned = src.trim().replace(/&amp;/g, '&').split('"')[0];
+	if (!cleaned.includes('player.vimeo.com')) return cleaned;
+	if (/[?&]transparent=/.test(cleaned)) return cleaned;
+	return `${cleaned}${cleaned.includes('?') ? '&' : '?'}transparent=0`;
+}

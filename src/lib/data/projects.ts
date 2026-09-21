@@ -5,6 +5,26 @@ import { base } from '$app/paths';
 
 const items: Array<Project> = [
 	{
+		slug: 'autochopper-sampler',
+		color: '#1c69d4',
+		description: 'AUTOCHOPPER is a sampler plugin for VST/AU that allow for dynamic slicing of audio samples. It is written in C++ and uses the JUCE framework for Mac and Windows. It has multiple modulation sources and can route unique effects chains to invididual slices. Available at <a href="https://glitchmagic.com/collections/plugins/products/autochopper-plugin" target="_blank" rel="noopener noreferrer">https://glitchmagic.com/collections/plugins/products/autochopper-plugin</a>',
+		shortDescription: 'Sampler Plugin for VST/AU that allow for dynamic slicing of audio samples.',
+		links: [
+			{ to: 'https://youtu.be/OUfRs5X1e6Y?si=KH1ym2OPw2i5jrsz', label: 'YouTube' },
+		],
+		logo: Assets.Ableton,
+		name: 'AUTOCHOPPER Sampler Plugin',
+		period: {
+			from: new Date(2026, 0, 1),
+			to: new Date()
+		},
+		skills: getSkills('daw-plugin-dev'),
+		type: 'DAW Plugin',
+		basePath: '',
+		youtubeVideoEmbed: ['https://www.youtube.com/embed/OUfRs5X1e6Y'],
+	},
+
+	{
 		slug: 'glitch-magic',
 		color: '#00ff00',
 		description:
@@ -21,9 +41,10 @@ const items: Array<Project> = [
 			from: new Date(2021, 1, 1),
 			to: new Date()
 		},
-		skills: getSkills('ableton', 'reaper','ae','pr','liquid', 'js', 'css','html','shopify','mixing','comp'),
+		skills: getSkills('video-production','liquid', 'js', 'css','html','shopify','mixing','comp'),
 		type: 'e-commerce website',
 		basePath: '',
+		cardAspectRatio: '16 / 9',
 		screenshots: [
 			{	
 				label: 'screenshot 1',
@@ -55,7 +76,7 @@ const items: Array<Project> = [
 			from: new Date(2025, 2, 1),
 			to: new Date()
 		},
-		skills: getSkills('reaper', 'mixing'),
+		skills: getSkills('mixing'),
 		type: 'Reaper DAW Scripting',
 		basePath: '',
 		youtubeVideoEmbed: ['https://www.youtube.com/embed/hIdFdJSHZJo?si=UGm8rUlAStA0Q98Z', 'https://www.youtube.com/embed/OCfxL7wMwJ8?si=qgNLBi0MBY7oFqiu'],

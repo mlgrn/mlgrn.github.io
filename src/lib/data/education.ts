@@ -42,7 +42,7 @@ const items: Array<Education> = [
 		shortDescription: 'Highlights include working with Alan Gilbert, Sir Simon Rattle, Anne-Sophie Mutter, Heinz Holliger, Ensemble Intercontemporain.',
 		slug: 'education-item-3',
 		subjects: ['20th century music', '21st century music'],
-		media:['https://player.vimeo.com/video/1110053950?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479','https://player.vimeo.com/video/1110053908?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479', 'https://player.vimeo.com/video/1110053964?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479']
+		media:['https://player.vimeo.com/video/1110053950?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479','https://player.vimeo.com/video/1110053908?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479', 'https://player.vimeo.com/video/1110053964?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479', 'https://player.vimeo.com/video/1228990630?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479']
 	},
 	
 ];

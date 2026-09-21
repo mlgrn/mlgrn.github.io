@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Assets from '$lib/data/assets';
 	import type { Project } from '$lib/data/types';
-	import { computeExactDuration, getMonthAndYear, href } from '$lib/utils';
+	import { computeExactDuration, getMonthAndYear, href, vimeoEmbedSrc } from '$lib/utils';
 	import { ellipsify } from '@riadh-adrani/utils';
 	import { mode } from 'mode-watcher';
 	import ButtonLink from '../common/button-link/button-link.svelte';
@@ -23,7 +23,6 @@
 	} from '../ui/dropdown-menu';
 	import Icon from '../ui/icon/icon.svelte';
 	import Separator from '../ui/separator/separator.svelte';
-	import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
 	import Muted from '../ui/typography/muted.svelte';
 	import P from '../ui/typography/p.svelte';
 
@@ -44,7 +43,7 @@
 	
 
 		{#if project.youtubeVideoEmbed}
-		<div class="relative w-full overflow-hidden bg-black" style="aspect-ratio: 1 / 1;">
+		<div class="relative w-full overflow-hidden bg-black" style="aspect-ratio: {project.cardAspectRatio ?? '16 / 9'};">
 			<iframe
 				class="absolute inset-0 w-full h-full rounded"
 				src={project.youtubeVideoEmbed[0]}
@@ -59,13 +58,12 @@
 		
 		
 				{:else if project.vimeoVideoEmbed}
-	
-				<div class="relative w-full bg-black" style="aspect-ratio: 350 / 350;">
+				<div class="relative w-full bg-black" style="aspect-ratio: 350 / 350; color-scheme: dark;">
 		  <div class="absolute inset-0 flex items-center justify-center bg-black">
 			<iframe
 			  class="rounded"
-			  style="width: 100%; height: 56.25%; max-height: 100%; max-width: 177.78%; background-color: black;"
-			  src={project.vimeoVideoEmbed[0]}
+			  style="width: 100%; height: 56.25%; max-height: 100%; max-width: 177.78%; background-color: #000; color-scheme: dark;"
+			  src={vimeoEmbedSrc(project.vimeoVideoEmbed[0])}
 			  title="Video"
 			  frameborder="0"
 			  loading="lazy"
@@ -94,7 +92,7 @@
 
 
 		{:else if project.screenshots && project.screenshots.length >= 1}
-		<div class="relative w-full overflow-hidden" style="aspect-ratio: 1 / 1;">
+		<div class="relative w-full overflow-hidden" style="aspect-ratio: {project.cardAspectRatio ?? '1 / 1'};">
 			<img
 				class="absolute inset-0 w-full h-full object-cover rounded"
 				src={project.screenshots[0].src}
@@ -112,16 +110,9 @@
 		{/if}
 
 
-		<div class="flex w-full flex-row items-center gap-1 overflow-x-hidden">
-			<CardTitle class="h-auto min-w-0 flex-1 overflow-x-hidden">
-				<Tooltip>
-					<TooltipTrigger
-						class="w-full overflow-y-auto overflow-x-hidden truncate text-ellipsis text-nowrap text-left"
-					>
-						{project.name}
-					</TooltipTrigger>
-					<TooltipContent>{project.name}</TooltipContent>
-				</Tooltip>
+		<div class="flex w-full flex-row items-start gap-1">
+			<CardTitle class="h-auto min-w-0 flex-1 whitespace-normal break-words text-left">
+				{project.name}
 			</CardTitle>
 			{#if project.links.length > 2}
 				<ButtonLink link={project.links[0]} />

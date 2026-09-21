@@ -3,6 +3,8 @@ import { getSkills } from './skills';
 import type { Project } from './types';
 
 const items: Array<Project> = [
+	
+
 	{
 		slug: 'life-so-simple',
 		color: '#5e95e3',
@@ -20,7 +22,7 @@ const items: Array<Project> = [
 			from: new Date(2024, 2,1),
 			to: new Date(2024, 8,1)
 		},
-		skills: getSkills('mixing', 'comp', 'mastering', 'pr','ae' ),
+		skills: getSkills('mixing', 'comp', 'mastering', 'video-production'),
 		type: 'Composition & Event Production',	
 		basePath:'',
 		// use embed version of the youtube video, not the raw url from browser
@@ -33,6 +35,84 @@ const items: Array<Project> = [
 			'https://www.youtube.com/embed/EQe5Je8GTDA?si=rdiXhVRjad_i6T-Z',
 			'https://www.youtube.com/embed/rtjs-6LmzvE?si=qIpbcWTu_9-namC3',
 			'https://www.youtube.com/embed/Z2EfKG6iAuw?si=wuPgzNeZXNEXFlQf'
+		]
+	},
+
+	{
+		slug: 'bmw-2027-7-series-grand-central',
+		color: '#1c69d4',
+		description:
+			'I co-composed the piece "In Circles" for the unveiling ceremony for the BMW 2027 7 Series at Grand Central Terminal with cellist James Acampora in collaboration with The Music Dept NYC and Redwood Reverie.',
+		shortDescription:
+			'I co-composed the piece "In Circles" for the unveiling ceremony for the BMW 2027 7 Series at Grand Central Terminal with cellist James Acampora in collaboration with The Music Dept NYC and Redwood Reverie.',
+		links: [
+			{ to: 'https://vimeo.com/1228981344', label: 'Vimeo' },
+		],
+		logo: Assets.Unknown,
+		name: 'BMW 2027 7 Series Unveiling at Grand Central Terminal, NYC',
+		period: {
+			from: new Date(2026, 0, 1),
+			to: new Date(2026, 0, 1)
+		},
+		skills: getSkills('comp'),
+		type: 'Composition',
+		basePath: '',
+		vimeoVideoEmbed: [
+			'https://player.vimeo.com/video/1228981344?badge=0&autopause=0&player_id=0&app_id=58479',
+		],
+		audioTracks: [
+			{
+				src: '/audio/In%20Circles%20v4.mp3',
+				title: 'In Circles (Full Track)'
+			}
+		],
+	},
+
+	{
+		slug: 'dont-cry-because-its-over',
+		color: '#c45c26',
+		description:
+			'I composed the string parts for Gengis Don\'s track Don\'t Cry Because it\'s Over, Cry Because you Listened. <br /><h1><strong>Credits</strong> </h1><br /> Featured artists: Gengis Don, Tomoki Sanders, Eiress Wicks, Peter Enriqez. <br /><br /><strong>Composition &amp; Lyrics</strong><br /><br />Emilio Guarino<br />Composer • Lyricist<br /><br />Rodrigo Anavalon<br />Composer • Lyricist<br /><br />Lyndon Harewood<br />Composer • Lyricist<br /><br /><strong>Production &amp; Engineering</strong><br /><br />Tomoki Sanders<br />Studio Producer<br /><br />Gengis Don<br />Studio Producer<br /><br />Chris Gaskel<br />Studio Producer<br /><br />Emilio Guarino<br />Studio Producer<br /><br />Peter Enriquez<br />Studio Producer<br /><br />John Colaiaocovo<br />Studio Producer<br />',
+		shortDescription: 'Composed string parts for Gengis Don\'s track Don\'t Cry Because it\'s Over, Cry Because you Listened',
+		links: [
+			{ to: 'https://youtu.be/tPKSl-5kFpI?si=vLWt94Znc7dTYhZx', label: 'YouTube' },
+		],
+		logo: Assets.Unknown,
+		name: "Don't Cry Because it's Over, Cry Because you Listened",
+		period: {
+			from: new Date(2026, 0, 1),
+			to: new Date(2026, 0, 1)
+		},
+		skills: getSkills('comp'),
+		type: 'Composition',
+		basePath: '',
+		youtubeVideoEmbed: ['https://www.youtube.com/embed/tPKSl-5kFpI?si=vLWt94Znc7dTYhZx'],
+	},
+
+	{
+		slug: 'maybelline-fit-me',
+		color: '#c8102e',
+		description: 'Two demo tracks made for Maybelline social media ads. All rights reserved to Redwood Reverie LLC',
+		shortDescription:
+			'Two demo tracks made for Maybelline social media ads, including a demo remix of ITZY\'s "Not Shy".',
+		links: [
+			{ to: 'https://vimeo.com/1228926698/66c5ee2716', label: 'ITZY Not Shy Remix' },
+			{ to: 'https://vimeo.com/721196169/ab503082b6', label: 'Fit Me Campaign Demo' }
+			
+		],
+		logo: Assets.Unknown,
+		name: 'Maybelline Social Media Campaign',
+		period: {
+			from: new Date(2022, 5, 1),
+			to: new Date(2022, 5, 1)
+		},
+		skills: getSkills('comp'),
+		type: 'Composition',
+		basePath: '',
+		// unlisted vimeo videos need the ?h= hash from the share link to embed
+		vimeoVideoEmbed: [
+					'https://player.vimeo.com/video/1228926698?h=66c5ee2716&badge=0&autopause=0&player_id=0&app_id=58479', 
+					'https://player.vimeo.com/video/721196169?h=ab503082b6&badge=0&autopause=0&player_id=0&app_id=58479',
 		]
 	},
 
@@ -243,7 +323,7 @@ const items: Array<Project> = [
 			from: new Date(2018, 0, 1),
 			to: new Date(2021, 12, 29)
 		},
-		skills: getSkills('comp', 'mixing', 'mastering', "ableton", "bass"),
+		skills: getSkills('comp', 'mixing', 'mastering', 'bass'),
 		type: 'Artist',
 		basePath:'',   
 		youtubeVideoEmbed: ['https://www.youtube.com/embed/S0QSe_VeYag?si=s_hIYkTRbBUx-v7f'],

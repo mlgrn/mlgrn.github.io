@@ -4,6 +4,27 @@ import type { Project } from './types';
 
 const items: Array<Project> = [
 	{
+		slug: 'tech-engineering-emmys-75',
+		color: '#d4af37',
+		description: 'Camera operator for the 75th Annual Technology and Engineering Emmy Awards.',
+		shortDescription:
+			'Camera operator for the 75th Annual Technology and Engineering Emmy Awards.',
+		links: [{ to: 'https://vimeo.com/1228977710', label: 'Vimeo' }],
+		logo: Assets.Unknown,
+		name: '75th Annual Technology and Engineering Emmy Awards',
+		period: {
+			from: new Date(2026, 0, 1),
+			to: new Date(2026, 0, 1)
+		},
+		skills: getSkills('cam-op'),
+		type: 'Livestream',
+		basePath: '',
+		vimeoVideoEmbed: [
+			'https://player.vimeo.com/video/1228977710?badge=0&autopause=0&player_id=0&app_id=58479'
+		]
+	},
+
+	{
 		slug: 'animated-brand-short',
 		color: '#000000',
 		description:
@@ -20,7 +41,7 @@ const items: Array<Project> = [
 			from: new Date(2025, 8, 1),
 			to: new Date(2025, 8, 1)
 		},
-		skills: getSkills('ae', 'pr', 'resolve'),
+		skills: getSkills('video-production'),
 		type: 'Video Production',
 		basePath: '',
 		vimeoVideoEmbed: ['https://player.vimeo.com/video/1117498188?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'],
@@ -64,7 +85,7 @@ const items: Array<Project> = [
 			from: new Date(2019,7,1),
 			to: new Date(2019,7,3)
 		},
-		skills: getSkills('mixing', 'reaper', 'ableton', 'pr', 'ae'),
+		skills: getSkills('mixing', 'video-production'),
 		type: 'Short Film',
 		basePath: '',
 		vimeoVideoEmbed: ['https://player.vimeo.com/video/907974786?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'],
@@ -121,7 +142,7 @@ const items: Array<Project> = [
 			from: new Date(2019,7,1),
 			to: new Date(2019,7,3)
 		},
-		skills: getSkills('pr', 'ae', 'resolve', 'ableton', 'mixing', 'mastering'),
+		skills: getSkills('video-production', 'mixing', 'mastering'),
 		type: 'Ecommerce Video',
 		basePath: '',
 		vimeoVideoEmbed: [' https://player.vimeo.com/video/504562182?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin'],

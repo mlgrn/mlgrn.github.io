@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { afterNavigate, goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import Input from '$lib/components/ui/input/input.svelte';
-	import { onMount, type Snippet } from 'svelte';
+	import { type Snippet } from 'svelte';
 	import TitledPage from '../titled-page/titled-page.svelte';
 
 	let {
@@ -9,31 +11,40 @@
 		children
 	}: { title: string; onSearch: (value: string) => void; children: Snippet } = $props();
 
-	let query = $state('');
-	let mounted = $state(false);
+	const queryFromUrl = (url: URL) => url.searchParams.get('q') ?? '';
+
+	let query = $state(queryFromUrl($page.url));
 
 	$effect(() => {
-		if (mounted) {
-			let searchParams = new URLSearchParams(window.location.search);
-
-			searchParams.set('q', query);
-
-			const url = `${window.location.protocol}//${window.location.host}${
-				window.location.pathname
-			}?${searchParams.toString()}`;
-
-			const state = window.history.state;
-
-			window.history.replaceState(state, '', url);
-
-			onSearch(query);
-		}
+		onSearch(query);
 	});
 
-	onMount(() => {
-		let searchParams = new URLSearchParams(window.location.search);
-		query = searchParams.get('q') ?? '';
-		mounted = true;
+	// Keep `q` in the URL so a search can be shared or reloaded.
+	$effect(() => {
+		if (queryFromUrl($page.url) === query) return;
+
+		const params = new URLSearchParams($page.url.searchParams);
+
+		if (query.trim().length === 0) {
+			params.delete('q');
+		} else {
+			params.set('q', query);
+		}
+
+		const search = params.toString().replaceAll('%2C', ',');
+
+		goto(`${$page.url.pathname}${search ? `?${search}` : ''}`, {
+			replaceState: true,
+			noScroll: true,
+			keepFocus: true
+		});
+	});
+
+	// Follow the URL when it changes from elsewhere, e.g. the back button.
+	afterNavigate(() => {
+		const fromUrl = queryFromUrl($page.url);
+
+		if (fromUrl !== query) query = fromUrl;
 	});
 </script>
 

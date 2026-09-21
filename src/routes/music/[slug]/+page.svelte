@@ -1,19 +1,20 @@
 <script lang="ts">
+	import AudioPlayer from '$lib/components/common/audio-player/audio-player.svelte';
 	import BasePage from '$lib/components/common/base-page/base-page.svelte';
 	import EmptyResult from '$lib/components/common/empty-result/empty-result.svelte';
 	import FancyBanner from '$lib/components/common/fancy-banner/fancy-banner.svelte';
 	import EmptyMarkdown from '$lib/components/common/markdown/empty-markdown.svelte';
 	import Markdown from '$lib/components/common/markdown/markdown.svelte';
 	import ScreenshotCard from '$lib/components/common/screenshot/screenshot-card.svelte';
+	import Footer from '$lib/components/common/footer/footer.svelte';
 	import Badge from '$lib/components/ui/badge/badge.svelte';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
 	import H1 from '$lib/components/ui/typography/h1.svelte';
 	import Muted from '$lib/components/ui/typography/muted.svelte';
 	import Assets from '$lib/data/assets';
 	import type { Project } from '$lib/data/types';
-	import { computeExactDuration, getMonthAndYear, href } from '$lib/utils';
+	import { computeExactDuration, getMonthAndYear, href, vimeoEmbedSrc } from '$lib/utils';
 	import { mode } from 'mode-watcher';
-	import Footer from '$lib/components/common/footer/footer.svelte';
 
 	let { data }: { data: { item?: Project } } = $props();
 
@@ -30,9 +31,10 @@
 	);
 
 	const yt = $derived(data.item?.youtubeVideoEmbed ?? []);
-  const vi = $derived(data.item?.vimeoVideoEmbed ?? []);
-  const bc = $derived(data.item?.bandcampEmbed ?? []);
-  const embeds = $derived([...yt, ...vi]);
+	const vi = $derived((data.item?.vimeoVideoEmbed ?? []).map(vimeoEmbedSrc));
+	const bc = $derived(data.item?.bandcampEmbed ?? []);
+	const audioTracks = $derived(data.item?.audioTracks ?? []);
+	const embeds = $derived([...yt, ...vi]);
 
 	
 	const gridClass = $derived(
@@ -76,46 +78,43 @@
 			</div>
 		</FancyBanner>
 		<Separator />
-		{#if data.item.description.trim()}
-			<Markdown content={data.item.description} />
-		{:else}
-			<EmptyMarkdown />
-		{/if}
-		<Separator />
 		<div class="flex flex-col gap-2 px-4 pt-4">
-
-
-				{#if embeds.length}
+			{#if embeds.length}
 				<div class={`grid gap-4 ${gridClass}`}>
-				  {#each embeds as src (src)}
-					<div class="relative aspect-video w-full">
-					  <iframe
-						class="absolute inset-0 h-full w-full rounded"
-						src={src}
-						title="YouTube video"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						referrerpolicy="strict-origin-when-cross-origin"
-						allowfullscreen
-					  ></iframe>
-					</div>
-				  {/each}
+					{#each embeds as src (src)}
+						<div class="relative aspect-video w-full bg-black" style="color-scheme: dark;">
+							<iframe
+								class="absolute inset-0 h-full w-full rounded"
+								style="background-color: #000; color-scheme: dark;"
+								{src}
+								title="YouTube video"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								referrerpolicy="strict-origin-when-cross-origin"
+								allowfullscreen
+							></iframe>
+						</div>
+					{/each}
 				</div>
-			  {/if}
+			{/if}
 
-			  {#if bc.length}
-			  <div class={`grid gap-4 ${gridClass}`}>
-				
-				{#each bc as src (src)}
-				<div class="relative aspect-video w-full">
-				<iframe title="Bandcamp"style="border: 0; width: 350px; height: 470px;" src={src}></iframe>
+		
+
+			{#if bc.length}
+				<div class={`grid gap-4 ${gridClass}`}>
+					{#each bc as src (src)}
+						<div class="relative aspect-video w-full">
+							<iframe
+								title="Bandcamp"
+								style="border: 0; width: 350px; height: 470px;"
+								{src}
+							></iframe>
+						</div>
+					{/each}
 				</div>
-				{/each}
-				
-			</div>
+			{/if}
 
-			  {/if}
-
+			
 
 			{#if data.item.screenshots && data.item.screenshots.length > 0}
 				<Muted>Screenshots</Muted>
@@ -126,6 +125,23 @@
 				</div>
 			{/if}
 		</div>
+
+		{#if audioTracks.length}
+			<div class="flex flex-col gap-3 px-4 pb-4 pt-2">
+				{#each audioTracks as track (track.src)}
+					<AudioPlayer src={track.src} title={track.title} />
+				{/each}
+			</div>
+		{/if}
+		
+		<Separator />
+
+		
+		{#if data.item.description.trim()}
+			<Markdown content={data.item.description} />
+		{:else}
+			<EmptyMarkdown />
+		{/if}
 	{/if}
 </BasePage>
 

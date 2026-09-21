@@ -11,7 +11,7 @@
 	import Muted from '$lib/components/ui/typography/muted.svelte';
 	import Assets from '$lib/data/assets';
 	import type { Education } from '$lib/data/types';
-	import { computeExactDuration, getMonthAndYear } from '$lib/utils';
+	import { computeExactDuration, getMonthAndYear, vimeoEmbedSrc } from '$lib/utils';
 	import { mode } from 'mode-watcher';
 	import Footer from '$lib/components/common/footer/footer.svelte';
 	import EducationData from '$lib/data/education';
@@ -60,11 +60,12 @@
 		<div class="grid grid-cols-1 gap-6 px-4 pt-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
 			{#if data.item && data.item.media && data.item.media.length > 0}
 				{#each data.item.media as mediaLink}
-					<div class="relative aspect-[16/9] w-full bg-[--background] rounded overflow-hidden">
+					<div class="relative aspect-[16/9] w-full overflow-hidden rounded bg-black" style="color-scheme: dark;">
 						<iframe 
 							class="absolute inset-0 h-full w-full"
+							style="background-color: #000; color-scheme: dark;"
 							title={data.item.degree} 
-							src={`${mediaLink}&controls=1&autopause=0&fullscreen=1`} 
+							src={`${vimeoEmbedSrc(mediaLink)}&controls=1&autopause=0&fullscreen=1`} 
 							frameborder="0" 
 							allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
 							allowfullscreen

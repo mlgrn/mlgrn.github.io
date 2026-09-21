@@ -11,7 +11,7 @@
 	import Muted from '$lib/components/ui/typography/muted.svelte';
 	import Assets from '$lib/data/assets';
 	import type { Project } from '$lib/data/types';
-	import { computeExactDuration, getMonthAndYear, href } from '$lib/utils';
+	import { computeExactDuration, getMonthAndYear, href, vimeoEmbedSrc } from '$lib/utils';
 	import { mode } from 'mode-watcher';
 	import Footer from '$lib/components/common/footer/footer.svelte';
 
@@ -31,7 +31,7 @@
 	);
 
 	const yt = $derived(data.item?.youtubeVideoEmbed ?? []);
-  const vi = $derived(data.item?.vimeoVideoEmbed ?? []);
+  const vi = $derived((data.item?.vimeoVideoEmbed ?? []).map(vimeoEmbedSrc));
   const embeds = $derived([...yt, ...vi]);
 
   const gridClass = $derived(
@@ -88,9 +88,10 @@
 		{#if embeds.length}
 		<div class={`grid gap-4 ${gridClass}`}>
 		  {#each embeds as src (src)}
-			<div class="relative aspect-video w-full">
+			<div class="relative aspect-video w-full bg-black" style="color-scheme: dark;">
 			  <iframe
 				class="absolute inset-0 h-full w-full rounded"
+				style="background-color: #000; color-scheme: dark;"
 				src={src}
 				title="Video"
 				frameborder="0"
