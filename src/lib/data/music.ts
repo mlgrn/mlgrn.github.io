@@ -163,6 +163,39 @@ const items: Array<Project> = [
 	},
 
 	{
+		slug: 'get-a-lil',
+		color: '#ff3f00',
+		description:
+			'Mastering for Destiny Autumn\'s "Get a Lil"',
+		shortDescription:
+			'Mastering for Destiny Autumn\'s "Get a Lil"',
+		links: [{ to: 'https://distrokid.com/hyperfollow/destinyautumn/get-a-lil-feat-cola--mattyg-2?ref=release&utm_source=ig&utm_medium=social&utm_content=link_in_bio', label: 'Stream it here' }],
+		logo: Assets.Unknown,
+		name: 'Destiny Autumn "Get a Lil"',
+		period: {
+			from: new Date(2020, 1, 1),
+			to: new Date(2024, 8, 30)
+		},
+		skills: getSkills('mastering'),
+		type: 'Album',
+		basePath:'',   
+		screenshots: [
+			{
+				label: '"Get a Lil" by Destiny Autumn (featuring cola & MattyG)',
+				src: '/images/get%20a%20lil%20cover.webp'
+			},
+			
+		],
+		audioTracks: [
+			{
+				src: '/audio/Get%20a%20Lil%2044100%2016%204%20(intro%20adjust).m4a',
+				title: '"Get a Lil" by Destiny Autumn (featuring cola & MattyG)'
+			}
+		],
+		
+	},
+
+	{
 		slug: 'first-life-origin-ep',
 		color: '#ff3f00',
 		description:
