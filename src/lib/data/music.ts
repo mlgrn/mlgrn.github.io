@@ -166,14 +166,14 @@ const items: Array<Project> = [
 		slug: 'lucerne-alumni-orchestra-2019',
 		color: '#8b1a1a',
 		description:
-			'I performed with the Lucerne Alumni Orchestra at KKL Lucerne in 2019 as part of the Lucerne Festival Academy alumni projects.',
+			'I played bass with the Lucerne Alumni Orchestra at KKL Lucerne under Riccardo Chailly in 2019 as part of the Lucerne Festival Academy alumni projects. There obviously are a lot of people on stage for this but if you\'re lookiung for me,  I\'m all the way at the far right of the stage (from the audiences\'s perspective.',
 		shortDescription:
 			'Bass performance with the Lucerne Alumni Orchestra at KKL Lucerne, 2019.',
 		links: [
 			{ to: 'https://vimeo.com/1228990630', label: 'Vimeo' },
 		],
 		logo: Assets.Lucerne,
-		name: 'Lucerne Alumni Orchestra, 2019 KKL Lucerne',
+		name: 'Lucerne Alumni Orchestra, 2019 KKL Lucerne with Riccardo Chailly.',
 		period: {
 			from: new Date(2019, 7, 1),
 			to: new Date(2019, 7, 30)
