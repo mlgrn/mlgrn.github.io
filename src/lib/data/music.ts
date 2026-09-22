@@ -163,6 +163,30 @@ const items: Array<Project> = [
 	},
 
 	{
+		slug: 'lucerne-alumni-orchestra-2019',
+		color: '#8b1a1a',
+		description:
+			'I performed with the Lucerne Alumni Orchestra at KKL Lucerne in 2019 as part of the Lucerne Festival Academy alumni projects.',
+		shortDescription:
+			'Bass performance with the Lucerne Alumni Orchestra at KKL Lucerne, 2019.',
+		links: [
+			{ to: 'https://vimeo.com/1228990630', label: 'Vimeo' },
+		],
+		logo: Assets.Lucerne,
+		name: 'Lucerne Alumni Orchestra, 2019 KKL Lucerne',
+		period: {
+			from: new Date(2019, 7, 1),
+			to: new Date(2019, 7, 30)
+		},
+		skills: getSkills('bass'),
+		type: 'Bass Performance',
+		basePath: '',
+		vimeoVideoEmbed: [
+			'https://player.vimeo.com/video/1228990630?badge=0&autopause=0&player_id=0&app_id=58479',
+		],
+	},
+
+	{
 		slug: 'get-a-lil',
 		color: '#ff3f00',
 		description:
